@@ -1,0 +1,30 @@
+SYSTEM = Ga2BiAs
+ISTART =  0
+ICHARG =  2
+EDIFF  =  1E-06
+EDIFFG =  -0.01
+PREC   =  Accurate
+ENCUT  =  500
+#ISPIN  =  2
+ISMEAR =  0
+SIGMA = 0.05
+GGA = PE
+LWAVE = F
+LCHARG = F
+NPAR=4
+LREAL = Auto
+#NBANDS = 28
+#ISYM = 0
+#IALGO=48 
+#NELMDL = -5
+#ICORELEVEL = 1
+###########################
+LHFCALC = .TRUE.
+HFSCREEN = 0.2
+TIME = 0.4
+AEXX = 0.25
+ALGO = Damped
+###########################
+#MAGMOM = 0 0 0  0 0 0  
+#LSORBIT = T
+#SAXIS = 0 0 1

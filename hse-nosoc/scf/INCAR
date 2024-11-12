@@ -1,0 +1,11 @@
+SYSTEM = Ga2BiAs
+ISART = 0
+ICHARG = 2
+PREC = Accurate                   
+ENCUT = 500.0
+EDIFF = 1E-06
+EDIFFG = -0.01 
+LWAVE = F
+LCHARG = F
+NPAR = 4
+LREAL = Auto
