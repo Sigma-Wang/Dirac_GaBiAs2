@@ -1,0 +1,1680 @@
+ -----------------------------------------------------------------------
+  W            W            W              TTTTTTTTTTTTTTTTTTTT         
+   W          W W          W                        TT                  
+    W        W   W        W                         TT                  
+     W      W     W      W                          TT                  
+      W    W       W    W                           TT                  
+       W  W         W  W                            TT                  
+        WW           WW                             TT                  
+        W             W                             TT                  
+                                                                        
+                        Welcome to WannierTools.                       
+                             Version 2.5.1     
+                   Tools for novel topological materials.               
+                          Enjoy it and good luck.                       
+                           Author : QuanSheng Wu                        
+                        Email : wuquansheng@gmail.com                   
+               Find more information on www.wanniertools.com            
+ =======================================================================
+                                                                        
+ You are using    32 CPU cores
+  
+   
+ >>>Read some paramters from wt.in
+ You are using : TB     model
+ Tight-binding Hamiltonian FROM: Hr File
+ Is_Sparse_Hr=  F
+ Tight-binding Hamiltonian filename: wannier90_hr.dat         
+ System of particle: electron                 
+ Tight-binding Hamiltonian obtained from : VASP                     
+   
+ >>>Control parameters: 
+ BulkBand_line_calc                :  F
+ BulkFatBand_calc                  :  F
+ BulkBand_plane_calc               :  F
+ BulkBand_cube_calc                :  F
+ BulkBand_unfold_line_calc         :  F
+ BulkBand_unfold_plane_calc        :  F
+ BulkFS_calc                       :  F
+ BulkFS_Plane_calc                 :  F
+ BulkFS_plane_stack_calc           :  F
+ BulkGap_cube_calc                 :  F
+ BulkGap_plane_calc                :  F
+ SlabBand_calc                     :  F
+ SlabBandWaveFunc_calc             :  F
+ SlabSS_calc                       :  F
+ SlabArc_calc                      :  T
+ SlabSpintexture_calc              :  F
+ wanniercenter_calc                :  F
+ BerryPhase_calc                   :  F
+ BerryCurvature_calc               :  F
+ BerryCurvature_Cube_calc          :  F
+ BerryCurvature_slab_calc          :  F
+ Dos_calc                          :  F
+ Z2_3D_calc                        :  F
+ WeylChirality_calc                :  F
+ NLChirality_calc                  :  F
+ Chern_3D_calc                     :  F
+ MirrorChern_calc                  :  F
+ JDos_calc                         :  F
+ FindNodes_calc                    :  F
+ EffectiveMass_calc                :  F
+ AHC_calc                          :  F
+ Boltz_OHE_calc                    :  F
+ LOTO_correction                   :  F
+ OrbitalTexture_calc               :  F
+ OrbitalTexture_3D_calc            :  F
+ LandauLevel_k_calc                :  F
+ LandauLevel_B_calc                :  F
+ LandauLevel_wavefunction_calc     :  F
+ Fit_kp_calc                       :  F
+ DMFT_MAG_calc                     :  F
+ Translate_to_WS_calc              :  F
+ LandauLevel_kplane_calc           :  F
+ LandauLevel_k_dos_calc            :  F
+ LandauLevel_B_dos_calc            :  F
+ FermiLevel_calc                   :  F
+   
+ >>>System parameters: 
+ NumSlabs :    30
+ Nslab1 for ribbon  :     1
+ Nslab2 for ribbon  :     1
+ Number of Occupied bands:    12
+ Number of total electrons:   12.000000
+ With SOC or not in Hrfile:     1
+ Fermi energy (eV) :        3.480000
+ surf_onsite (eV):         0.000000
+ Add_Zeeman_Field:  F
+ Zeeman_energy_in_eV (eV):         0.000000
+ Electric_field_in_eVpA (eV/Angstrom):         0.000000
+ Symmetrical_Electric_field_in_eVpA (eV/Angstrom):         0.000000
+ Inner_symmetrical_Electric_Field:  F
+ ijmax :    10
+   
+ **Notes**: There are two ways to specify magnetic field.
+ 1. specify Bmagnitude, Btheta, Bphi
+ 2. specify Bx, By, Bz
+ Bmagnitude, Bx, By, Bz are real numbers in unit of Tesla. and Bx, By, Bz 
+ are in the cartesian coordinates. Btheta is the angle with z axial 
+  and Bphi is the angle with respect to x axial in the x-y plane
+  Btheta is in [0, 180], Bphi is in [0, 360).
+ If you specify both of them together, we will choose the first one.
+ If choose the first one, but not specify Btheta, Bphi, then 
+ by default we set Btheta=0, Bphi=0 which means B is along z direction.
+  
+  Warning: You didn't specify the magnitude of magnetic field.
+  
+ >>You did not specified the magnitude of magnetic field, 
+  and also didn't set Bx, By, Bz. So we will set the magnetic direction
+  from the settings of Btheta, Bphi.
+  If you even didn't set Btheta, Bphi, we will take the default value, 
+  Btheta=0, Bphi=0 which means B is along z direction
+ >>You didn't set Btheta, and we set it to 0.
+ >>You didn't set Bphi, and we set it to 0.
+ Bmagnitude (in Tesla) :        1.000000
+ Btheta, Bphi :        0.000000        0.000000
+ Bx, By, Bz (in Tesla) :        0.000000        0.000000        1.000000
+ B direction cosines :        0.000000        0.000000        1.000000
+   
+ >>>calculation parameters : 
+ E_arc :         -0.02000
+ Eta_arc :          0.00100
+ Gap_threshold         0.00100
+ OmegaMin :         -1.20000
+ OmegaMax :          1.20000
+ OmegaNum :   1500
+ OmegaNum_unfold :    200
+ Nk1 :   2000
+ Nk2 :   2000
+ Nk3 :    300
+ NP number of principle layers  :      3
+ Tmin(Kelvin)  :        100.00000
+ Tmax(Kelvin)  :        100.00000
+ NumT  :      1
+ NBTau  :      1
+ Beta  :        100.00000
+ Nslice_BTau_Max  :   5000
+ BTauMax(Tesla.ps)         0.00000
+ Rcut    999999.00000
+ Magp               1
+ Magp_min               0
+ Magp_max               1
+ wcc_calc_tol         0.08000
+ wcc_neighbour_tol         0.30000
+ NumLCZVecs   400
+ NumSelectedEigenVals     0
+ NumRandomConfs:     1
+ Projection weight mode:NORMAL              
+  
+ We found LATTICE card
+>> lattice information (Angstrom)
+           a           b           c       alpha        beta       gamma
+    4.300141    4.300141    6.145861   90.000000   90.000000   90.000000
+ Three Lattice vectors of the unfolded cell: 
+    4.300141    0.000000    0.000000
+    0.000000    4.300141    0.000000
+    0.000000    0.000000    6.145861
+>> Reciprocal lattice information (1/Angstrom)
+           a           b           c       alpha        beta       gamma
+    1.461158    1.461158    1.022344   90.000000   90.000000   90.000000
+ Three reciprocal lattice vectors of the primitive cell: 
+    1.461158    0.000000    0.000000
+    0.000000    1.461158    0.000000
+    0.000000    0.000000    1.022344
+  
+ We found ATOM_POSITIONS card
+Origin_cell%Num_atoms    4
+  
+ Warning: You didn't specify the atom magnetic moment in the ATOMIC_POSITION car
+ d Or the format is wrong. So we set all the Atom-magnetic-moments to zero.
+ 
+>> Atom position and magnetic moment of Original lattice
+                                         Catesian                  Fractional(Direct)         Magnetic moment
+------------------------------------------------------------------------------------------------------------------
+ index  Atom Name            x           y           z           a           b           c      Mx      My      Mz
+------------------------------------------------------------------------------------------------------------------
+     1  Ga            2.150070    0.000000    4.460297    0.500000    0.000000    0.725740   0.000   0.000   0.000
+     2  Ga            0.000000    2.150070    1.685564    0.000000    0.500000    0.274260   0.000   0.000   0.000
+     3  Bi            0.000000    0.000000    0.000000    0.000000    0.000000    0.000000   0.000   0.000   0.000
+     4  As            2.150070    2.150070    3.072931    0.500000    0.500000    0.500000   0.000   0.000   0.000
+  
+ We found PROJECTORS card
+ >>Number of projectors per atoms:
+     4     4     3     3
+Ga      s       px      py      pz      
+Ga      s       px      py      pz      
+Bi      px      py      pz      
+As      px      py      pz      
+  
+ >> Wannier centers by default, in unit of reciprocal lattice vector
+ iwann        R1        R2        R3
+     1  0.500000  0.000000  0.725740
+     2  0.500000  0.000000  0.725740
+     3  0.500000  0.000000  0.725740
+     4  0.500000  0.000000  0.725740
+     5  0.000000  0.500000  0.274260
+     6  0.000000  0.500000  0.274260
+     7  0.000000  0.500000  0.274260
+     8  0.000000  0.500000  0.274260
+     9  0.000000  0.000000  0.000000
+    10  0.000000  0.000000  0.000000
+    11  0.000000  0.000000  0.000000
+    12  0.500000  0.500000  0.500000
+    13  0.500000  0.500000  0.500000
+    14  0.500000  0.500000  0.500000
+    15  0.500000  0.000000  0.725740
+    16  0.500000  0.000000  0.725740
+    17  0.500000  0.000000  0.725740
+    18  0.500000  0.000000  0.725740
+    19  0.000000  0.500000  0.274260
+    20  0.000000  0.500000  0.274260
+    21  0.000000  0.500000  0.274260
+    22  0.000000  0.500000  0.274260
+    23  0.000000  0.000000  0.000000
+    24  0.000000  0.000000  0.000000
+    25  0.000000  0.000000  0.000000
+    26  0.500000  0.500000  0.500000
+    27  0.500000  0.500000  0.500000
+    28  0.500000  0.500000  0.500000
+ We didn't found LATTICE_UNFOLD card, so it is the same as the unit cell.
+>> Folded lattice information (Angstrom)
+           a           b           c       alpha        beta       gamma
+    4.300141    4.300141    6.145861   90.000000   90.000000   90.000000
+ Three Lattice vectors of unfolded cell: 
+    4.300141    0.000000    0.000000
+    0.000000    4.300141    0.000000
+    0.000000    0.000000    6.145861
+>> Folded Reciprocal lattice information (1/Angstrom)
+           a           b           c       alpha        beta       gamma
+    1.461158    1.461158    1.022344   90.000000   90.000000   90.000000
+ Three reciprocal lattice vectors of unfolded cell: 
+    1.461158    0.000000    0.000000
+    0.000000    1.461158    0.000000
+    0.000000    0.000000    1.022344
+ 
+>> The relation between the original lattice and the unfolded lattice
+>> The cell volume ratio is:     1.000000
+>> The lattice constant a ratio is:     1.000000
+>> The lattice constant b ratio is:     1.000000
+>> The lattice constant c ratio is:     1.000000
+>> Origin_cell in unit of Folded_cell: R1      1.000000    0.000000    0.000000
+>> Origin_cell in unit of Folded_cell: R2      0.000000    1.000000    0.000000
+>> Origin_cell in unit of Folded_cell: R3      0.000000    0.000000    1.000000
+ 
+ 
+>>> Atom position and magnetic moment of Unfolded lattice
+                                         Catesian                  Fractional(Direct)         Magnetic moment
+------------------------------------------------------------------------------------------------------------------
+ index  Atom Name            x           y           z           a           b           c      Mx      My      Mz
+------------------------------------------------------------------------------------------------------------------
+     1  Ga            2.150070    0.000000    4.460297    0.500000    0.000000    0.725740   0.000   0.000   0.000
+     2  Ga            0.000000    2.150070    1.685564    0.000000    0.500000    0.274260   0.000   0.000   0.000
+     3  Bi            0.000000    0.000000    0.000000    0.000000    0.000000    0.000000   0.000   0.000   0.000
+     4  As            2.150070    2.150070    3.072931    0.500000    0.500000    0.500000   0.000   0.000   0.000
+  
+ We found SURFACE card
+ 
+>> new vectors to define the surface (in unit of lattice vector)
+ The 1st vector on surface     :    1.000000    0.000000    0.000000
+ The 2nd vector on surface     :    0.000000    1.000000    0.000000
+ The 3rd vector out of surface :    0.000000    0.000000    1.000000
+  
+ The rotated new unit cell in cartesian coordinates : 
+    4.300141    0.000000    0.000000
+    0.000000    4.300141    0.000000
+    0.000000    0.000000    6.145861
+New cell's Volume is          113.64442Ang^3
+  
+ Fractional coordinates of atoms in units of new lattice vectors : 
+Ga      0.500000    0.000000    0.725740
+Ga      0.000000    0.500000    0.274260
+Bi      0.000000    0.000000    0.000000
+As      0.500000    0.500000    0.500000
+  
+ 2D Primitive Cell_Volume:    18.4912126198810     
+ Ra2, Rb2
+    4.3001    0.0000
+    0.0000    4.3001
+ Ka2, Kb2
+    1.4612    0.0000
+    0.0000    1.4612
+>> lattice information of the magnetic supercell (Angstrom)
+    4.300141    0.000000    0.000000
+    0.000000    4.300141    0.000000
+    0.000000    0.000000  184.375830
+>> Reciprocal lattice information of the magnetic supercell (1/Angstrom)
+    1.461158    0.000000    0.000000
+    0.000000    1.461158    0.000000
+    0.000000    0.000000    0.034078
+  
+3D Primitive Origin_cell%CellVolume:     113.64442248 in Angstrom^3
+3D Magnetic supercell Volume:    3409.33267450 in Angstrom^3
+Projected area of magnetic supercell normal to the first vector specifed in SURFACE card:     792.84206599 in Angstrom^2
+  
+ We found KPATH_BULK card
+Number of K lines :     3
+ K      0.3333   0.3333   0.0000  G       0.0000   0.0000   0.0000
+ G      0.0000   0.0000   0.0000  M       0.0000   0.5000   0.0000
+ M      0.0000   0.5000   0.0000  K       0.3333   0.3333   0.0000
+  
+ We found KPATH_SLAB card
+ k lines for 2D system
+ No. of k lines for 2D system :            2
+  X     0.50000  0.00000    G       0.00000  0.00000
+  G     0.00000  0.00000    Y       0.50000  0.50000
+  
+ We found KPLANE_SLAB card
+ >> Kpoints plane for 2D system--> arcs  
+K2D_start: -0.5000 -0.5000
+The first vector:   1.0000  0.0000
+The second vector:   0.0000  1.0000
+ >> Kpoints plane for 3D system--> gapshape  
+k3D_start :   0.0000  0.0000  0.0000
+The 1st vector:   1.0000  0.0000  0.0000
+The 2nd vector:   0.0000  0.5000  0.0000
+ >> Kpoints cube for 3D system--> gapshape3D  
+k3D_start :  0.0000  0.0000  0.0000
+The 1st vector:   1.0000  0.0000  0.0000
+The 2nd vector:   0.0000  1.0000  0.0000
+The 3rd vector:   0.0000  0.0000  1.0000
+kCubeVolume:   0.0000
+ReciprocalOrigin_cell%CellVolume:   2.1827
+  
+  
+ >> Using default parameters for Kpoint_3D
+>> k points  0.0000 0.0000 0.0000 in unit of reciprocal primitive cell
+>> k points  0.0000 0.0000 0.0000 in Cartesian coordinates
+  
+ >> Using default parameters for effective mass calculation
+ >> Effective mass calculation parameters  
+>> The    12'th band
+>> k step  0.0100 in unit of 1/Angstrom
+>> k points  0.0000 0.0000 0.0000 in unit of reciprocal primitive cell
+>> k points  0.0000 0.0000 0.0000 in unit of 1/Angstrom
+  
+ >> We use the default values for k3points_pointmode_direct=[0,0,0]
+ >> and Nk3_point_mode = 1
+  
+ >> We use the default values for k3points_unfold_pointmode_direct=[0,0,0]
+ >> and Nk3_unfold_point_mode = 1
+  
+ >> We use the default values for Single_KPOINT_3D_DIRECT=[0,0,0]
+ >> Output all atoms weight for surface state spectrum
+ > NtopAtoms            4
+> TopAtoms 
+     1     2     3     4
+> NbottomAtoms          4
+> BottomAtoms 
+     1     2     3     4
+ > NtopOrbitals           28
+> TopOrbitals 
+     1     2     3     4     5     6     7     8     9    10
+    11    12    13    14    15    16    17    18    19    20
+    21    22    23    24    25    26    27    28
+> NBottomOrbitals   28
+> BottomOrbitals 
+     1     2     3     4     5     6     7     8     9    10
+    11    12    13    14    15    16    17    18    19    20
+    21    22    23    24    25    26    27    28
+  
+ >> We do not calculate chirality for nodal lines
+  
+ >> We do not calculate chirality for weyl points
+  
+>> There are    1 groups of SelectedAtoms
+Group :   1
+>> Number of atoms selected         4
+>> Selected atoms are
+    1  Ga            2  Ga            3  Bi            4  As        
+  
+>> There are   1 groups of SelectedOrbitals
+ >> SelectedOrbitals
+>> Number of orbitals selected (including spin degenarcy)        28
+>> Orbitals are
+       1       2       3       4       5       6       7       8       9      10      11      12
+      13      14      15      16      17      18      19      20      21      22      23      24
+      25      26      27      28
+  
+ >> SELECTED_OCCUPIED_BANDS
+>> Number of Occupied bands selected         12
+>> OccupiedBand indices are
+     1     2     3     4     5     6     7     8     9    10    11    12
+  
+  
+ >> SELECTEDBANDS
+>> Number of bands selected         28
+>> Band indices are
+     1     2     3     4     5     6     7     8     9    10    11    12
+    13    14    15    16    17    18    19    20    21    22    23    24
+    25    26    27    28
+  
+ <<<Read wt.in file successfully
+ 
+  File wannier90_hr.dat exist, We are using HmnR from wannier90
+ >> Num_wann          28
+ >> NRPTS         245
+  >> Begin to read Hmn_R.data
+  
+ 
+  Note: This is not a 2D system, so we can't add electric field.
+ 
+  << Read Hmn_R.data successfully
+  
+ >> Start of calculating the surface arc
+ Arc, ik            1 Nk     4004001 time left  0.000000000000000E+000  s
+ Arc, ik         3201 Nk     4004001 time left   3125.62498835614       s
+ Arc, ik         6401 Nk     4004001 time left   2748.34998510778       s
+ Arc, ik         9601 Nk     4004001 time left   2621.32496465929       s
+ Arc, ik        12801 Nk     4004001 time left   2993.40002601966       s
+ Arc, ik        16001 Nk     4004001 time left   3364.87502924865       s
+ Arc, ik        19201 Nk     4004001 time left   7346.97498654714       s
+ Arc, ik        22401 Nk     4004001 time left   2239.65001946781       s
+ Arc, ik        25601 Nk     4004001 time left   2362.17503983062       s
+ Arc, ik        28801 Nk     4004001 time left   2981.39996806858       s
+ Arc, ik        32001 Nk     4004001 time left   3103.12498843996       s
+ Arc, ik        35201 Nk     4004001 time left   3224.65000877855       s
+ Arc, ik        38401 Nk     4004001 time left   2230.65001938958       s
+ Arc, ik        41601 Nk     4004001 time left   2228.85001937393       s
+ Arc, ik        44801 Nk     4004001 time left   3093.12504609115       s
+ Arc, ik        48001 Nk     4004001 time left   2966.99996822281       s
+ Arc, ik        51201 Nk     4004001 time left   3088.12498849584       s
+ Arc, ik        54401 Nk     4004001 time left   2591.92502252990       s
+ Arc, ik        57601 Nk     4004001 time left   2836.47500551306       s
+ Arc, ik        60801 Nk     4004001 time left   2834.17500550859       s
+ Arc, ik        64001 Nk     4004001 time left   2955.00002568588       s
+ Arc, ik        67201 Nk     4004001 time left   6274.27505453816       s
+ Arc, ik        70401 Nk     4004001 time left   1229.24997252412       s
+ Arc, ik        73601 Nk     4004001 time left   2333.67498215521       s
+ Arc, ik        76801 Nk     4004001 time left   2577.22502240213       s
+ Arc, ik        80001 Nk     4004001 time left   3556.12501187716       s
+ Arc, ik        83201 Nk     4004001 time left   7596.54998995829       s
+ Arc, ik        86401 Nk     4004001 time left   2815.77500547282       s
+ Arc, ik        89601 Nk     4004001 time left   2324.17498222785       s
+ Arc, ik        92801 Nk     4004001 time left   2688.94998542964       s
+ Arc, ik        96001 Nk     4004001 time left   2808.87500545941       s
+ Arc, ik        99201 Nk     4004001 time left   6833.39998363517       s
+ Arc, ik       102401 Nk     4004001 time left   2194.65001907665       s
+ Arc, ik       105601 Nk     4004001 time left   2071.02499909233       s
+ Arc, ik       108801 Nk     4004001 time left   2677.95004217187       s
+ Arc, ik       112001 Nk     4004001 time left   2918.99996873690       s
+ Arc, ik       115201 Nk     4004001 time left   6805.39998370223       s
+ Arc, ik       118401 Nk     4004001 time left   2185.65001899842       s
+ Arc, ik       121601 Nk     4004001 time left   2183.85001898278       s
+ Arc, ik       124801 Nk     4004001 time left   1939.60003567627       s
+ Arc, ik       128001 Nk     4004001 time left   2785.87500541471       s
+ Arc, ik       131201 Nk     4004001 time left   6898.42500360683       s
+ Arc, ik       134401 Nk     4004001 time left   1934.79997927789       s
+ Arc, ik       137601 Nk     4004001 time left   2658.14998559654       s
+ Arc, ik       140801 Nk     4004001 time left   2655.94998560846       s
+ Arc, ik       144001 Nk     4004001 time left   2050.62499910127       s
+ Arc, ik       147201 Nk     4004001 time left   6749.39998383634       s
+ Arc, ik       150401 Nk     4004001 time left   2649.35004172148       s
+ Arc, ik       153601 Nk     4004001 time left   2165.84996279562       s
+ Arc, ik       156801 Nk     4004001 time left   2043.82499910425       s
+ Arc, ik       160001 Nk     4004001 time left   2762.87500537001       s
+ Arc, ik       163201 Nk     4004001 time left   3240.67497227807       s
+ Arc, ik       166401 Nk     4004001 time left   2278.57498257654       s
+ Arc, ik       169601 Nk     4004001 time left   2755.97494955873       s
+ Arc, ik       172801 Nk     4004001 time left   2633.94998572767       s
+ Arc, ik       176001 Nk     4004001 time left   2033.62499910872       s
+ Arc, ik       179201 Nk     4004001 time left   6932.44996749563       s
+ Arc, ik       182401 Nk     4004001 time left   2627.34998576343       s
+ Arc, ik       185601 Nk     4004001 time left   2267.17503822874       s
+ Arc, ik       188801 Nk     4004001 time left   2622.94998578727       s
+ Arc, ik       192001 Nk     4004001 time left   2263.37503816467       s
+ Arc, ik       195201 Nk     4004001 time left   6784.42500354722       s
+ Arc, ik       198401 Nk     4004001 time left   2021.72499911394       s
+ Arc, ik       201601 Nk     4004001 time left   2614.14998583496       s
+ Arc, ik       204801 Nk     4004001 time left   2730.67500530742       s
+ Arc, ik       208001 Nk     4004001 time left   2491.12502165372       s
+ Arc, ik       211201 Nk     4004001 time left   6874.45002296008       s
+ Arc, ik       214401 Nk     4004001 time left   2131.65001852904       s
+ Arc, ik       217601 Nk     4004001 time left   2011.52499911841       s
+ Arc, ik       220801 Nk     4004001 time left   2600.94998590648       s
+ Arc, ik       224001 Nk     4004001 time left   2126.24996347586       s
+ Arc, ik       227201 Nk     4004001 time left   6137.30001670774       s
+ Arc, ik       230401 Nk     4004001 time left   1061.32500922540       s
+ Arc, ik       233601 Nk     4004001 time left   2003.02499912214       s
+ Arc, ik       236801 Nk     4004001 time left   2472.22502148943       s
+ Arc, ik       240001 Nk     4004001 time left   2234.87498291070       s
+ Arc, ik       243201 Nk     4004001 time left   6698.92500350252       s
+ Arc, ik       246401 Nk     4004001 time left   2113.64996369230       s
+ Arc, ik       249601 Nk     4004001 time left   2229.17503758799       s
+ Arc, ik       252801 Nk     4004001 time left   2696.17500524037       s
+ Arc, ik       256001 Nk     4004001 time left   2225.37498298334       s
+ Arc, ik       259201 Nk     4004001 time left   6436.37496512383       s
+ Arc, ik       262401 Nk     4004001 time left   2455.42496689595       s
+ Arc, ik       265601 Nk     4004001 time left   1986.02499912959       s
+ Arc, ik       268801 Nk     4004001 time left   2684.67500521801       s
+ Arc, ik       272001 Nk     4004001 time left   2565.74998609722       s
+ Arc, ik       275201 Nk     4004001 time left   6525.39998437278       s
+ Arc, ik       278401 Nk     4004001 time left   2444.92502125213       s
+ Arc, ik       281601 Nk     4004001 time left   2442.82502123388       s
+ Arc, ik       284801 Nk     4004001 time left   2092.05001818482       s
+ Arc, ik       288001 Nk     4004001 time left   2090.25001816917       s
+ Arc, ik       291201 Nk     4004001 time left   6381.37496542186       s
+ Arc, ik       294401 Nk     4004001 time left   2550.35004016245       s
+ Arc, ik       297601 Nk     4004001 time left   2548.14998619258       s
+ Arc, ik       300801 Nk     4004001 time left   2545.94998620450       s
+ Arc, ik       304001 Nk     4004001 time left   2659.37500516884       s
+ Arc, ik       307201 Nk     4004001 time left   6700.45002237894       s
+ Arc, ik       310401 Nk     4004001 time left   2654.77500515990       s
+ Arc, ik       313601 Nk     4004001 time left   2421.82502105134       s
+ Arc, ik       316801 Nk     4004001 time left   1958.82499914151       s
+ Arc, ik       320001 Nk     4004001 time left   2532.75003988529       s
+ Arc, ik       323201 Nk     4004001 time left   6441.39998457395       s
+ Arc, ik       326401 Nk     4004001 time left   1953.72499914374       s
+ Arc, ik       329601 Nk     4004001 time left   2640.97500513308       s
+ Arc, ik       332801 Nk     4004001 time left   2638.67500512861       s
+ Arc, ik       336001 Nk     4004001 time left   2407.12502092356       s
+ Arc, ik       339201 Nk     4004001 time left   6756.97498762747       s
+ Arc, ik       342401 Nk     4004001 time left   2059.64996461989       s
+ Arc, ik       345601 Nk     4004001 time left   2057.85001788754       s
+ Arc, ik       348801 Nk     4004001 time left   1941.82499914896       s
+ Arc, ik       352001 Nk     4004001 time left   1027.12500892812       s
+ Arc, ik       355201 Nk     4004001 time left   3078.67497366387       s
+ Arc, ik       358401 Nk     4004001 time left   2506.35003946954       s
+ Arc, ik       361601 Nk     4004001 time left   2390.32502077753       s
+ Arc, ik       364801 Nk     4004001 time left   1933.32499915268       s
+ Arc, ik       368001 Nk     4004001 time left   2840.62498941785       s
+ Arc, ik       371201 Nk     4004001 time left   7152.07495643990       s
+ Arc, ik       374401 Nk     4004001 time left   1020.82500887336       s
+ Arc, ik       377601 Nk     4004001 time left   2493.15003926167       s
+ Arc, ik       380801 Nk     4004001 time left   2377.72502066800       s
+ Arc, ik       384001 Nk     4004001 time left   2036.25001769979       s
+ Arc, ik       387201 Nk     4004001 time left   6894.52502484201       s
+ Arc, ik       390401 Nk     4004001 time left   2032.65001766849       s
+ Arc, ik       393601 Nk     4004001 time left   2482.14998655021       s
+ Arc, ik       396801 Nk     4004001 time left   2479.94998656213       s
+ Arc, ik       400001 Nk     4004001 time left   2365.12502055848       s
+ Arc, ik       403201 Nk     4004001 time left   3038.17502640886       s
+ Arc, ik       406401 Nk     4004001 time left   1011.82500879513       s
+ Arc, ik       409601 Nk     4004001 time left   1909.52499916311       s
+ Arc, ik       412801 Nk     4004001 time left   2132.27498369524       s
+ Arc, ik       416001 Nk     4004001 time left   2354.62496825494       s
+ Arc, ik       419201 Nk     4004001 time left   6609.47504006326       s
+ Arc, ik       422401 Nk     4004001 time left   2462.34998665750       s
+ Arc, ik       425601 Nk     4004001 time left   2460.15003874199       s
+ Arc, ik       428801 Nk     4004001 time left   2011.04996545473       s
+ Arc, ik       432001 Nk     4004001 time left   2009.25001746509       s
+ Arc, ik       435201 Nk     4004001 time left   2899.64995596092       s
+ Arc, ik       438401 Nk     4004001 time left   2005.65001743380       s
+ Arc, ik       441601 Nk     4004001 time left   2449.14998672903       s
+ Arc, ik       444801 Nk     4004001 time left   2002.04996560933       s
+ Arc, ik       448001 Nk     4004001 time left   2000.25001738686       s
+ Arc, ik       451201 Nk     4004001 time left   6439.44996980717       s
+ Arc, ik       454401 Nk     4004001 time left   1996.64996570209       s
+ Arc, ik       457601 Nk     4004001 time left   2548.97500495426       s
+ Arc, ik       460801 Nk     4004001 time left   996.525008662138       s
+ Arc, ik       464001 Nk     4004001 time left   1991.25001730863       s
+ Arc, ik       467201 Nk     4004001 time left   6963.07500905823       s
+ Arc, ik       470401 Nk     4004001 time left   2429.35003825696       s
+ Arc, ik       473601 Nk     4004001 time left   2427.14998684824       s
+ Arc, ik       476801 Nk     4004001 time left   2094.27503531333       s
+ Arc, ik       480001 Nk     4004001 time left   2422.74998687208       s
+ Arc, ik       483201 Nk     4004001 time left   6161.40003647888       s
+ Arc, ik       486401 Nk     4004001 time left   2088.57503521722       s
+ Arc, ik       489601 Nk     4004001 time left   988.425008591730       s
+ Arc, ik       492801 Nk     4004001 time left   987.524957489222       s
+ Arc, ik       496001 Nk     4004001 time left   2411.74998693168       s
+ Arc, ik       499201 Nk     4004001 time left   6023.87501836056       s
+ Arc, ik       502401 Nk     4004001 time left   2079.07498410204       s
+ Arc, ik       505601 Nk     4004001 time left   2405.14998696744       s
+ Arc, ik       508801 Nk     4004001 time left   2075.27498413110       s
+ Arc, ik       512001 Nk     4004001 time left   2400.75003780657       s
+ Arc, ik       515201 Nk     4004001 time left   5451.24997969251       s
+ Arc, ik       518401 Nk     4004001 time left   2396.34998701513       s
+ Arc, ik       521601 Nk     4004001 time left   2394.14998702705       s
+ Arc, ik       524801 Nk     4004001 time left   978.524957876652       s
+ Arc, ik       528001 Nk     4004001 time left   977.625008497853       s
+ Arc, ik       531201 Nk     4004001 time left   2713.12498989282       s
+ Arc, ik       534401 Nk     4004001 time left   975.825008482207       s
+ Arc, ik       537601 Nk     4004001 time left   2274.82501977356       s
+ Arc, ik       540801 Nk     4004001 time left   1839.82499919366       s
+ Arc, ik       544001 Nk     4004001 time left   2378.74998711050       s
+ Arc, ik       547201 Nk     4004001 time left   6157.42500321940       s
+ Arc, ik       550401 Nk     4004001 time left   1834.72499919590       s
+ Arc, ik       553601 Nk     4004001 time left   2048.67498433450       s
+ Arc, ik       556801 Nk     4004001 time left   1831.32499919739       s
+ Arc, ik       560001 Nk     4004001 time left   1829.62499919813       s
+ Arc, ik       563201 Nk     4004001 time left   5806.35000040056       s
+ Arc, ik       566401 Nk     4004001 time left   1933.64996678429       s
+ Arc, ik       569601 Nk     4004001 time left   2146.50000199908       s
+ Arc, ik       572801 Nk     4004001 time left   965.025008388329       s
+ Arc, ik       576001 Nk     4004001 time left   964.125008380506       s
+ Arc, ik       579201 Nk     4004001 time left   4816.12499202602       s
+ Arc, ik       582401 Nk     4004001 time left   2352.34998725355       s
+ Arc, ik       585601 Nk     4004001 time left   1922.85001671407       s
+ Arc, ik       588801 Nk     4004001 time left   2347.94998727739       s
+ Arc, ik       592001 Nk     4004001 time left   2239.12496981211       s
+ Arc, ik       595201 Nk     4004001 time left   3089.22501031775       s
+ Arc, ik       598401 Nk     4004001 time left   1915.65001665149       s
+ Arc, ik       601601 Nk     4004001 time left   1701.19998177979       s
+ Arc, ik       604801 Nk     4004001 time left   2336.94998733699       s
+ Arc, ik       608001 Nk     4004001 time left   2334.74998734891       s
+ Arc, ik       611201 Nk     4004001 time left   3074.72501026932       s
+ Arc, ik       614401 Nk     4004001 time left   1059.25002564909       s
+ Arc, ik       617601 Nk     4004001 time left   1058.24997634627       s
+ Arc, ik       620801 Nk     4004001 time left   1057.25002560066       s
+ Arc, ik       624001 Nk     4004001 time left   950.625008263160       s
+ Arc, ik       627201 Nk     4004001 time left   1371.82497916510       s
+ Arc, ik       630401 Nk     4004001 time left   948.825008247513       s
+ Arc, ik       633601 Nk     4004001 time left   1158.57504276792       s
+ Arc, ik       636801 Nk     4004001 time left   1894.05001646373       s
+ Arc, ik       640001 Nk     4004001 time left   2207.62497023679       s
+ Arc, ik       643201 Nk     4004001 time left   2520.60002190992       s
+ Arc, ik       646401 Nk     4004001 time left   2413.27500469051       s
+ Arc, ik       649601 Nk     4004001 time left   2096.50000195252       s
+ Arc, ik       652801 Nk     4004001 time left   2513.40002184734       s
+ Arc, ik       656001 Nk     4004001 time left   1883.25001636986       s
+ Arc, ik       659201 Nk     4004001 time left   2508.59997313237       s
+ Arc, ik       662401 Nk     4004001 time left   1879.65001633856       s
+ Arc, ik       665601 Nk     4004001 time left   1147.57499378175       s
+ Arc, ik       668801 Nk     4004001 time left   2397.17500465922       s
+ Arc, ik       672001 Nk     4004001 time left   1874.25001629163       s
+ Arc, ik       675201 Nk     4004001 time left   1976.47498488659       s
+ Arc, ik       678401 Nk     4004001 time left   1870.64996786648       s
+ Arc, ik       681601 Nk     4004001 time left   2595.62499033054       s
+ Arc, ik       684801 Nk     4004001 time left   2178.22501893388       s
+ Arc, ik       688001 Nk     4004001 time left   932.625008106697       s
+ Arc, ik       691201 Nk     4004001 time left   2381.07500462793       s
+ Arc, ik       694401 Nk     4004001 time left   2378.77500462346       s
+ Arc, ik       697601 Nk     4004001 time left   2066.50000192458       s
+ Arc, ik       700801 Nk     4004001 time left   2167.72497077473       s
+ Arc, ik       704001 Nk     4004001 time left   1959.37498501735       s
+ Arc, ik       707201 Nk     4004001 time left   2575.62499040505       s
+ Arc, ik       710401 Nk     4004001 time left   2264.34998773038       s
+ Arc, ik       713601 Nk     4004001 time left   2467.79997356934       s
+ Arc, ik       716801 Nk     4004001 time left   1849.04996823752       s
+ Arc, ik       720001 Nk     4004001 time left   923.625008028466       s
+ Arc, ik       723201 Nk     4004001 time left   2358.07500458322       s
+ Arc, ik       726401 Nk     4004001 time left   2355.77500457875       s
+ Arc, ik       729601 Nk     4004001 time left   2455.80002134666       s
+ Arc, ik       732801 Nk     4004001 time left   2248.95003541606       s
+ Arc, ik       736001 Nk     4004001 time left   2246.74998782575       s
+ Arc, ik       739201 Nk     4004001 time left   2856.69999315869       s
+ Arc, ik       742401 Nk     4004001 time left   2140.42497114278       s
+ Arc, ik       745601 Nk     4004001 time left   2443.80002124235       s
+ Arc, ik       748801 Nk     4004001 time left   2441.40002122149       s
+ Arc, ik       752001 Nk     4004001 time left   2337.37500454299       s
+ Arc, ik       755201 Nk     4004001 time left   2335.07500453852       s
+ Arc, ik       758401 Nk     4004001 time left   1825.65001586918       s
+ Arc, ik       761601 Nk     4004001 time left   2431.79997395491       s
+ Arc, ik       764801 Nk     4004001 time left   1012.25002451101       s
+ Arc, ik       768001 Nk     4004001 time left   2629.25000715768       s
+ Arc, ik       771201 Nk     4004001 time left   2323.57500451617       s
+ Arc, ik       774401 Nk     4004001 time left   2220.34998796880       s
+ Arc, ik       777601 Nk     4004001 time left   2419.80002103373       s
+ Arc, ik       780801 Nk     4004001 time left   1712.32499924954       s
+ Arc, ik       784001 Nk     4004001 time left   1811.24996888684       s
+ Arc, ik       787201 Nk     4004001 time left   2312.07500449382       s
+ Arc, ik       790401 Nk     4004001 time left   1707.22499925178       s
+ Arc, ik       793601 Nk     4004001 time left   2407.80002092943       s
+ Arc, ik       796801 Nk     4004001 time left   2305.17500448041       s
+ Arc, ik       800001 Nk     4004001 time left   2302.87500447594       s
+ Arc, ik       803201 Nk     4004001 time left   2400.60002086684       s
+ Arc, ik       806401 Nk     4004001 time left   1698.72499925550       s
+ Arc, ik       809601 Nk     4004001 time left   2295.97500446253       s
+ Arc, ik       812801 Nk     4004001 time left   2493.12499071239       s
+ Arc, ik       816001 Nk     4004001 time left   1992.50000185566       s
+ Arc, ik       819201 Nk     4004001 time left   1890.97503188532       s
+ Arc, ik       822401 Nk     4004001 time left   994.249977776781       s
+ Arc, ik       825601 Nk     4004001 time left   1092.57499407977       s
+ Arc, ik       828801 Nk     4004001 time left   893.024961557239       s
+ Arc, ik       832001 Nk     4004001 time left   892.125007754657       s
+ Arc, ik       835201 Nk     4004001 time left   1089.27499409765       s
+ Arc, ik       838401 Nk     4004001 time left   1978.50000184262       s
+ Arc, ik       841601 Nk     4004001 time left   2371.79997459752       s
+ Arc, ik       844801 Nk     4004001 time left   2073.22497204877       s
+ Arc, ik       848001 Nk     4004001 time left   1873.87498567114       s
+ Arc, ik       851201 Nk     4004001 time left   2364.60002055392       s
+ Arc, ik       854401 Nk     4004001 time left   1574.79998313356       s
+ Arc, ik       857601 Nk     4004001 time left   2359.80002051219       s
+ Arc, ik       860801 Nk     4004001 time left   2062.72501792992       s
+ Arc, ik       864001 Nk     4004001 time left   1766.25001535285       s
+ Arc, ik       867201 Nk     4004001 time left   2156.55003396096       s
+ Arc, ik       870401 Nk     4004001 time left   2252.27500437759       s
+ Arc, ik       873601 Nk     4004001 time left   1076.07499416918       s
+ Arc, ik       876801 Nk     4004001 time left   977.250023663510       s
+ Arc, ik       880001 Nk     4004001 time left   1757.24996981444       s
+ Arc, ik       883201 Nk     4004001 time left   1462.87496730220       s
+ Arc, ik       886401 Nk     4004001 time left   1753.65001524333       s
+ Arc, ik       889601 Nk     4004001 time left   2919.74998005899       s
+ Arc, ik       892801 Nk     4004001 time left   2236.17500434630       s
+ Arc, ik       896001 Nk     4004001 time left   2136.74998842180       s
+ Arc, ik       899201 Nk     4004001 time left   2037.52501771087       s
+ Arc, ik       902401 Nk     4004001 time left   872.324962448329       s
+ Arc, ik       905601 Nk     4004001 time left   3001.57499603229       s
+ Arc, ik       908801 Nk     4004001 time left   2224.67500432394       s
+ Arc, ik       912001 Nk     4004001 time left   2802.12496436434       s
+ Arc, ik       915201 Nk     4004001 time left   2123.54998849332       s
+ Arc, ik       918401 Nk     4004001 time left   1735.65001508687       s
+ Arc, ik       921601 Nk     4004001 time left   2889.74998026388       s
+ Arc, ik       924801 Nk     4004001 time left   1635.82499928307       s
+ Arc, ik       928001 Nk     4004001 time left   1730.24997027824       s
+ Arc, ik       931201 Nk     4004001 time left   2112.55003326805       s
+ Arc, ik       934401 Nk     4004001 time left   863.325007504318       s
+ Arc, ik       937601 Nk     4004001 time left   2395.62499107560       s
+ Arc, ik       940801 Nk     4004001 time left   2010.22501747357       s
+ Arc, ik       944001 Nk     4004001 time left   1912.50000178115       s
+ Arc, ik       947201 Nk     4004001 time left   2197.07495978801       s
+ Arc, ik       950401 Nk     4004001 time left   2290.19997547148       s
+ Arc, ik       953601 Nk     4004001 time left   2478.45000674715       s
+ Arc, ik       956801 Nk     4004001 time left   2094.94998864830       s
+ Arc, ik       960001 Nk     4004001 time left   1522.00002799509       s
+ Arc, ik       963201 Nk     4004001 time left   855.224963184446       s
+ Arc, ik       966401 Nk     4004001 time left   2183.27500424348       s
+ Arc, ik       969601 Nk     4004001 time left   2465.45000671176       s
+ Arc, ik       972801 Nk     4004001 time left   1989.22497318126       s
+ Arc, ik       976001 Nk     4004001 time left   851.624963339418       s
+ Arc, ik       979201 Nk     4004001 time left   850.725007394794       s
+ Arc, ik       982401 Nk     4004001 time left   1699.64997080388       s
+ Arc, ik       985601 Nk     4004001 time left   2924.07499613473       s
+ Arc, ik       988801 Nk     4004001 time left   1978.72501719976       s
+ Arc, ik       992001 Nk     4004001 time left   1788.37498632492       s
+ Arc, ik       995201 Nk     4004001 time left   2162.57500420325       s
+ Arc, ik       998401 Nk     4004001 time left   1596.72499930020       s
+ Arc, ik      1001601 Nk     4004001 time left   3002.40001153434       s
+ Arc, ik      1004801 Nk     4004001 time left   2061.94998882711       s
+ Arc, ik      1008001 Nk     4004001 time left   1966.12501709023       s
+ Arc, ik      1011201 Nk     4004001 time left   2338.12499128981       s
+ Arc, ik      1014401 Nk     4004001 time left   1681.64997111307       s
+ Arc, ik      1017601 Nk     4004001 time left   1306.54999687104       s
+ Arc, ik      1020801 Nk     4004001 time left   932.250022573862       s
+ Arc, ik      1024001 Nk     4004001 time left   838.125007285271       s
+ Arc, ik      1027201 Nk     4004001 time left   2232.60001940653       s
+ Arc, ik      1030401 Nk     4004001 time left   2044.34998892248       s
+ Arc, ik      1033601 Nk     4004001 time left   2877.57499619620       s
+ Arc, ik      1036801 Nk     4004001 time left   2039.95003212476       s
+ Arc, ik      1040001 Nk     4004001 time left   1667.24997136043       s
+ Arc, ik      1043201 Nk     4004001 time left   1943.02497380413       s
+ Arc, ik      1046401 Nk     4004001 time left   1756.07502961066       s
+ Arc, ik      1049601 Nk     4004001 time left   2954.40001134994       s
+ Arc, ik      1052801 Nk     4004001 time left   1567.82499931287       s
+ Arc, ik      1056001 Nk     4004001 time left   1750.37498661550       s
+ Arc, ik      1059201 Nk     4004001 time left   1932.52501679817       s
+ Arc, ik      1062401 Nk     4004001 time left   2114.27496130345       s
+ Arc, ik      1065601 Nk     4004001 time left   2938.39996852912       s
+ Arc, ik      1068801 Nk     4004001 time left   2017.94998906553       s
+ Arc, ik      1072001 Nk     4004001 time left   2015.74998907745       s
+ Arc, ik      1075201 Nk     4004001 time left   2105.07500409149       s
+ Arc, ik      1078401 Nk     4004001 time left   2102.77500408702       s
+ Arc, ik      1081601 Nk     4004001 time left   3013.72502619633       s
+ Arc, ik      1084801 Nk     4004001 time left   2006.94998912513       s
+ Arc, ik      1088001 Nk     4004001 time left   2004.75003157044       s
+ Arc, ik      1091201 Nk     4004001 time left   1911.52501661563       s
+ Arc, ik      1094401 Nk     4004001 time left   2000.34998916090       s
+ Arc, ik      1097601 Nk     4004001 time left   2906.40001116553       s
+ Arc, ik      1100801 Nk     4004001 time left   1995.94998918474       s
+ Arc, ik      1104001 Nk     4004001 time left   1903.12501654262       s
+ Arc, ik      1107201 Nk     4004001 time left   1629.45001416374       s
+ Arc, ik      1110401 Nk     4004001 time left   1627.64997204067       s
+ Arc, ik      1113601 Nk     4004001 time left   2890.39996904321       s
+ Arc, ik      1116801 Nk     4004001 time left   1533.82499932777       s
+ Arc, ik      1120001 Nk     4004001 time left   1982.74998925626       s
+ Arc, ik      1123201 Nk     4004001 time left   1440.39998457301       s
+ Arc, ik      1126401 Nk     4004001 time left   1978.34998928010       s
+ Arc, ik      1129601 Nk     4004001 time left   2784.57499631913       s
+ Arc, ik      1132801 Nk     4004001 time left   807.525007019285       s
+ Arc, ik      1136001 Nk     4004001 time left   896.250021702144       s
+ Arc, ik      1139201 Nk     4004001 time left   805.724965315312       s
+ Arc, ik      1142401 Nk     4004001 time left   2056.77500399761       s
+ Arc, ik      1145601 Nk     4004001 time left   2590.42500865180       s
+ Arc, ik      1148801 Nk     4004001 time left   1606.05001396034       s
+ Arc, ik      1152001 Nk     4004001 time left   2049.87500398420       s
+ Arc, ik      1155201 Nk     4004001 time left   1958.55003084289       s
+ Arc, ik      1158401 Nk     4004001 time left   1778.50000165636       s
+ Arc, ik      1161601 Nk     4004001 time left   2309.44996492472       s
+ Arc, ik      1164801 Nk     4004001 time left   1597.05001388211       s
+ Arc, ik      1168001 Nk     4004001 time left   2038.37500396185       s
+ Arc, ik      1171201 Nk     4004001 time left   1593.44997262815       s
+ Arc, ik      1174401 Nk     4004001 time left   1945.34998945892       s
+ Arc, ik      1177601 Nk     4004001 time left   2296.45000625169       s
+ Arc, ik      1180801 Nk     4004001 time left   2029.17500394396       s
+ Arc, ik      1184001 Nk     4004001 time left   1938.74998949468       s
+ Arc, ik      1187201 Nk     4004001 time left   1584.45001377258       s
+ Arc, ik      1190401 Nk     4004001 time left   1670.57498722570       s
+ Arc, ik      1193601 Nk     4004001 time left   2283.45000621630       s
+ Arc, ik      1196801 Nk     4004001 time left   1929.95003039250       s
+ Arc, ik      1200001 Nk     4004001 time left   1577.25001371000       s
+ Arc, ik      1203201 Nk     4004001 time left   1925.54998956621       s
+ Arc, ik      1206401 Nk     4004001 time left   1486.22499934863       s
+ Arc, ik      1209601 Nk     4004001 time left   2619.74998210790       s
+ Arc, ik      1212801 Nk     4004001 time left   1482.82499935012       s
+ Arc, ik      1216001 Nk     4004001 time left   2265.25000616675       s
+ Arc, ik      1219201 Nk     4004001 time left   1566.45001361612       s
+ Arc, ik      1222401 Nk     4004001 time left   1564.65001360048       s
+ Arc, ik      1225601 Nk     4004001 time left   2604.75002264138       s
+ Arc, ik      1228801 Nk     4004001 time left   1561.05001356918       s
+ Arc, ik      1232001 Nk     4004001 time left   1559.25001355354       s
+ Arc, ik      1235201 Nk     4004001 time left   1903.55002997676       s
+ Arc, ik      1238401 Nk     4004001 time left   1469.22499935608       s
+ Arc, ik      1241601 Nk     4004001 time left   2589.74998231279       s
+ Arc, ik      1244801 Nk     4004001 time left   1552.04997333931       s
+ Arc, ik      1248001 Nk     4004001 time left   1636.37498748722       s
+ Arc, ik      1251201 Nk     4004001 time left   1548.45001345966       s
+ Arc, ik      1254401 Nk     4004001 time left   1546.65001344401       s
+ Arc, ik      1257601 Nk     4004001 time left   2660.57499648305       s
+ Arc, ik      1260801 Nk     4004001 time left   1885.95002969960       s
+ Arc, ik      1264001 Nk     4004001 time left   1969.37500382774       s
+ Arc, ik      1267201 Nk     4004001 time left   1967.07500382327       s
+ Arc, ik      1270401 Nk     4004001 time left   1964.77500381880       s
+ Arc, ik      1273601 Nk     4004001 time left   2303.77502002520       s
+ Arc, ik      1276801 Nk     4004001 time left   1874.95002952637       s
+ Arc, ik      1280001 Nk     4004001 time left   2128.12499207212       s
+ Arc, ik      1283201 Nk     4004001 time left   1530.45001330320       s
+ Arc, ik      1286401 Nk     4004001 time left   1953.27496425016       s
+ Arc, ik      1289601 Nk     4004001 time left   2120.62499210006       s
+ Arc, ik      1292801 Nk     4004001 time left   2118.12499210937       s
+ Arc, ik      1296001 Nk     4004001 time left   1861.74998991191       s
+ Arc, ik      1299201 Nk     4004001 time left   1521.45001322497       s
+ Arc, ik      1302401 Nk     4004001 time left   1604.07498773420       s
+ Arc, ik      1305601 Nk     4004001 time left   2529.75002198946       s
+ Arc, ik      1308801 Nk     4004001 time left   2021.39997835038       s
+ Arc, ik      1312001 Nk     4004001 time left   2103.12499216525       s
+ Arc, ik      1315201 Nk     4004001 time left   1512.45001314674       s
+ Arc, ik      1318401 Nk     4004001 time left   1930.27500375174       s
+ Arc, ik      1321601 Nk     4004001 time left   2682.40001030499       s
+ Arc, ik      1324801 Nk     4004001 time left   1841.94999001920       s
+ Arc, ik      1328001 Nk     4004001 time left   2007.00001744553       s
+ Arc, ik      1331201 Nk     4004001 time left   1503.45001306850       s
+ Arc, ik      1334401 Nk     4004001 time left   1501.65001305286       s
+ Arc, ik      1337601 Nk     4004001 time left   2499.75002172869       s
+ Arc, ik      1340801 Nk     4004001 time left   1830.94999007881       s
+ Arc, ik      1344001 Nk     4004001 time left   1995.00001734123       s
+ Arc, ik      1347201 Nk     4004001 time left   1494.44997432875       s
+ Arc, ik      1350401 Nk     4004001 time left   1575.57498795213       s
+ Arc, ik      1353601 Nk     4004001 time left   1904.97500370257       s
+ Arc, ik      1356801 Nk     4004001 time left   1902.67500369810       s
+ Arc, ik      1360001 Nk     4004001 time left   1983.00001723692       s
+ Arc, ik      1363201 Nk     4004001 time left   1485.44997448334       s
+ Arc, ik      1366401 Nk     4004001 time left   1895.77500368468       s
+ Arc, ik      1369601 Nk     4004001 time left   1646.50000153342       s
+ Arc, ik      1372801 Nk     4004001 time left   1808.94999019802       s
+ Arc, ik      1376001 Nk     4004001 time left   1642.50000152970       s
+ Arc, ik      1379201 Nk     4004001 time left   1804.54999022186       s
+ Arc, ik      1382401 Nk     4004001 time left   1720.42497680523       s
+ Arc, ik      1385601 Nk     4004001 time left   1800.14999024570       s
+ Arc, ik      1388801 Nk     4004001 time left   2288.29999451991       s
+ Arc, ik      1392001 Nk     4004001 time left   1959.00001702830       s
+ Arc, ik      1395201 Nk     4004001 time left   1467.45001275558       s
+ Arc, ik      1398401 Nk     4004001 time left   1384.22499939334       s
+ Arc, ik      1401601 Nk     4004001 time left   1707.82497697510       s
+ Arc, ik      1404801 Nk     4004001 time left   1380.82499939483       s
+ Arc, ik      1408001 Nk     4004001 time left   2271.49999456014       s
+ Arc, ik      1411201 Nk     4004001 time left   1782.54999034107       s
+ Arc, ik      1414401 Nk     4004001 time left   1456.64997497806       s
+ Arc, ik      1417601 Nk     4004001 time left   1939.79997922434       s
+ Arc, ik      1420801 Nk     4004001 time left   1453.05001263041       s
+ Arc, ik      1424001 Nk     4004001 time left   1854.37496606028       s
+ Arc, ik      1427201 Nk     4004001 time left   1529.97498830082       s
+ Arc, ik      1430401 Nk     4004001 time left   1849.77500359528       s
+ Arc, ik      1433601 Nk     4004001 time left   2088.44996828120       s
+ Arc, ik      1436801 Nk     4004001 time left   1845.17500358634       s
+ Arc, ik      1440001 Nk     4004001 time left   2003.12499253778       s
+ Arc, ik      1443201 Nk     4004001 time left   1760.54999046028       s
+ Arc, ik      1446401 Nk     4004001 time left   1838.27500357293       s
+ Arc, ik      1449601 Nk     4004001 time left   1915.79997948138       s
+ Arc, ik      1452801 Nk     4004001 time left   1753.94999049604       s
+ Arc, ik      1456001 Nk     4004001 time left   1911.00001661107       s
+ Arc, ik      1459201 Nk     4004001 time left   1829.07500355504       s
+ Arc, ik      1462401 Nk     4004001 time left   1747.34999053180       s
+ Arc, ik      1465601 Nk     4004001 time left   1903.80001654848       s
+ Arc, ik      1468801 Nk     4004001 time left   1346.82499940973       s
+ Arc, ik      1472001 Nk     4004001 time left   1978.12499263091       s
+ Arc, ik      1475201 Nk     4004001 time left   1738.54999057949       s
+ Arc, ik      1478401 Nk     4004001 time left   1736.34999059141       s
+ Arc, ik      1481601 Nk     4004001 time left   1891.80001644418       s
+ Arc, ik      1484801 Nk     4004001 time left   1574.50000146637       s
+ Arc, ik      1488001 Nk     4004001 time left   1808.37500351481       s
+ Arc, ik      1491201 Nk     4004001 time left   1413.44997572014       s
+ Arc, ik      1494401 Nk     4004001 time left   1882.19997984124       s
+ Arc, ik      1497601 Nk     4004001 time left   1879.80001633987       s
+ Arc, ik      1500801 Nk     4004001 time left   1720.94999067485       s
+ Arc, ik      1504001 Nk     4004001 time left   1953.12499272404       s
+ Arc, ik      1507201 Nk     4004001 time left   1872.59997994406       s
+ Arc, ik      1510401 Nk     4004001 time left   1402.65001219232       s
+ Arc, ik      1513601 Nk     4004001 time left   1867.80001623556       s
+ Arc, ik      1516801 Nk     4004001 time left   1321.32499942090       s
+ Arc, ik      1520001 Nk     4004001 time left   1863.00001619384       s
+ Arc, ik      1523201 Nk     4004001 time left   1783.07496736525       s
+ Arc, ik      1526401 Nk     4004001 time left   1858.20001615211       s
+ Arc, ik      1529601 Nk     4004001 time left   1778.47500345670       s
+ Arc, ik      1532801 Nk     4004001 time left   2162.29999482166       s
+ Arc, ik      1536001 Nk     4004001 time left   1851.00001608953       s
+ Arc, ik      1539201 Nk     4004001 time left   1848.59998020111       s
+ Arc, ik      1542401 Nk     4004001 time left   2461.60000945674       s
+ Arc, ik      1545601 Nk     4004001 time left   1997.44996966328       s
+ Arc, ik      1548801 Nk     4004001 time left   1764.67500342987       s
+ Arc, ik      1552001 Nk     4004001 time left   1915.62499286374       s
+ Arc, ik      1555201 Nk     4004001 time left   1836.59998032963       s
+ Arc, ik      1558401 Nk     4004001 time left   1910.62499288237       s
+ Arc, ik      1561601 Nk     4004001 time left   1755.47500341199       s
+ Arc, ik      1564801 Nk     4004001 time left   1829.40001590177       s
+ Arc, ik      1568001 Nk     4004001 time left   1827.00001588091       s
+ Arc, ik      1571201 Nk     4004001 time left   1824.60001586005       s
+ Arc, ik      1574401 Nk     4004001 time left   2201.82500735391       s
+ Arc, ik      1577601 Nk     4004001 time left   1895.62499293825       s
+ Arc, ik      1580801 Nk     4004001 time left   1514.50000141049       s
+ Arc, ik      1584001 Nk     4004001 time left   2041.87498253305       s
+ Arc, ik      1587201 Nk     4004001 time left   1812.60001575574       s
+ Arc, ik      1590401 Nk     4004001 time left   1810.19998061238       s
+ Arc, ik      1593601 Nk     4004001 time left   1883.12499298481       s
+ Arc, ik      1596801 Nk     4004001 time left   1654.95002606185       s
+ Arc, ik      1600001 Nk     4004001 time left   1802.99998068949       s
+ Arc, ik      1603201 Nk     4004001 time left   1800.59998071520       s
+ Arc, ik      1606401 Nk     4004001 time left   1798.20001563057       s
+ Arc, ik      1609601 Nk     4004001 time left   823.074995540082       s
+ Arc, ik      1612801 Nk     4004001 time left   971.425020042807       s
+ Arc, ik      1616001 Nk     4004001 time left   1940.25000528200       s
+ Arc, ik      1619201 Nk     4004001 time left   1863.12499305932       s
+ Arc, ik      1622401 Nk     4004001 time left   1711.77500332706       s
+ Arc, ik      1625601 Nk     4004001 time left   1783.80001550540       s
+ Arc, ik      1628801 Nk     4004001 time left   1855.62499308726       s
+ Arc, ik      1632001 Nk     4004001 time left   2075.50002954667       s
+ Arc, ik      1635201 Nk     4004001 time left   1850.62499310588       s
+ Arc, ik      1638401 Nk     4004001 time left   1922.05000523245       s
+ Arc, ik      1641601 Nk     4004001 time left   1771.80001540110       s
+ Arc, ik      1644801 Nk     4004001 time left   3538.79999642959       s
+ Arc, ik      1648001 Nk     4004001 time left   1914.24997092690       s
+ Arc, ik      1651201 Nk     4004001 time left   1691.07500328682       s
+ Arc, ik      1654401 Nk     4004001 time left   1762.20001531765       s
+ Arc, ik      1657601 Nk     4004001 time left   1833.12499317108       s
+ Arc, ik      1660801 Nk     4004001 time left   3514.79999645380       s
+ Arc, ik      1664001 Nk     4004001 time left   1901.25000517583       s
+ Arc, ik      1667201 Nk     4004001 time left   1825.62499319902       s
+ Arc, ik      1670401 Nk     4004001 time left   1750.20001521334       s
+ Arc, ik      1673601 Nk     4004001 time left   1820.62499321764       s
+ Arc, ik      1676801 Nk     4004001 time left   3927.15000027092       s
+ Arc, ik      1680001 Nk     4004001 time left   2178.74998511979       s
+ Arc, ik      1683201 Nk     4004001 time left   1740.59998135781       s
+ Arc, ik      1686401 Nk     4004001 time left   1738.20001510903       s
+ Arc, ik      1689601 Nk     4004001 time left   1808.12499326421       s
+ Arc, ik      1692801 Nk     4004001 time left   4189.04998035869       s
+ Arc, ik      1696001 Nk     4004001 time left   1875.25000510504       s
+ Arc, ik      1699201 Nk     4004001 time left   1728.59998148633       s
+ Arc, ik      1702401 Nk     4004001 time left   1654.27500321530       s
+ Arc, ik      1705601 Nk     4004001 time left   1795.62499331078       s
+ Arc, ik      1708801 Nk     4004001 time left   4016.59999038093       s
+ Arc, ik      1712001 Nk     4004001 time left   1718.99998158915       s
+ Arc, ik      1715201 Nk     4004001 time left   1859.65000506258       s
+ Arc, ik      1718401 Nk     4004001 time left   1642.77500319295       s
+ Arc, ik      1721601 Nk     4004001 time left   1711.80001487955       s
+ Arc, ik      1724801 Nk     4004001 time left   4059.82500212267       s
+ Arc, ik      1728001 Nk     4004001 time left   1778.12502649613       s
+ Arc, ik      1731201 Nk     4004001 time left   2130.74998544762       s
+ Arc, ik      1734401 Nk     4004001 time left   1631.27500317059       s
+ Arc, ik      1737601 Nk     4004001 time left   1628.97500316612       s
+ Arc, ik      1740801 Nk     4004001 time left   3960.60002344893       s
+ Arc, ik      1744001 Nk     4004001 time left   2048.12500684056       s
+ Arc, ik      1747201 Nk     4004001 time left   2186.27499711001       s
+ Arc, ik      1750401 Nk     4004001 time left   1690.19998189760       s
+ Arc, ik      1753601 Nk     4004001 time left   1617.47500314377       s
+ Arc, ik      1756801 Nk     4004001 time left   3581.47499843035       s
+ Arc, ik      1760001 Nk     4004001 time left   2173.87502978090       s
+ Arc, ik      1763201 Nk     4004001 time left   3431.22500808677       s
+ Arc, ik      1766401 Nk     4004001 time left   1678.20001458749       s
+ Arc, ik      1769601 Nk     4004001 time left   1815.45000494225       s
+ Arc, ik      1772801 Nk     4004001 time left   3346.79999662330       s
+ Arc, ik      1776001 Nk     4004001 time left   2228.00000855932       s
+ Arc, ik      1779201 Nk     4004001 time left   4032.44998109294       s
+ Arc, ik      1782401 Nk     4004001 time left   1735.62499353429       s
+ Arc, ik      1785601 Nk     4004001 time left   2079.75001807790       s
+ Arc, ik      1788801 Nk     4004001 time left   4153.50000386825       s
+ Arc, ik      1792001 Nk     4004001 time left   2142.87499716738       s
+ Arc, ik      1795201 Nk     4004001 time left   3934.42500205711       s
+ Arc, ik      1798401 Nk     4004001 time left   1792.05000487855       s
+ Arc, ik      1801601 Nk     4004001 time left   2064.75001794752       s
+ Arc, ik      1804801 Nk     4004001 time left   4123.50000384031       s
+ Arc, ik      1808001 Nk     4004001 time left   2264.62498772889       s
+ Arc, ik      1811201 Nk     4004001 time left   3700.35000025528       s
+ Arc, ik      1814401 Nk     4004001 time left   1984.32500662748       s
+ Arc, ik      1817601 Nk     4004001 time left   1981.42500661779       s
+ Arc, ik      1820801 Nk     4004001 time left   3615.92498907121       s
+ Arc, ik      1824001 Nk     4004001 time left   1839.37498426531       s
+ Arc, ik      1827201 Nk     4004001 time left   3401.25001900597       s
+ Arc, ik      1830401 Nk     4004001 time left   1766.05000480777       s
+ Arc, ik      1833601 Nk     4004001 time left   1966.92500656936       s
+ Arc, ik      1836801 Nk     4004001 time left   3792.60002245428       s
+ Arc, ik      1840001 Nk     4004001 time left   2502.12500075577       s
+ Arc, ik      1843201 Nk     4004001 time left   3376.24998742249       s
+ Arc, ik      1846401 Nk     4004001 time left   1820.47498442698       s
+ Arc, ik      1849601 Nk     4004001 time left   1952.42497517029       s
+ Arc, ik      1852801 Nk     4004001 time left   3899.05001302250       s
+ Arc, ik      1856001 Nk     4004001 time left   2349.37501000240       s
+ Arc, ik      1859201 Nk     4004001 time left   3753.39999101125       s
+ Arc, ik      1862401 Nk     4004001 time left   1740.05000473699       s
+ Arc, ik      1865601 Nk     4004001 time left   1670.62499377644       s
+ Arc, ik      1868801 Nk     4004001 time left   3870.04998185439       s
+ Arc, ik      1872001 Nk     4004001 time left   2598.37499156129       s
+ Arc, ik      1875201 Nk     4004001 time left   4058.02498364355       s
+ Arc, ik      1878401 Nk     4004001 time left   1793.47501558950       s
+ Arc, ik      1881601 Nk     4004001 time left   1724.45000469452       s
+ Arc, ik      1884801 Nk     4004001 time left   4105.94999457244       s
+ Arc, ik      1888001 Nk     4004001 time left   3041.75000591204       s
+ Arc, ik      1891201 Nk     4004001 time left   3829.44998204475       s
+ Arc, ik      1894401 Nk     4004001 time left   1582.20001375303       s
+ Arc, ik      1897601 Nk     4004001 time left   1579.80001373217       s
+ Arc, ik      1900801 Nk     4004001 time left   3746.32500195876       s
+ Arc, ik      1904001 Nk     4004001 time left   3084.37501662411       s
+ Arc, ik      1907201 Nk     4004001 time left   3734.92500195280       s
+ Arc, ik      1910401 Nk     4004001 time left   1962.75001706090       s
+ Arc, ik      1913601 Nk     4004001 time left   1698.44997420441       s
+ Arc, ik      1916801 Nk     4004001 time left   3717.82500194386       s
+ Arc, ik      1920001 Nk     4004001 time left   3451.62498956779       s
+ Arc, ik      1923201 Nk     4004001 time left   3836.47499297513       s
+ Arc, ik      1926401 Nk     4004001 time left   1688.04997436237       s
+ Arc, ik      1929601 Nk     4004001 time left   1620.62502414919       s
+ Arc, ik      1932801 Nk     4004001 time left   3948.22501422605       s
+ Arc, ik      1936001 Nk     4004001 time left   3554.37501083361       s
+ Arc, ik      1939201 Nk     4004001 time left   3742.45001249947       s
+ Arc, ik      1942401 Nk     4004001 time left   1675.05000456003       s
+ Arc, ik      1945601 Nk     4004001 time left   1608.12499400927       s
+ Arc, ik      1948801 Nk     4004001 time left   3725.04998253426       s
+ Arc, ik      1952001 Nk     4004001 time left   3590.99999140017       s
+ Arc, ik      1955201 Nk     4004001 time left   3905.52501407219       s
+ Arc, ik      1958401 Nk     4004001 time left   1853.82500619162       s
+ Arc, ik      1961601 Nk     4004001 time left   2170.04999904893       s
+ Arc, ik      1964801 Nk     4004001 time left   3823.50000356091       s
+ Arc, ik      1968001 Nk     4004001 time left   3499.37498103827       s
+ Arc, ik      1971201 Nk     4004001 time left   3493.87501064921       s
+ Arc, ik      1974401 Nk     4004001 time left   1966.17499740096       s
+ Arc, ik      1977601 Nk     4004001 time left   1773.09999575373       s
+ Arc, ik      1980801 Nk     4004001 time left   3603.82497244282       s
+ Arc, ik      1984001 Nk     4004001 time left   3408.75000023516       s
+ Arc, ik      1987201 Nk     4004001 time left   3529.39999154769       s
+ Arc, ik      1990401 Nk     4004001 time left   1887.75001640897       s
+ Arc, ik      1993601 Nk     4004001 time left   2010.40000772336       s
+ Arc, ik      1996801 Nk     4004001 time left   3575.32500186935       s
+ Arc, ik      2000001 Nk     4004001 time left   3444.37501049833       s
+ Arc, ik      2003201 Nk     4004001 time left   3626.44998299656       s
+ Arc, ik      2006401 Nk     4004001 time left   1810.32500604633       s
+ Arc, ik      2009601 Nk     4004001 time left   2119.04999907129       s
+ Arc, ik      2012801 Nk     4004001 time left   3982.40001529921       s
+ Arc, ik      2016001 Nk     4004001 time left   3168.37499861140       s
+ Arc, ik      2019201 Nk     4004001 time left   3535.42500184849       s
+ Arc, ik      2022401 Nk     4004001 time left   1857.75001614820       s
+ Arc, ik      2025601 Nk     4004001 time left   1978.40000760043       s
+ Arc, ik      2028801 Nk     4004001 time left   3456.59999172203       s
+ Arc, ik      2032001 Nk     4004001 time left   3635.87502203882       s
+ Arc, ik      2035201 Nk     4004001 time left   3506.92500183359       s
+ Arc, ik      2038401 Nk     4004001 time left   1535.62499427935       s
+ Arc, ik      2041601 Nk     4004001 time left   1962.40000753896       s
+ Arc, ik      2044801 Nk     4004001 time left   3489.82500182465       s
+ Arc, ik      2048001 Nk     4004001 time left   2933.99999703979       s
+ Arc, ik      2051201 Nk     4004001 time left   3600.47499340726       s
+ Arc, ik      2054401 Nk     4004001 time left   1584.05000431230       s
+ Arc, ik      2057601 Nk     4004001 time left   1703.09999592137       s
+ Arc, ik      2060801 Nk     4004001 time left   3643.50000339327       s
+ Arc, ik      2064001 Nk     4004001 time left   2121.87500903383       s
+ Arc, ik      2067201 Nk     4004001 time left   3389.39999188296       s
+ Arc, ik      2070401 Nk     4004001 time left   1812.74998761946       s
+ Arc, ik      2073601 Nk     4004001 time left   1930.39997932501       s
+ Arc, ik      2076801 Nk     4004001 time left   3432.82500179484       s
+ Arc, ik      2080001 Nk     4004001 time left   1984.12498924881       s
+ Arc, ik      2083201 Nk     4004001 time left   3361.39999195002       s
+ Arc, ik      2086401 Nk     4004001 time left   1797.74998772191       s
+ Arc, ik      2089601 Nk     4004001 time left   1914.40000735456       s
+ Arc, ik      2092801 Nk     4004001 time left   3882.12499666261       s
+ Arc, ik      2096001 Nk     4004001 time left   2265.75001043966       s
+ Arc, ik      2099201 Nk     4004001 time left   3690.54999512155       s
+ Arc, ik      2102401 Nk     4004001 time left   1782.74998782435       s
+ Arc, ik      2105601 Nk     4004001 time left   1898.40000729309       s
+ Arc, ik      2108801 Nk     4004001 time left   3435.04998389399       s
+ Arc, ik      2112001 Nk     4004001 time left   1892.00000726851       s
+ Arc, ik      2115201 Nk     4004001 time left   3482.47502110898       s
+ Arc, ik      2118401 Nk     4004001 time left   1767.75001536589       s
+ Arc, ik      2121601 Nk     4004001 time left   1647.09999605548       s
+ Arc, ik      2124801 Nk     4004001 time left   3347.32497440418       s
+ Arc, ik      2128001 Nk     4004001 time left   1817.37499759765       s
+ Arc, ik      2131201 Nk     4004001 time left   3745.60001438949       s
+ Arc, ik      2134401 Nk     4004001 time left   1694.32497845264       s
+ Arc, ik      2137601 Nk     4004001 time left   1574.77501368849       s
+ Arc, ik      2140801 Nk     4004001 time left   3144.15000021691       s
+ Arc, ik      2144001 Nk     4004001 time left   1860.00000714557       s
+ Arc, ik      2147201 Nk     4004001 time left   3423.47502075136       s
+ Arc, ik      2150401 Nk     4004001 time left   1448.12502157874       s
+ Arc, ik      2153601 Nk     4004001 time left   1792.57499763044       s
+ Arc, ik      2156801 Nk     4004001 time left   3117.15000021504       s
+ Arc, ik      2160001 Nk     4004001 time left   1901.62498969585       s
+ Arc, ik      2163201 Nk     4004001 time left   3451.50000321446       s
+ Arc, ik      2166401 Nk     4004001 time left   1722.74998823414       s
+ Arc, ik      2169601 Nk     4004001 time left   1834.40000704722       s
+ Arc, ik      2172801 Nk     4004001 time left   3204.59999232553       s
+ Arc, ik      2176001 Nk     4004001 time left   1770.87499765912       s
+ Arc, ik      2179201 Nk     4004001 time left   3193.39999235235       s
+ Arc, ik      2182401 Nk     4004001 time left   1480.05000402918       s
+ Arc, ik      2185601 Nk     4004001 time left   2216.17499280255       s
+ Arc, ik      2188801 Nk     4004001 time left   2836.25001584878       s
+ Arc, ik      2192001 Nk     4004001 time left   1698.75001476612       s
+ Arc, ik      2195201 Nk     4004001 time left   3052.35000021057       s
+ Arc, ik      2198401 Nk     4004001 time left   1410.62502101995       s
+ Arc, ik      2201601 Nk     4004001 time left   1689.74998845952       s
+ Arc, ik      2204801 Nk     4004001 time left   2979.92499099346       s
+ Arc, ik      2208001 Nk     4004001 time left   1403.12499477295       s
+ Arc, ik      2211201 Nk     4004001 time left   3193.42500166968       s
+ Arc, ik      2214401 Nk     4004001 time left   1677.74998854147       s
+ Arc, ik      2217601 Nk     4004001 time left   1618.92500540707       s
+ Arc, ik      2220801 Nk     4004001 time left   3232.05001079477       s
+ Arc, ik      2224001 Nk     4004001 time left   1668.75001450535       s
+ Arc, ik      2227201 Nk     4004001 time left   3775.69999834523       s
+ Arc, ik      2230401 Nk     4004001 time left   1385.62499483814       s
+ Arc, ik      2233601 Nk     4004001 time left   1659.74998866441       s
+ Arc, ik      2236801 Nk     4004001 time left   1491.07501296094       s
+ Arc, ik      2240001 Nk     4004001 time left   1653.74998870539       s
+ Arc, ik      2243201 Nk     4004001 time left   3246.47501967847       s
+ Arc, ik      2246401 Nk     4004001 time left   1647.75001432281       s
+ Arc, ik      2249601 Nk     4004001 time left   1699.57499775337       s
+ Arc, ik      2252801 Nk     4004001 time left   1587.02500530053       s
+ Arc, ik      2256001 Nk     4004001 time left   1638.74998880783       s
+ Arc, ik      2259201 Nk     4004001 time left   2998.87500914047       s
+ Arc, ik      2262401 Nk     4004001 time left   1632.75001419242       s
+ Arc, ik      2265601 Nk     4004001 time left   1629.74998886930       s
+ Arc, ik      2268801 Nk     4004001 time left   1626.75001414027       s
+ Arc, ik      2272001 Nk     4004001 time left   1407.25000383100       s
+ Arc, ik      2275201 Nk     4004001 time left   3025.40001791203       s
+ Arc, ik      2278401 Nk     4004001 time left   1725.59998151846       s
+ Arc, ik      2281601 Nk     4004001 time left   1830.04999919794       s
+ Arc, ik      2284801 Nk     4004001 time left   1826.65002421709       s
+ Arc, ik      2288001 Nk     4004001 time left   1608.74998901272       s
+ Arc, ik      2291201 Nk     4004001 time left   3639.69999840483       s
+ Arc, ik      2294401 Nk     4004001 time left   1602.75001393165       s
+ Arc, ik      2297601 Nk     4004001 time left   1279.80001112446       s
+ Arc, ik      2300801 Nk     4004001 time left   1277.40001110360       s
+ Arc, ik      2304001 Nk     4004001 time left   1434.37498772983       s
+ Arc, ik      2307201 Nk     4004001 time left   2863.35000019753       s
+ Arc, ik      2310401 Nk     4004001 time left   1164.35001833597       s
+ Arc, ik      2313601 Nk     4004001 time left   1267.79998642160       s
+ Arc, ik      2316801 Nk     4004001 time left   1265.39998644730       s
+ Arc, ik      2320001 Nk     4004001 time left   1368.24997921940       s
+ Arc, ik      2323201 Nk     4004001 time left   2836.35000019567       s
+ Arc, ik      2326401 Nk     4004001 time left   1363.05000371067       s
+ Arc, ik      2329601 Nk     4004001 time left   1203.47500233911       s
+ Arc, ik      2332801 Nk     4004001 time left   1253.40001089498       s
+ Arc, ik      2336001 Nk     4004001 time left   1563.74998932006       s
+ Arc, ik      2339201 Nk     4004001 time left   2757.32499166625       s
+ Arc, ik      2342401 Nk     4004001 time left   1453.89999651816       s
+ Arc, ik      2345601 Nk     4004001 time left   1295.62499517342       s
+ Arc, ik      2348801 Nk     4004001 time left   1241.40001079068       s
+ Arc, ik      2352001 Nk     4004001 time left   1238.99998673005       s
+ Arc, ik      2355201 Nk     4004001 time left   2421.67498905910       s
+ Arc, ik      2358401 Nk     4004001 time left   1234.20001072809       s
+ Arc, ik      2361601 Nk     4004001 time left   1231.79998680716       s
+ Arc, ik      2364801 Nk     4004001 time left   1229.40001068637       s
+ Arc, ik      2368001 Nk     4004001 time left   1227.00001066551       s
+ Arc, ik      2371201 Nk     4004001 time left   1377.67498821486       s
+ Arc, ik      2374401 Nk     4004001 time left   865.724999620579       s
+ Arc, ik      2377601 Nk     4004001 time left   1219.79998693569       s
+ Arc, ik      2380801 Nk     4004001 time left   1268.12499527587       s
+ Arc, ik      2384001 Nk     4004001 time left   1164.37500226311       s
+ Arc, ik      2387201 Nk     4004001 time left   1616.80000621127       s
+ Arc, ik      2390401 Nk     4004001 time left   1512.75001314934       s
+ Arc, ik      2393601 Nk     4004001 time left   1258.12501874752       s
+ Arc, ik      2396801 Nk     4004001 time left   1205.40001047775       s
+ Arc, ik      2400001 Nk     4004001 time left   1152.87500224076       s
+ Arc, ik      2403201 Nk     4004001 time left   1450.72498155059       s
+ Arc, ik      2406401 Nk     4004001 time left   1198.19998716703       s
+ Arc, ik      2409601 Nk     4004001 time left   1245.62499535969       s
+ Arc, ik      2412801 Nk     4004001 time left   1044.22498592176       s
+ Arc, ik      2416001 Nk     4004001 time left   1191.00001035258       s
+ Arc, ik      2419201 Nk     4004001 time left   1238.12501844950       s
+ Arc, ik      2422401 Nk     4004001 time left   1235.62499539694       s
+ Arc, ik      2425601 Nk     4004001 time left   1183.80001029000       s
+ Arc, ik      2428801 Nk     4004001 time left   1132.17497927835       s
+ Arc, ik      2432001 Nk     4004001 time left   1179.00001024827       s
+ Arc, ik      2435201 Nk     4004001 time left   1176.60001022741       s
+ Arc, ik      2438401 Nk     4004001 time left   1418.82500473876       s
+ Arc, ik      2441601 Nk     4004001 time left   1122.97500218265       s
+ Arc, ik      2444801 Nk     4004001 time left   1218.12499546213       s
+ Arc, ik      2448001 Nk     4004001 time left   1215.62499547144       s
+ Arc, ik      2451201 Nk     4004001 time left   1164.60001012310       s
+ Arc, ik      2454401 Nk     4004001 time left   1404.32498214068       s
+ Arc, ik      2457601 Nk     4004001 time left   1063.14999423921       s
+ Arc, ik      2460801 Nk     4004001 time left   1157.39998760400       s
+ Arc, ik      2464001 Nk     4004001 time left   1154.99998762971       s
+ Arc, ik      2467201 Nk     4004001 time left   1104.57500214688       s
+ Arc, ik      2470401 Nk     4004001 time left   1437.74999018060       s
+ Arc, ik      2473601 Nk     4004001 time left   1147.80000997707       s
+ Arc, ik      2476801 Nk     4004001 time left   1097.67500213347       s
+ Arc, ik      2480001 Nk     4004001 time left   1381.12498243572       s
+ Arc, ik      2483201 Nk     4004001 time left   1140.60000991449       s
+ Arc, ik      2486401 Nk     4004001 time left   1375.32500459347       s
+ Arc, ik      2489601 Nk     4004001 time left   1041.15001639584       s
+ Arc, ik      2492801 Nk     4004001 time left   1133.39998786105       s
+ Arc, ik      2496001 Nk     4004001 time left   1130.99998788675       s
+ Arc, ik      2499201 Nk     4004001 time left   940.500000875909       s
+ Arc, ik      2502401 Nk     4004001 time left   1454.67499807710       s
+ Arc, ik      2505601 Nk     4004001 time left   1030.14999441803       s
+ Arc, ik      2508801 Nk     4004001 time left   887.774993211497       s
+ Arc, ik      2512001 Nk     4004001 time left   1165.62499565771       s
+ Arc, ik      2515201 Nk     4004001 time left   837.450007279404       s
+ Arc, ik      2518401 Nk     4004001 time left   1299.89999688696       s
+ Arc, ik      2521601 Nk     4004001 time left   787.524999654852       s
+ Arc, ik      2524801 Nk     4004001 time left   785.824999655597       s
+ Arc, ik      2528001 Nk     4004001 time left   922.500000859145       s
+ Arc, ik      2531201 Nk     4004001 time left   828.449985769112       s
+ Arc, ik      2534401 Nk     4004001 time left   1377.75001197588       s
+ Arc, ik      2537601 Nk     4004001 time left   824.849985830951       s
+ Arc, ik      2540801 Nk     4004001 time left   1051.67500204407       s
+ Arc, ik      2544001 Nk     4004001 time left   1049.37500203960       s
+ Arc, ik      2547201 Nk     4004001 time left   956.024987110868       s
+ Arc, ik      2550401 Nk     4004001 time left   1181.05000321520       s
+ Arc, ik      2553601 Nk     4004001 time left   1042.47500202619       s
+ Arc, ik      2556801 Nk     4004001 time left   994.949994608760       s
+ Arc, ik      2560001 Nk     4004001 time left   947.624987224117       s
+ Arc, ik      2563201 Nk     4004001 time left   810.449986078311       s
+ Arc, ik      2566401 Nk     4004001 time left   1168.05000317981       s
+ Arc, ik      2569601 Nk     4004001 time left   986.150015529711       s
+ Arc, ik      2572801 Nk     4004001 time left   805.049986171070       s
+ Arc, ik      2576001 Nk     4004001 time left   1115.62499584397       s
+ Arc, ik      2579201 Nk     4004001 time left   1024.07500199042       s
+ Arc, ik      2582401 Nk     4004001 time left   1554.87498593284       s
+ Arc, ik      2585601 Nk     4004001 time left   975.149994716048       s
+ Arc, ik      2588801 Nk     4004001 time left   928.725008072797       s
+ Arc, ik      2592001 Nk     4004001 time left   926.625008054543       s
+ Arc, ik      2595201 Nk     4004001 time left   924.525008036289       s
+ Arc, ik      2598401 Nk     4004001 time left   1142.05000310903       s
+ Arc, ik      2601601 Nk     4004001 time left   964.150015183259       s
+ Arc, ik      2604801 Nk     4004001 time left   961.949994787574       s
+ Arc, ik      2608001 Nk     4004001 time left   1221.49999707472       s
+ Arc, ik      2611201 Nk     4004001 time left   783.450006810017       s
+ Arc, ik      2614401 Nk     4004001 time left   1302.75001132395       s
+ Arc, ik      2617601 Nk     4004001 time left   953.150015010033       s
+ Arc, ik      2620801 Nk     4004001 time left   778.050006763078       s
+ Arc, ik      2624001 Nk     4004001 time left   905.624987790361       s
+ Arc, ik      2627201 Nk     4004001 time left   946.549994871020       s
+ Arc, ik      2630401 Nk     4004001 time left   1073.12499600230       s
+ Arc, ik      2633601 Nk     4004001 time left   942.149994894862       s
+ Arc, ik      2636801 Nk     4004001 time left   897.225007798988       s
+ Arc, ik      2640001 Nk     4004001 time left   980.375001905486       s
+ Arc, ik      2643201 Nk     4004001 time left   893.024987960234       s
+ Arc, ik      2646401 Nk     4004001 time left   1272.74999130750       s
+ Arc, ik      2649601 Nk     4004001 time left   804.175013559870       s
+ Arc, ik      2652801 Nk     4004001 time left   971.175001887605       s
+ Arc, ik      2656001 Nk     4004001 time left   926.749994978309       s
+ Arc, ik      2659201 Nk     4004001 time left   924.549994990230       s
+ Arc, ik      2662401 Nk     4004001 time left   1090.05000296747       s
+ Arc, ik      2665601 Nk     4004001 time left   961.974982393440       s
+ Arc, ik      2668801 Nk     4004001 time left   751.050006528385       s
+ Arc, ik      2672001 Nk     4004001 time left   915.749995037913       s
+ Arc, ik      2675201 Nk     4004001 time left   913.549995049834       s
+ Arc, ik      2678401 Nk     4004001 time left   1242.75001080241       s
+ Arc, ik      2681601 Nk     4004001 time left   909.149995073676       s
+ Arc, ik      2684801 Nk     4004001 time left   742.049987253267       s
+ Arc, ik      2688001 Nk     4004001 time left   740.250006434508       s
+ Arc, ik      2691201 Nk     4004001 time left   902.549995109439       s
+ Arc, ik      2694401 Nk     4004001 time left   1227.75001067203       s
+ Arc, ik      2697601 Nk     4004001 time left   938.975001825020       s
+ Arc, ik      2700801 Nk     4004001 time left   692.324999696575       s
+ Arc, ik      2704001 Nk     4004001 time left   853.125007415656       s
+ Arc, ik      2707201 Nk     4004001 time left   891.549995169044       s
+ Arc, ik      2710401 Nk     4004001 time left   1172.32500391547       s
+ Arc, ik      2713601 Nk     4004001 time left   766.174994141329       s
+ Arc, ik      2716801 Nk     4004001 time left   884.949995204806       s
+ Arc, ik      2720001 Nk     4004001 time left   882.749995216727       s
+ Arc, ik      2723201 Nk     4004001 time left   880.549995228648       s
+ Arc, ik      2726401 Nk     4004001 time left   1157.82500386704       s
+ Arc, ik      2729601 Nk     4004001 time left   756.675012758933       s
+ Arc, ik      2732801 Nk     4004001 time left   675.324999704026       s
+ Arc, ik      2736001 Nk     4004001 time left   673.624999704771       s
+ Arc, ik      2739201 Nk     4004001 time left   869.550013693515       s
+ Arc, ik      2742401 Nk     4004001 time left   985.624996328261       s
+ Arc, ik      2745601 Nk     4004001 time left   865.150013624225       s
+ Arc, ik      2748801 Nk     4004001 time left   706.049987871666       s
+ Arc, ik      2752001 Nk     4004001 time left   704.249987902585       s
+ Arc, ik      2755201 Nk     4004001 time left   858.550013520289       s
+ Arc, ik      2758401 Nk     4004001 time left   1128.82498564431       s
+ Arc, ik      2761601 Nk     4004001 time left   892.975001735613       s
+ Arc, ik      2764801 Nk     4004001 time left   851.949995383620       s
+ Arc, ik      2768001 Nk     4004001 time left   695.250006043352       s
+ Arc, ik      2771201 Nk     4004001 time left   693.449988088105       s
+ Arc, ik      2774401 Nk     4004001 time left   1114.32498582872       s
+ Arc, ik      2777601 Nk     4004001 time left   843.149995431304       s
+ Arc, ik      2780801 Nk     4004001 time left   879.175001708791       s
+ Arc, ik      2784001 Nk     4004001 time left   724.374994460959       s
+ Arc, ik      2787201 Nk     4004001 time left   912.599990225863       s
+ Arc, ik      2790401 Nk     4004001 time left   1023.97500890074       s
+ Arc, ik      2793601 Nk     4004001 time left   718.674994504545       s
+ Arc, ik      2796801 Nk     4004001 time left   792.225006886292       s
+ Arc, ik      2800001 Nk     4004001 time left   677.250005886890       s
+ Arc, ik      2803201 Nk     4004001 time left   675.450005871244       s
+ Arc, ik      2806401 Nk     4004001 time left   898.199990380090       s
+ Arc, ik      2809601 Nk     4004001 time left   821.149995550513       s
+ Arc, ik      2812801 Nk     4004001 time left   818.949995562434       s
+ Arc, ik      2816001 Nk     4004001 time left   816.749995574355       s
+ Arc, ik      2819201 Nk     4004001 time left   777.524989517406       s
+ Arc, ik      2822401 Nk     4004001 time left   1144.67499848688       s
+ Arc, ik      2825601 Nk     4004001 time left   846.975001646206       s
+ Arc, ik      2828801 Nk     4004001 time left   771.224989602342       s
+ Arc, ik      2832001 Nk     4004001 time left   549.375004775357       s
+ Arc, ik      2835201 Nk     4004001 time left   803.549995645881       s
+ Arc, ik      2838401 Nk     4004001 time left   1019.89999755751       s
+ Arc, ik      2841601 Nk     4004001 time left   762.825006630737       s
+ Arc, ik      2844801 Nk     4004001 time left   760.724989743903       s
+ Arc, ik      2848001 Nk     4004001 time left   794.750012515578       s
+ Arc, ik      2851201 Nk     4004001 time left   792.549995705485       s
+ Arc, ik      2854401 Nk     4004001 time left   934.049985813908       s
+ Arc, ik      2857601 Nk     4004001 time left   823.975001601502       s
+ Arc, ik      2860801 Nk     4004001 time left   607.324999733828       s
+ Arc, ik      2864001 Nk     4004001 time left   641.249988984782       s
+ Arc, ik      2867201 Nk     4004001 time left   674.974994838703       s
+ Arc, ik      2870401 Nk     4004001 time left   885.625013196841       s
+ Arc, ik      2873601 Nk     4004001 time left   635.849989077542       s
+ Arc, ik      2876801 Nk     4004001 time left   774.950012203772       s
+ Arc, ik      2880001 Nk     4004001 time left   632.250005495735       s
+ Arc, ik      2883201 Nk     4004001 time left   630.450005480088       s
+ Arc, ik      2886401 Nk     4004001 time left   942.974991933443       s
+ Arc, ik      2889601 Nk     4004001 time left   626.850005448796       s
+ Arc, ik      2892801 Nk     4004001 time left   694.500000646804       s
+ Arc, ik      2896001 Nk     4004001 time left   623.250005417503       s
+ Arc, ik      2899201 Nk     4004001 time left   725.024990225211       s
+ Arc, ik      2902401 Nk     4004001 time left   860.624996793922       s
+ Arc, ik      2905601 Nk     4004001 time left   755.149995908141       s
+ Arc, ik      2908801 Nk     4004001 time left   581.824999745004       s
+ Arc, ik      2912001 Nk     4004001 time left   545.999994152226       s
+ Arc, ik      2915201 Nk     4004001 time left   612.450005323626       s
+ Arc, ik      2918401 Nk     4004001 time left   882.050002401229       s
+ Arc, ik      2921601 Nk     4004001 time left   575.024999747984       s
+ Arc, ik      2924801 Nk     4004001 time left   607.050005276687       s
+ Arc, ik      2928001 Nk     4004001 time left   739.749995991588       s
+ Arc, ik      2931201 Nk     4004001 time left   603.450005245395       s
+ Arc, ik      2934401 Nk     4004001 time left   902.475007844623       s
+ Arc, ik      2937601 Nk     4004001 time left   733.149996027350       s
+ Arc, ik      2940801 Nk     4004001 time left   730.949996039271       s
+ Arc, ik      2944001 Nk     4004001 time left   662.500000617001       s
+ Arc, ik      2947201 Nk     4004001 time left   693.525006028358       s
+ Arc, ik      2950401 Nk     4004001 time left   823.124996933620       s
+ Arc, ik      2953601 Nk     4004001 time left   787.799991562497       s
+ Arc, ik      2956801 Nk     4004001 time left   719.949996098876       s
+ Arc, ik      2960001 Nk     4004001 time left   685.125005955342       s
+ Arc, ik      2963201 Nk     4004001 time left   650.500000605825       s
+ Arc, ik      2966401 Nk     4004001 time left   972.749993356410       s
+ Arc, ik      2969601 Nk     4004001 time left   775.800006743520       s
+ Arc, ik      2972801 Nk     4004001 time left   708.949996158481       s
+ Arc, ik      2976001 Nk     4004001 time left   578.250005026348       s
+ Arc, ik      2979201 Nk     4004001 time left   704.550011095125       s
+ Arc, ik      2982401 Nk     4004001 time left   702.350011060480       s
+ Arc, ik      2985601 Nk     4004001 time left   572.850004979409       s
+ Arc, ik      2988801 Nk     4004001 time left   571.050004963763       s
+ Arc, ik      2992001 Nk     4004001 time left   695.749996230006       s
+ Arc, ik      2995201 Nk     4004001 time left   693.549996241927       s
+ Arc, ik      2998401 Nk     4004001 time left   785.624997073319       s
+ Arc, ik      3001601 Nk     4004001 time left   720.475001400337       s
+ Arc, ik      3004801 Nk     4004001 time left   686.949996277690       s
+ Arc, ik      3008001 Nk     4004001 time left   684.750010783318       s
+ Arc, ik      3011201 Nk     4004001 time left   620.500000577886       s
+ Arc, ik      3014401 Nk     4004001 time left   773.124997119885       s
+ Arc, ik      3017601 Nk     4004001 time left   554.849990468938       s
+ Arc, ik      3020801 Nk     4004001 time left   583.775009843521       s
+ Arc, ik      3024001 Nk     4004001 time left   673.749996349216       s
+ Arc, ik      3027201 Nk     4004001 time left   702.075001364574       s
+ Arc, ik      3030401 Nk     4004001 time left   760.624997166451       s
+ Arc, ik      3033601 Nk     4004001 time left   545.850004744716       s
+ Arc, ik      3036801 Nk     4004001 time left   876.524988852907       s
+ Arc, ik      3040001 Nk     4004001 time left   542.250004713424       s
+ Arc, ik      3043201 Nk     4004001 time left   510.424999776296       s
+ Arc, ik      3046401 Nk     4004001 time left   748.124997213017       s
+ Arc, ik      3049601 Nk     4004001 time left   656.149996444583       s
+ Arc, ik      3052801 Nk     4004001 time left   594.500000553671       s
+ Arc, ik      3056001 Nk     4004001 time left   651.749996468425       s
+ Arc, ik      3059201 Nk     4004001 time left   620.025005389471       s
+ Arc, ik      3062401 Nk     4004001 time left   706.200006138533       s
+ Arc, ik      3065601 Nk     4004001 time left   674.475001310930       s
+ Arc, ik      3068801 Nk     4004001 time left   730.624997278210       s
+ Arc, ik      3072001 Nk     4004001 time left   436.875003797468       s
+ Arc, ik      3075201 Nk     4004001 time left   638.549996539950       s
+ Arc, ik      3078401 Nk     4004001 time left   694.200006034225       s
+ Arc, ik      3081601 Nk     4004001 time left   662.975001288578       s
+ Arc, ik      3084801 Nk     4004001 time left   660.675001284108       s
+ Arc, ik      3088001 Nk     4004001 time left   515.250004478730       s
+ Arc, ik      3091201 Nk     4004001 time left   627.550009882543       s
+ Arc, ik      3094401 Nk     4004001 time left   682.200005929917       s
+ Arc, ik      3097601 Nk     4004001 time left   481.524999788962       s
+ Arc, ik      3100801 Nk     4004001 time left   564.500000525732       s
+ Arc, ik      3104001 Nk     4004001 time left   703.124997380655       s
+ Arc, ik      3107201 Nk     4004001 time left   644.575001252815       s
+ Arc, ik      3110401 Nk     4004001 time left   670.200005825609       s
+ Arc, ik      3113601 Nk     4004001 time left   639.975001243874       s
+ Arc, ik      3116801 Nk     4004001 time left   665.400005783886       s
+ Arc, ik      3120001 Nk     4004001 time left   469.624999794178       s
+ Arc, ik      3123201 Nk     4004001 time left   578.025005024392       s
+ Arc, ik      3126401 Nk     4004001 time left   630.775001225993       s
+ Arc, ik      3129601 Nk     4004001 time left   546.500000508968       s
+ Arc, ik      3132801 Nk     4004001 time left   653.399993001949       s
+ Arc, ik      3136001 Nk     4004001 time left   623.875001212582       s
+ Arc, ik      3139201 Nk     4004001 time left   594.549996778369       s
+ Arc, ik      3142401 Nk     4004001 time left   780.825002607889       s
+ Arc, ik      3145601 Nk     4004001 time left   482.850004197098       s
+ Arc, ik      3148801 Nk     4004001 time left   668.124997511040       s
+ Arc, ik      3152001 Nk     4004001 time left   692.250001884531       s
+ Arc, ik      3155201 Nk     4004001 time left   610.074988834094       s
+ Arc, ik      3158401 Nk     4004001 time left   660.624997538980       s
+ Arc, ik      3161601 Nk     4004001 time left   579.149996861815       s
+ Arc, ik      3164801 Nk     4004001 time left   629.399993258994       s
+ Arc, ik      3168001 Nk     4004001 time left   470.250004087575       s
+ Arc, ik      3171201 Nk     4004001 time left   494.475008337758       s
+ Arc, ik      3174401 Nk     4004001 time left   622.200005408376       s
+ Arc, ik      3177601 Nk     4004001 time left   593.975001154467       s
+ Arc, ik      3180801 Nk     4004001 time left   488.774996262509       s
+ Arc, ik      3184001 Nk     4004001 time left   563.750008877832       s
+ Arc, ik      3187201 Nk     4004001 time left   561.549996957183       s
+ Arc, ik      3190401 Nk     4004001 time left   559.350008808542       s
+ Arc, ik      3193601 Nk     4004001 time left   557.149996981025       s
+ Arc, ik      3196801 Nk     4004001 time left   681.075005920138       s
+ Arc, ik      3200001 Nk     4004001 time left   552.749997004867       s
+ Arc, ik      3203201 Nk     4004001 time left   550.549997016788       s
+ Arc, ik      3206401 Nk     4004001 time left   598.199993593153       s
+ Arc, ik      3209601 Nk     4004001 time left   422.024999815039       s
+ Arc, ik      3212801 Nk     4004001 time left   568.675001105294       s
+ Arc, ik      3216001 Nk     4004001 time left   566.375001100823       s
+ Arc, ik      3219201 Nk     4004001 time left   539.549997076392       s
+ Arc, ik      3222401 Nk     4004001 time left   586.200005095452       s
+ Arc, ik      3225601 Nk     4004001 time left   535.150008427445       s
+ Arc, ik      3228801 Nk     4004001 time left   581.399993773084       s
+ Arc, ik      3232001 Nk     4004001 time left   506.624993169680       s
+ Arc, ik      3235201 Nk     4004001 time left   432.450003759004       s
+ Arc, ik      3238401 Nk     4004001 time left   598.124997771811       s
+ Arc, ik      3241601 Nk     4004001 time left   524.149997159839       s
+ Arc, ik      3244801 Nk     4004001 time left   569.400004949421       s
+ Arc, ik      3248001 Nk     4004001 time left   448.875007568859       s
+ Arc, ik      3251201 Nk     4004001 time left   635.175005521160       s
+ Arc, ik      3254401 Nk     4004001 time left   421.649992757011       s
+ Arc, ik      3257601 Nk     4004001 time left   513.149997219443       s
+ Arc, ik      3260801 Nk     4004001 time left   696.750006056391       s
+ Arc, ik      3264001 Nk     4004001 time left   508.750008011702       s
+ Arc, ik      3267201 Nk     4004001 time left   483.524993481115       s
+ Arc, ik      3270401 Nk     4004001 time left   412.650003586896       s
+ Arc, ik      3273601 Nk     4004001 time left   433.675007312559       s
+ Arc, ik      3276801 Nk     4004001 time left   636.299998476170       s
+ Arc, ik      3280001 Nk     4004001 time left   429.874996712897       s
+ Arc, ik      3283201 Nk     4004001 time left   495.550007803831       s
+ Arc, ik      3286401 Nk     4004001 time left   515.775001002476       s
+ Arc, ik      3289601 Nk     4004001 time left   491.149997338653       s
+ Arc, ik      3292801 Nk     4004001 time left   577.850001573097       s
+ Arc, ik      3296001 Nk     4004001 time left   398.250003461726       s
+ Arc, ik      3299201 Nk     4004001 time left   418.474996800069       s
+ Arc, ik      3302401 Nk     4004001 time left   438.500000408385       s
+ Arc, ik      3305601 Nk     4004001 time left   480.149997398257       s
+ Arc, ik      3308801 Nk     4004001 time left   651.749995548744       s
+ Arc, ik      3312001 Nk     4004001 time left   389.249993313570       s
+ Arc, ik      3315201 Nk     4004001 time left   473.549997434020       s
+ Arc, ik      3318401 Nk     4004001 time left   385.650003352202       s
+ Arc, ik      3321601 Nk     4004001 time left   490.475000953302       s
+ Arc, ik      3324801 Nk     4004001 time left   1018.79999897210       s
+ Arc, ik      3328001 Nk     4004001 time left   464.750007318798       s
+ Arc, ik      3331201 Nk     4004001 time left   399.474996945355       s
+ Arc, ik      3334401 Nk     4004001 time left   481.274991191458       s
+ Arc, ik      3337601 Nk     4004001 time left   374.849993560929       s
+ Arc, ik      3340801 Nk     4004001 time left   1077.70000293385       s
+ Arc, ik      3344001 Nk     4004001 time left   474.375000922009       s
+ Arc, ik      3347201 Nk     4004001 time left   451.549997553229       s
+ Arc, ik      3350401 Nk     4004001 time left   367.650003195740       s
+ Arc, ik      3353601 Nk     4004001 time left   467.475000908598       s
+ Arc, ik      3356801 Nk     4004001 time left   1031.47499954794       s
+ Arc, ik      3360001 Nk     4004001 time left   442.749997600913       s
+ Arc, ik      3363201 Nk     4004001 time left   340.424999850802       s
+ Arc, ik      3366401 Nk     4004001 time left   438.349997624755       s
+ Arc, ik      3369601 Nk     4004001 time left   356.850003101863       s
+ Arc, ik      3372801 Nk     4004001 time left   1104.59999735467       s
+ Arc, ik      3376001 Nk     4004001 time left   333.624999853782       s
+ Arc, ik      3379201 Nk     4004001 time left   429.549997672439       s
+ Arc, ik      3382401 Nk     4004001 time left   407.925003545824       s
+ Arc, ik      3385601 Nk     4004001 time left   386.500000359956       s
+ Arc, ik      3388801 Nk     4004001 time left   1095.82500057295       s
+ Arc, ik      3392001 Nk     4004001 time left   401.625003491063       s
+ Arc, ik      3395201 Nk     4004001 time left   399.525003472809       s
+ Arc, ik      3398401 Nk     4004001 time left   340.650002961047       s
+ Arc, ik      3401601 Nk     4004001 time left   320.024999859743       s
+ Arc, ik      3404801 Nk     4004001 time left   1029.87500313902       s
+ Arc, ik      3408001 Nk     4004001 time left   335.250002914108       s
+ Arc, ik      3411201 Nk     4004001 time left   407.549997791648       s
+ Arc, ik      3414401 Nk     4004001 time left   331.649994303007       s
+ Arc, ik      3417601 Nk     4004001 time left   329.850002867170       s
+ Arc, ik      3420801 Nk     4004001 time left   1129.94999850634       s
+ Arc, ik      3424001 Nk     4004001 time left   326.250002835877       s
+ Arc, ik      3427201 Nk     4004001 time left   396.549997851253       s
+ Arc, ik      3430401 Nk     4004001 time left   394.349997863173       s
+ Arc, ik      3433601 Nk     4004001 time left   392.149997875094       s
+ Arc, ik      3436801 Nk     4004001 time left   1028.04999517975       s
+ Arc, ik      3440001 Nk     4004001 time left   317.250002757646       s
+ Arc, ik      3443201 Nk     4004001 time left   368.024995038286       s
+ Arc, ik      3446401 Nk     4004001 time left   400.775000778958       s
+ Arc, ik      3449601 Nk     4004001 time left   311.849994643126       s
+ Arc, ik      3452801 Nk     4004001 time left   981.825000513345       s
+ Arc, ik      3456001 Nk     4004001 time left   308.250002679415       s
+ Arc, ik      3459201 Nk     4004001 time left   374.550005898345       s
+ Arc, ik      3462401 Nk     4004001 time left   372.350005863700       s
+ Arc, ik      3465601 Nk     4004001 time left   302.849994797725       s
+ Arc, ik      3468801 Nk     4004001 time left   970.050003239885       s
+ Arc, ik      3472001 Nk     4004001 time left   382.375000743195       s
+ Arc, ik      3475201 Nk     4004001 time left   380.075000738725       s
+ Arc, ik      3478401 Nk     4004001 time left   344.925002998207       s
+ Arc, ik      3481601 Nk     4004001 time left   293.849994952325       s
+ Arc, ik      3484801 Nk     4004001 time left   989.724996010773       s
+ Arc, ik      3488001 Nk     4004001 time left   354.749998077750       s
+ Arc, ik      3491201 Nk     4004001 time left   352.550005551893       s
+ Arc, ik      3494401 Nk     4004001 time left   286.650002491660       s
+ Arc, ik      3497601 Nk     4004001 time left   379.800003301352       s
+ Arc, ik      3500801 Nk     4004001 time left   896.325000468642       s
+ Arc, ik      3504001 Nk     4004001 time left   296.875005005859       s
+ Arc, ik      3507201 Nk     4004001 time left   279.450002429076       s
+ Arc, ik      3510401 Nk     4004001 time left   262.224999885075       s
+ Arc, ik      3513601 Nk     4004001 time left   275.850002397783       s
+ Arc, ik      3516801 Nk     4004001 time left   959.175001247786       s
+ Arc, ik      3520001 Nk     4004001 time left   272.250002366491       s
+ Arc, ik      3523201 Nk     4004001 time left   300.500000279862       s
+ Arc, ik      3526401 Nk     4004001 time left   328.349998220801       s
+ Arc, ik      3529601 Nk     4004001 time left   326.150005136151       s
+ Arc, ik      3532801 Nk     4004001 time left   912.949998793192       s
+ Arc, ik      3536001 Nk     4004001 time left   263.250002288260       s
+ Arc, ik      3539201 Nk     4004001 time left   246.924999891780       s
+ Arc, ik      3542401 Nk     4004001 time left   245.224999892525       s
+ Arc, ik      3545601 Nk     4004001 time left   257.849995570723       s
+ Arc, ik      3548801 Nk     4004001 time left   867.724996502511       s
+ Arc, ik      3552001 Nk     4004001 time left   254.250002210028       s
+ Arc, ik      3555201 Nk     4004001 time left   322.575000626966       s
+ Arc, ik      3558401 Nk     4004001 time left   320.275000622496       s
+ Arc, ik      3561601 Nk     4004001 time left   290.325002523605       s
+ Arc, ik      3564801 Nk     4004001 time left   809.775004908442       s
+ Arc, ik      3568001 Nk     4004001 time left   245.250002131797       s
+ Arc, ik      3571201 Nk     4004001 time left   297.549998387694       s
+ Arc, ik      3574401 Nk     4004001 time left   228.224999899976       s
+ Arc, ik      3577601 Nk     4004001 time left   266.500000248197       s
+ Arc, ik      3580801 Nk     4004001 time left   740.600004384760       s
+ Arc, ik      3584001 Nk     4004001 time left   301.875000586733       s
+ Arc, ik      3587201 Nk     4004001 time left   234.449995972682       s
+ Arc, ik      3590401 Nk     4004001 time left   284.349998459220       s
+ Arc, ik      3593601 Nk     4004001 time left   218.024999904446       s
+ Arc, ik      3596801 Nk     4004001 time left   763.500000711065       s
+ Arc, ik      3600001 Nk     4004001 time left   239.874998165760       s
+ Arc, ik      3603201 Nk     4004001 time left   237.974998180289       s
+ Arc, ik      3606401 Nk     4004001 time left   236.074998194817       s
+ Arc, ik      3609601 Nk     4004001 time left   221.849996189121       s
+ Arc, ik      3612801 Nk     4004001 time left   672.374996356666       s
+ Arc, ik      3616001 Nk     4004001 time left   266.749998554587       s
+ Arc, ik      3619201 Nk     4004001 time left   180.375001567882       s
+ Arc, ik      3622401 Nk     4004001 time left   214.650001865812       s
+ Arc, ik      3625601 Nk     4004001 time left   271.975000528619       s
+ Arc, ik      3628801 Nk     4004001 time left   703.500000655185       s
+ Arc, ik      3632001 Nk     4004001 time left   209.250001818873       s
+ Arc, ik      3635201 Nk     4004001 time left   207.449996436480       s
+ Arc, ik      3638401 Nk     4004001 time left   262.775000510737       s
+ Arc, ik      3641601 Nk     4004001 time left   249.149998649955       s
+ Arc, ik      3644801 Nk     4004001 time left   639.825000334531       s
+ Arc, ik      3648001 Nk     4004001 time left   166.875001450535       s
+ Arc, ik      3651201 Nk     4004001 time left   231.524996878579       s
+ Arc, ik      3654401 Nk     4004001 time left   240.349998697639       s
+ Arc, ik      3657601 Nk     4004001 time left   173.199998144992       s
+ Arc, ik      3660801 Nk     4004001 time left   654.224997363053       s
+ Arc, ik      3664001 Nk     4004001 time left   223.125001939479       s
+ Arc, ik      3667201 Nk     4004001 time left   231.549998745322       s
+ Arc, ik      3670401 Nk     4004001 time left   229.349998757243       s
+ Arc, ik      3673601 Nk     4004001 time left   206.500000192318       s
+ Arc, ik      3676801 Nk     4004001 time left   623.724997485988       s
+ Arc, ik      3680001 Nk     4004001 time left   212.624997133389       s
+ Arc, ik      3683201 Nk     4004001 time left   170.424999925308       s
+ Arc, ik      3686401 Nk     4004001 time left   178.650001552887       s
+ Arc, ik      3689601 Nk     4004001 time left   206.324997218326       s
+ Arc, ik      3692801 Nk     4004001 time left   583.500000543427       s
+ Arc, ik      3696001 Nk     4004001 time left   182.874998601619       s
+ Arc, ik      3699201 Nk     4004001 time left   161.924999929033       s
+ Arc, ik      3702401 Nk     4004001 time left   207.349998876452       s
+ Arc, ik      3705601 Nk     4004001 time left   167.850001459010       s
+ Arc, ik      3708801 Nk     4004001 time left   562.724997731857       s
+ Arc, ik      3712001 Nk     4004001 time left   191.625001665670       s
+ Arc, ik      3715201 Nk     4004001 time left   162.450001412071       s
+ Arc, ik      3718401 Nk     4004001 time left   169.574998703320       s
+ Arc, ik      3721601 Nk     4004001 time left   194.150003057439       s
+ Arc, ik      3724801 Nk     4004001 time left   523.500000487547       s
+ Arc, ik      3728001 Nk     4004001 time left   181.124997558072       s
+ Arc, ik      3731201 Nk     4004001 time left   179.025001556147       s
+ Arc, ik      3734401 Nk     4004001 time left   185.350002918858       s
+ Arc, ik      3737601 Nk     4004001 time left   166.499996278435       s
+ Arc, ik      3740801 Nk     4004001 time left   468.825000245124       s
+ Arc, ik      3744001 Nk     4004001 time left   146.249997487757       s
+ Arc, ik      3747201 Nk     4004001 time left   160.500000149477       s
+ Arc, ik      3750401 Nk     4004001 time left   166.424997756258       s
+ Arc, ik      3753601 Nk     4004001 time left   179.975000349805       s
+ Arc, ik      3756801 Nk     4004001 time left   432.599998963997       s
+ Arc, ik      3760001 Nk     4004001 time left   175.375000340864       s
+ Arc, ik      3763201 Nk     4004001 time left   135.449997673277       s
+ Arc, ik      3766401 Nk     4004001 time left   133.650001161732       s
+ Arc, ik      3769601 Nk     4004001 time left   146.500000136439       s
+ Arc, ik      3772801 Nk     4004001 time left   397.375001211185       s
+ Arc, ik      3776001 Nk     4004001 time left   128.249997796956       s
+ Arc, ik      3779201 Nk     4004001 time left   154.549999162555       s
+ Arc, ik      3782401 Nk     4004001 time left   152.349999174476       s
+ Arc, ik      3785601 Nk     4004001 time left   136.500000127126       s
+ Arc, ik      3788801 Nk     4004001 time left   363.150000025053       s
+ Arc, ik      3792001 Nk     4004001 time left   119.249997951556       s
+ Arc, ik      3795201 Nk     4004001 time left   117.450001020916       s
+ Arc, ik      3798401 Nk     4004001 time left   141.349999234080       s
+ Arc, ik      3801601 Nk     4004001 time left   107.524999952875       s
+ Arc, ik      3804801 Nk     4004001 time left   336.150000023190       s
+ Arc, ik      3808001 Nk     4004001 time left   128.625001118053       s
+ Arc, ik      3811201 Nk     4004001 time left   108.449998137075       s
+ Arc, ik      3814401 Nk     4004001 time left   124.425001081545       s
+ Arc, ik      3817601 Nk     4004001 time left   93.1999990018085       s
+ Arc, ik      3820801 Nk     4004001 time left   297.700000810437       s
+ Arc, ik      3824001 Nk     4004001 time left   140.625002095476       s
+ Arc, ik      3827201 Nk     4004001 time left   132.599998579826       s
+ Arc, ik      3830401 Nk     4004001 time left   92.2249999595806       s
+ Arc, ik      3833601 Nk     4004001 time left   117.149999365211       s
+ Arc, ik      3836801 Nk     4004001 time left   287.375000875909       s
+ Arc, ik      3840001 Nk     4004001 time left   117.875000229105       s
+ Arc, ik      3843201 Nk     4004001 time left   95.4750016098842       s
+ Arc, ik      3846401 Nk     4004001 time left   108.350001706276       s
+ Arc, ik      3849601 Nk     4004001 time left   106.149999424815       s
+ Arc, ik      3852801 Nk     4004001 time left   259.874998591840       s
+ Arc, ik      3856001 Nk     4004001 time left   106.375000206754       s
+ Arc, ik      3859201 Nk     4004001 time left   95.0250008259900       s
+ Arc, ik      3862401 Nk     4004001 time left   79.6499986317940       s
+ Arc, ik      3865601 Nk     4004001 time left   73.5249999677762       s
+ Arc, ik      3868801 Nk     4004001 time left   236.600001400802       s
+ Arc, ik      3872001 Nk     4004001 time left   98.9999989396892       s
+ Arc, ik      3875201 Nk     4004001 time left   108.675000944640       s
+ Arc, ik      3878401 Nk     4004001 time left   82.4250007164665       s
+ Arc, ik      3881601 Nk     4004001 time left   65.0249999715015       s
+ Arc, ik      3884801 Nk     4004001 time left   178.799999819603       s
+ Arc, ik      3888001 Nk     4004001 time left   83.3750001620501       s
+ Arc, ik      3891201 Nk     4004001 time left   84.6000007353723       s
+ Arc, ik      3894401 Nk     4004001 time left   75.3499995917082       s
+ Arc, ik      3897601 Nk     4004001 time left   59.8499989719130       s
+ Arc, ik      3900801 Nk     4004001 time left   145.124999759719       s
+ Arc, ik      3904001 Nk     4004001 time left   71.8750001396984       s
+ Arc, ik      3907201 Nk     4004001 time left   72.6000006310642       s
+ Arc, ik      3910401 Nk     4004001 time left   67.2749987686984       s
+ Arc, ik      3913601 Nk     4004001 time left   50.8500004420057       s
+ Arc, ik      3916801 Nk     4004001 time left   70.8500001928769       s
+ Arc, ik      3920001 Nk     4004001 time left   60.3750001173466       s
+ Arc, ik      3923201 Nk     4004001 time left   58.0750001128763       s
+ Arc, ik      3926401 Nk     4004001 time left   53.3499997109175       s
+ Arc, ik      3929601 Nk     4004001 time left   41.8500003637746       s
+ Arc, ik      3932801 Nk     4004001 time left   66.7500005802140       s
+ Arc, ik      3936001 Nk     4004001 time left   48.8750000949949       s
+ Arc, ik      3939201 Nk     4004001 time left   50.6249998114072       s
+ Arc, ik      3942401 Nk     4004001 time left   32.7249999856576       s
+ Arc, ik      3945601 Nk     4004001 time left   32.8499994357117       s
+ Arc, ik      3948801 Nk     4004001 time left   34.5000000321306       s
+ Arc, ik      3952001 Nk     4004001 time left   38.9999995823018       s
+ Arc, ik      3955201 Nk     4004001 time left   38.1249998579733       s
+ Arc, ik      3958401 Nk     4004001 time left   29.9249995965511       s
+ Arc, ik      3961601 Nk     4004001 time left   29.1500004590489       s
+ Arc, ik      3964801 Nk     4004001 time left   25.7250002236106       s
+ Arc, ik      3968001 Nk     4004001 time left   22.5000000209548       s
+ Arc, ik      3971201 Nk     4004001 time left   32.8000001260079       s
+ Arc, ik      3974401 Nk     4004001 time left   21.2750000413507       s
+ Arc, ik      3977601 Nk     4004001 time left   16.5000000153668       s
+ Arc, ik      3980801 Nk     4004001 time left   17.4000001512468       s
+ Arc, ik      3984001 Nk     4004001 time left   15.0000001303852       s
+ Arc, ik      3987201 Nk     4004001 time left   25.7249998161569       s
+ Arc, ik      3990401 Nk     4004001 time left   9.77500001899898       s
+ Arc, ik      3993601 Nk     4004001 time left   6.82499990798533       s
+ Arc, ik      3996801 Nk     4004001 time left   5.17500001005828       s
+ Arc, ik      4000001 Nk     4004001 time left   3.00000002607703       s
+ Arc, ik      4003201 Nk     4004001 time left   1.37500000419095       s
+ Ndim:           84
+ Nk1,Nk2,eta:         2001        2001  1.000000000000000E-003
+ Calculated surface density of state successfully
+ calculate spintexture successfully
+ Time cost for SlabArc is about         3454.690 s
+ End of calculating the surface arc
+  
+ Time cost for whole program is about         3455.487 s
+  
+  
+  =======================================================================
+  Congratulations! you finished the calculation.
+  I hope you could find something useful from this calculation.
+  If so, I would like to ask you to cite our this paper:
+  
+  WannierTools : An open-source software package for novel topological materials
+  QuanSheng Wu and ShengNan Zhang and Hai-Feng Song and Matthias Troyer and Alexey A. Soluyanov
+  Computer Physics Communications 224, 405 (2018)
+  https://doi.org/10.1016/j.cpc.2017.09.033
+  
+  For bugs, please report to wuquansheng@gmail.com                   
+  or wanniertools@groups.google.com.                 
+  More information could find on www.wanniertools.com            
+  See you next time :)
+  =======================================================================

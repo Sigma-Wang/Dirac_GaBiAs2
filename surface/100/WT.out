@@ -1,0 +1,916 @@
+ -----------------------------------------------------------------------
+  W            W            W              TTTTTTTTTTTTTTTTTTTT         
+   W          W W          W                        TT                  
+    W        W   W        W                         TT                  
+     W      W     W      W                          TT                  
+      W    W       W    W                           TT                  
+       W  W         W  W                            TT                  
+        WW           WW                             TT                  
+        W             W                             TT                  
+                                                                        
+                        Welcome to WannierTools.                       
+                             Version 2.5.1     
+                   Tools for novel topological materials.               
+                          Enjoy it and good luck.                       
+                           Author : QuanSheng Wu                        
+                        Email : wuquansheng@gmail.com                   
+               Find more information on www.wanniertools.com            
+ =======================================================================
+                                                                        
+ You are using    32 CPU cores
+  
+   
+ >>>Read some paramters from wt.in
+ You are using : TB     model
+ Tight-binding Hamiltonian FROM: Hr File
+ Is_Sparse_Hr=  F
+ Tight-binding Hamiltonian filename: wannier90_hr.dat         
+ System of particle: electron                 
+ Tight-binding Hamiltonian obtained from : VASP                     
+   
+ >>>Control parameters: 
+ BulkBand_line_calc                :  F
+ BulkFatBand_calc                  :  F
+ BulkBand_plane_calc               :  F
+ BulkBand_cube_calc                :  F
+ BulkBand_unfold_line_calc         :  F
+ BulkBand_unfold_plane_calc        :  F
+ BulkFS_calc                       :  F
+ BulkFS_Plane_calc                 :  F
+ BulkFS_plane_stack_calc           :  F
+ BulkGap_cube_calc                 :  F
+ BulkGap_plane_calc                :  F
+ SlabBand_calc                     :  F
+ SlabBandWaveFunc_calc             :  F
+ SlabSS_calc                       :  T
+ SlabArc_calc                      :  T
+ SlabSpintexture_calc              :  F
+ wanniercenter_calc                :  F
+ BerryPhase_calc                   :  F
+ BerryCurvature_calc               :  F
+ BerryCurvature_Cube_calc          :  F
+ BerryCurvature_slab_calc          :  F
+ Dos_calc                          :  F
+ Z2_3D_calc                        :  F
+ WeylChirality_calc                :  F
+ NLChirality_calc                  :  F
+ Chern_3D_calc                     :  F
+ MirrorChern_calc                  :  F
+ JDos_calc                         :  F
+ FindNodes_calc                    :  F
+ EffectiveMass_calc                :  F
+ AHC_calc                          :  F
+ Boltz_OHE_calc                    :  F
+ LOTO_correction                   :  F
+ OrbitalTexture_calc               :  F
+ OrbitalTexture_3D_calc            :  F
+ LandauLevel_k_calc                :  F
+ LandauLevel_B_calc                :  F
+ LandauLevel_wavefunction_calc     :  F
+ Fit_kp_calc                       :  F
+ DMFT_MAG_calc                     :  F
+ Translate_to_WS_calc              :  F
+ LandauLevel_kplane_calc           :  F
+ LandauLevel_k_dos_calc            :  F
+ LandauLevel_B_dos_calc            :  F
+ FermiLevel_calc                   :  F
+   
+ >>>System parameters: 
+ NumSlabs :    30
+ Nslab1 for ribbon  :     1
+ Nslab2 for ribbon  :     1
+ Number of Occupied bands:    12
+ Number of total electrons:   12.000000
+ With SOC or not in Hrfile:     1
+ Fermi energy (eV) :        3.480000
+ surf_onsite (eV):         0.000000
+ Add_Zeeman_Field:  F
+ Zeeman_energy_in_eV (eV):         0.000000
+ Electric_field_in_eVpA (eV/Angstrom):         0.000000
+ Symmetrical_Electric_field_in_eVpA (eV/Angstrom):         0.000000
+ Inner_symmetrical_Electric_Field:  F
+ ijmax :    10
+   
+ **Notes**: There are two ways to specify magnetic field.
+ 1. specify Bmagnitude, Btheta, Bphi
+ 2. specify Bx, By, Bz
+ Bmagnitude, Bx, By, Bz are real numbers in unit of Tesla. and Bx, By, Bz 
+ are in the cartesian coordinates. Btheta is the angle with z axial 
+  and Bphi is the angle with respect to x axial in the x-y plane
+  Btheta is in [0, 180], Bphi is in [0, 360).
+ If you specify both of them together, we will choose the first one.
+ If choose the first one, but not specify Btheta, Bphi, then 
+ by default we set Btheta=0, Bphi=0 which means B is along z direction.
+  
+  Warning: You didn't specify the magnitude of magnetic field.
+  
+ >>You did not specified the magnitude of magnetic field, 
+  and also didn't set Bx, By, Bz. So we will set the magnetic direction
+  from the settings of Btheta, Bphi.
+  If you even didn't set Btheta, Bphi, we will take the default value, 
+  Btheta=0, Bphi=0 which means B is along z direction
+ >>You didn't set Btheta, and we set it to 0.
+ >>You didn't set Bphi, and we set it to 0.
+ Bmagnitude (in Tesla) :        1.000000
+ Btheta, Bphi :        0.000000        0.000000
+ Bx, By, Bz (in Tesla) :        0.000000        0.000000        1.000000
+ B direction cosines :        0.000000        0.000000        1.000000
+   
+ >>>calculation parameters : 
+ E_arc :          0.00000
+ Eta_arc :          0.00500
+ Gap_threshold         0.00100
+ OmegaMin :         -1.20000
+ OmegaMax :          1.20000
+ OmegaNum :   2500
+ OmegaNum_unfold :    200
+ Nk1 :   1200
+ Nk2 :   1200
+ Nk3 :    300
+ NP number of principle layers  :      3
+ Tmin(Kelvin)  :        100.00000
+ Tmax(Kelvin)  :        100.00000
+ NumT  :      1
+ NBTau  :      1
+ Beta  :        100.00000
+ Nslice_BTau_Max  :   5000
+ BTauMax(Tesla.ps)         0.00000
+ Rcut    999999.00000
+ Magp               1
+ Magp_min               0
+ Magp_max               1
+ wcc_calc_tol         0.08000
+ wcc_neighbour_tol         0.30000
+ NumLCZVecs   400
+ NumSelectedEigenVals     0
+ NumRandomConfs:     1
+ Projection weight mode:NORMAL              
+  
+ We found LATTICE card
+>> lattice information (Angstrom)
+           a           b           c       alpha        beta       gamma
+    4.300141    4.300141    6.145861   90.000000   90.000000   90.000000
+ Three Lattice vectors of the unfolded cell: 
+    4.300141    0.000000    0.000000
+    0.000000    4.300141    0.000000
+    0.000000    0.000000    6.145861
+>> Reciprocal lattice information (1/Angstrom)
+           a           b           c       alpha        beta       gamma
+    1.461158    1.461158    1.022344   90.000000   90.000000   90.000000
+ Three reciprocal lattice vectors of the primitive cell: 
+    1.461158    0.000000    0.000000
+    0.000000    1.461158    0.000000
+    0.000000    0.000000    1.022344
+  
+ We found ATOM_POSITIONS card
+Origin_cell%Num_atoms    4
+  
+ Warning: You didn't specify the atom magnetic moment in the ATOMIC_POSITION car
+ d Or the format is wrong. So we set all the Atom-magnetic-moments to zero.
+ 
+>> Atom position and magnetic moment of Original lattice
+                                         Catesian                  Fractional(Direct)         Magnetic moment
+------------------------------------------------------------------------------------------------------------------
+ index  Atom Name            x           y           z           a           b           c      Mx      My      Mz
+------------------------------------------------------------------------------------------------------------------
+     1  Ga            2.150070    0.000000    4.460297    0.500000    0.000000    0.725740   0.000   0.000   0.000
+     2  Ga            0.000000    2.150070    1.685564    0.000000    0.500000    0.274260   0.000   0.000   0.000
+     3  Bi            0.000000    0.000000    0.000000    0.000000    0.000000    0.000000   0.000   0.000   0.000
+     4  As            2.150070    2.150070    3.072931    0.500000    0.500000    0.500000   0.000   0.000   0.000
+  
+ We found PROJECTORS card
+ >>Number of projectors per atoms:
+     4     4     3     3
+Ga      s       px      py      pz      
+Ga      s       px      py      pz      
+Bi      px      py      pz      
+As      px      py      pz      
+  
+ >> Wannier centers by default, in unit of reciprocal lattice vector
+ iwann        R1        R2        R3
+     1  0.500000  0.000000  0.725740
+     2  0.500000  0.000000  0.725740
+     3  0.500000  0.000000  0.725740
+     4  0.500000  0.000000  0.725740
+     5  0.000000  0.500000  0.274260
+     6  0.000000  0.500000  0.274260
+     7  0.000000  0.500000  0.274260
+     8  0.000000  0.500000  0.274260
+     9  0.000000  0.000000  0.000000
+    10  0.000000  0.000000  0.000000
+    11  0.000000  0.000000  0.000000
+    12  0.500000  0.500000  0.500000
+    13  0.500000  0.500000  0.500000
+    14  0.500000  0.500000  0.500000
+    15  0.500000  0.000000  0.725740
+    16  0.500000  0.000000  0.725740
+    17  0.500000  0.000000  0.725740
+    18  0.500000  0.000000  0.725740
+    19  0.000000  0.500000  0.274260
+    20  0.000000  0.500000  0.274260
+    21  0.000000  0.500000  0.274260
+    22  0.000000  0.500000  0.274260
+    23  0.000000  0.000000  0.000000
+    24  0.000000  0.000000  0.000000
+    25  0.000000  0.000000  0.000000
+    26  0.500000  0.500000  0.500000
+    27  0.500000  0.500000  0.500000
+    28  0.500000  0.500000  0.500000
+ We didn't found LATTICE_UNFOLD card, so it is the same as the unit cell.
+>> Folded lattice information (Angstrom)
+           a           b           c       alpha        beta       gamma
+    4.300141    4.300141    6.145861   90.000000   90.000000   90.000000
+ Three Lattice vectors of unfolded cell: 
+    4.300141    0.000000    0.000000
+    0.000000    4.300141    0.000000
+    0.000000    0.000000    6.145861
+>> Folded Reciprocal lattice information (1/Angstrom)
+           a           b           c       alpha        beta       gamma
+    1.461158    1.461158    1.022344   90.000000   90.000000   90.000000
+ Three reciprocal lattice vectors of unfolded cell: 
+    1.461158    0.000000    0.000000
+    0.000000    1.461158    0.000000
+    0.000000    0.000000    1.022344
+ 
+>> The relation between the original lattice and the unfolded lattice
+>> The cell volume ratio is:     1.000000
+>> The lattice constant a ratio is:     1.000000
+>> The lattice constant b ratio is:     1.000000
+>> The lattice constant c ratio is:     1.000000
+>> Origin_cell in unit of Folded_cell: R1      1.000000    0.000000    0.000000
+>> Origin_cell in unit of Folded_cell: R2      0.000000    1.000000    0.000000
+>> Origin_cell in unit of Folded_cell: R3      0.000000    0.000000    1.000000
+ 
+ 
+>>> Atom position and magnetic moment of Unfolded lattice
+                                         Catesian                  Fractional(Direct)         Magnetic moment
+------------------------------------------------------------------------------------------------------------------
+ index  Atom Name            x           y           z           a           b           c      Mx      My      Mz
+------------------------------------------------------------------------------------------------------------------
+     1  Ga            2.150070    0.000000    4.460297    0.500000    0.000000    0.725740   0.000   0.000   0.000
+     2  Ga            0.000000    2.150070    1.685564    0.000000    0.500000    0.274260   0.000   0.000   0.000
+     3  Bi            0.000000    0.000000    0.000000    0.000000    0.000000    0.000000   0.000   0.000   0.000
+     4  As            2.150070    2.150070    3.072931    0.500000    0.500000    0.500000   0.000   0.000   0.000
+  
+ We found SURFACE card
+ 
+>> new vectors to define the surface (in unit of lattice vector)
+ The 1st vector on surface     :    1.000000    0.000000    0.000000
+ The 2nd vector on surface     :    0.000000    0.000000    1.000000
+ The 3rd vector out of surface :    0.000000    0.000000    1.000000
+ 
+ Warnning: The Umatrix is wrongly set, the new cellvolume should be the same as the old ones. 
+ cell_volume vs cell_volume-new  113.6444    0.0000
+ However, don't worry, WannierTools will help you to find a suitable rotation matrix.
+ I am looking for new unit cell atuomatically: 
+   Congratulations, you got a unit cell that has 
+  the same volume as the original unit cell 
+  The unitary rotation matrix is : 
+     1.000     0.000     0.000
+     0.000     0.000     1.000
+     0.000    -1.000     0.000
+  
+ The lattice vectors for new cell are : 
+ R1=     4.300     0.000     0.000
+ R2=     0.000     0.000     6.146
+ R3=     0.000    -4.300     0.000
+  Where R1, R2, R3 are in cartesian coordinates
+ 
+>> New SURFACE CARD:
+ The 1st vector on surface     :    1.000000    0.000000    0.000000
+ The 2nd vector on surface     :    0.000000    0.000000    1.000000
+ The 3rd vector out of surface :    0.000000   -1.000000    0.000000
+  
+ The rotated new unit cell in cartesian coordinates : 
+    4.300141    0.000000    0.000000
+    0.000000    0.000000    6.145861
+    0.000000   -4.300141    0.000000
+New cell's Volume is          113.64442Ang^3
+  
+ Fractional coordinates of atoms in units of new lattice vectors : 
+Ga      0.500000    0.725740    0.000000
+Ga      0.000000    0.274260   -0.500000
+Bi      0.000000    0.000000    0.000000
+As      0.500000    0.500000   -0.500000
+  
+ 2D Primitive Cell_Volume:    26.4280688664010     
+ Ra2, Rb2
+    4.3001    0.0000
+    0.0000    6.1459
+ Ka2, Kb2
+    1.4612    0.0000
+    0.0000    1.0223
+>> lattice information of the magnetic supercell (Angstrom)
+    4.300141    0.000000    0.000000
+    0.000000    0.000000    6.145861
+    0.000000 -129.004230    0.000000
+>> Reciprocal lattice information of the magnetic supercell (1/Angstrom)
+    1.461158    0.000000    0.000000
+    0.000000    0.000000    1.022344
+    0.000000   -0.048705    0.000000
+  
+3D Primitive Origin_cell%CellVolume:     113.64442248 in Angstrom^3
+3D Magnetic supercell Volume:    3409.33267450 in Angstrom^3
+Projected area of magnetic supercell normal to the first vector specifed in SURFACE card:     792.84206599 in Angstrom^2
+  
+ We found KPATH_BULK card
+Number of K lines :     3
+ K      0.3333   0.3333   0.0000  G       0.0000   0.0000   0.0000
+ G      0.0000   0.0000   0.0000  M       0.0000   0.5000   0.0000
+ M      0.0000   0.5000   0.0000  K       0.3333   0.3333   0.0000
+  
+ We found KPATH_SLAB card
+ k lines for 2D system
+ No. of k lines for 2D system :            2
+  X     0.50000  0.00000    G       0.00000  0.00000
+  G     0.00000  0.00000    Z       0.00000  0.50000
+  
+ We found KPLANE_SLAB card
+ >> Kpoints plane for 2D system--> arcs  
+K2D_start: -0.5000 -0.5000
+The first vector:   1.0000  0.0000
+The second vector:   0.0000  1.0000
+ >> Kpoints plane for 3D system--> gapshape  
+k3D_start :   0.0000  0.0000  0.0000
+The 1st vector:   1.0000  0.0000  0.0000
+The 2nd vector:   0.0000  0.5000  0.0000
+ >> Kpoints cube for 3D system--> gapshape3D  
+k3D_start :  0.0000  0.0000  0.0000
+The 1st vector:   1.0000  0.0000  0.0000
+The 2nd vector:   0.0000  1.0000  0.0000
+The 3rd vector:   0.0000  0.0000  1.0000
+kCubeVolume:   0.0000
+ReciprocalOrigin_cell%CellVolume:   2.1827
+  
+  
+ >> Using default parameters for Kpoint_3D
+>> k points  0.0000 0.0000 0.0000 in unit of reciprocal primitive cell
+>> k points  0.0000 0.0000 0.0000 in Cartesian coordinates
+  
+ >> Using default parameters for effective mass calculation
+ >> Effective mass calculation parameters  
+>> The    12'th band
+>> k step  0.0100 in unit of 1/Angstrom
+>> k points  0.0000 0.0000 0.0000 in unit of reciprocal primitive cell
+>> k points  0.0000 0.0000 0.0000 in unit of 1/Angstrom
+  
+ >> We use the default values for k3points_pointmode_direct=[0,0,0]
+ >> and Nk3_point_mode = 1
+  
+ >> We use the default values for k3points_unfold_pointmode_direct=[0,0,0]
+ >> and Nk3_unfold_point_mode = 1
+  
+ >> We use the default values for Single_KPOINT_3D_DIRECT=[0,0,0]
+ >> Output all atoms weight for surface state spectrum
+ > NtopAtoms            4
+> TopAtoms 
+     1     2     3     4
+> NbottomAtoms          4
+> BottomAtoms 
+     1     2     3     4
+ > NtopOrbitals           28
+> TopOrbitals 
+     1     2     3     4     5     6     7     8     9    10
+    11    12    13    14    15    16    17    18    19    20
+    21    22    23    24    25    26    27    28
+> NBottomOrbitals   28
+> BottomOrbitals 
+     1     2     3     4     5     6     7     8     9    10
+    11    12    13    14    15    16    17    18    19    20
+    21    22    23    24    25    26    27    28
+  
+ >> We do not calculate chirality for nodal lines
+  
+ >> We do not calculate chirality for weyl points
+  
+>> There are    1 groups of SelectedAtoms
+Group :   1
+>> Number of atoms selected         4
+>> Selected atoms are
+    1  Ga            2  Ga            3  Bi            4  As        
+  
+>> There are   1 groups of SelectedOrbitals
+ >> SelectedOrbitals
+>> Number of orbitals selected (including spin degenarcy)        28
+>> Orbitals are
+       1       2       3       4       5       6       7       8       9      10      11      12
+      13      14      15      16      17      18      19      20      21      22      23      24
+      25      26      27      28
+  
+ >> SELECTED_OCCUPIED_BANDS
+>> Number of Occupied bands selected         12
+>> OccupiedBand indices are
+     1     2     3     4     5     6     7     8     9    10    11    12
+  
+  
+ >> SELECTEDBANDS
+>> Number of bands selected         28
+>> Band indices are
+     1     2     3     4     5     6     7     8     9    10    11    12
+    13    14    15    16    17    18    19    20    21    22    23    24
+    25    26    27    28
+  
+ <<<Read wt.in file successfully
+ 
+  File wannier90_hr.dat exist, We are using HmnR from wannier90
+ >> Num_wann          28
+ >> NRPTS         245
+  >> Begin to read Hmn_R.data
+  
+ 
+  Note: This is not a 2D system, so we can't add electric field.
+ 
+  << Read Hmn_R.data successfully
+  
+ >> Start of calculating the surface state
+ SurfaceSS, ik           1 Nk        2400 time left  0.000000000000000E+000  s
+ SurfaceSS, ik         321 Nk        2400 time left   5037.02718750182       s
+ SurfaceSS, ik         641 Nk        2400 time left   3866.50187500461       s
+ SurfaceSS, ik         961 Nk        2400 time left   3696.74603124715       s
+ SurfaceSS, ik        1281 Nk        2400 time left   3413.57943750059       s
+ SurfaceSS, ik        1601 Nk        2400 time left   2249.16003125358       s
+ SurfaceSS, ik        1921 Nk        2400 time left   1039.66949999660       s
+ SurfaceSS, ik        2241 Nk        2400 time left   411.243562500305       s
+ ndim          84
+ knv2,omeganum,eta        2400        2500  1.440000000000000E-003
+ calculate density of state successfully
+ Time cost for SlabSS_calc is about         7282.140 s
+ End of calculating the surface state
+  
+ >> Start of calculating the surface arc
+ Arc, ik            1 Nk     1442401 time left  0.000000000000000E+000  s
+ Arc, ik         3201 Nk     1442401 time left   494.724997319281       s
+ Arc, ik         6401 Nk     1442401 time left   493.624997325242       s
+ Arc, ik         9601 Nk     1442401 time left   1074.59999891580       s
+ Arc, ik        12801 Nk     1442401 time left   1384.92499816930       s
+ Arc, ik        16001 Nk     1442401 time left   490.324997343123       s
+ Arc, ik        19201 Nk     1442401 time left   2357.17500323080       s
+ Arc, ik        22401 Nk     1442401 time left   1286.87499396619       s
+ Arc, ik        25601 Nk     1442401 time left   487.024997361004       s
+ Arc, ik        28801 Nk     1442401 time left   1060.20000921562       s
+ Arc, ik        32001 Nk     1442401 time left   1498.54999934323       s
+ Arc, ik        35201 Nk     1442401 time left   1319.25000122865       s
+ Arc, ik        38401 Nk     1442401 time left   1009.12500196137       s
+ Arc, ik        41601 Nk     1442401 time left   481.524997390807       s
+ Arc, ik        44801 Nk     1442401 time left   1441.27500235918       s
+ Arc, ik        48001 Nk     1442401 time left   2396.62500730483       s
+ Arc, ik        51201 Nk     1442401 time left   478.224997408688       s
+ Arc, ik        54401 Nk     1442401 time left   477.124997414649       s
+ Arc, ik        57601 Nk     1442401 time left   1384.80000531999       s
+ Arc, ik        60801 Nk     1442401 time left   474.925007479033       s
+ Arc, ik        64001 Nk     1442401 time left   1076.87499598833       s
+ Arc, ik        67201 Nk     1442401 time left   2535.52499535726       s
+ Arc, ik        70401 Nk     1442401 time left   943.249994888902       s
+ Arc, ik        73601 Nk     1442401 time left   1197.69999713171       s
+ Arc, ik        76801 Nk     1442401 time left   981.525001907721       s
+ Arc, ik        80001 Nk     1442401 time left   1404.97500229976       s
+ Arc, ik        83201 Nk     1442401 time left   1231.77499422454       s
+ Arc, ik        86401 Nk     1442401 time left   974.625001894310       s
+ Arc, ik        89601 Nk     1442401 time left   972.325001889840       s
+ Arc, ik        92801 Nk     1442401 time left   548.275001492584       s
+ Arc, ik        96001 Nk     1442401 time left   967.725001880899       s
+ Arc, ik        99201 Nk     1442401 time left   1007.39999898360       s
+ Arc, ik       102401 Nk     1442401 time left   1549.37500046799       s
+ Arc, ik       105601 Nk     1442401 time left   2631.82500342373       s
+ Arc, ik       108801 Nk     1442401 time left   458.424997515976       s
+ Arc, ik       112001 Nk     1442401 time left   540.475001471350       s
+ Arc, ik       115201 Nk     1442401 time left   953.925001854077       s
+ Arc, ik       118401 Nk     1442401 time left   455.124997533858       s
+ Arc, ik       121601 Nk     1442401 time left   536.574991850648       s
+ Arc, ik       124801 Nk     1442401 time left   947.024992253864       s
+ Arc, ik       128001 Nk     1442401 time left   1191.17500397842       s
+ Arc, ik       131201 Nk     1442401 time left   1475.09999374161       s
+ Arc, ik       134401 Nk     1442401 time left   940.125001827255       s
+ Arc, ik       137601 Nk     1442401 time left   937.825001822785       s
+ Arc, ik       140801 Nk     1442401 time left   569.449998636264       s
+ Arc, ik       144001 Nk     1442401 time left   2191.05000015115       s
+ Arc, ik       147201 Nk     1442401 time left   1011.87499623047       s
+ Arc, ik       150401 Nk     1442401 time left   888.250004587462       s
+ Arc, ik       153601 Nk     1442401 time left   2456.77499947487       s
+ Arc, ik       156801 Nk     1442401 time left   1044.55000284361       s
+ Arc, ik       160001 Nk     1442401 time left   2484.65000604629       s
+ Arc, ik       163201 Nk     1442401 time left   2398.50000223378       s
+ Arc, ik       166401 Nk     1442401 time left   1076.62500007427       s
+ Arc, ik       169601 Nk     1442401 time left   914.825001778081       s
+ Arc, ik       172801 Nk     1442401 time left   2380.50000221701       s
+ Arc, ik       176001 Nk     1442401 time left   435.324997641146       s
+ Arc, ik       179201 Nk     1442401 time left   2171.12499742652       s
+ Arc, ik       182401 Nk     1442401 time left   944.999999046559       s
+ Arc, ik       185601 Nk     1442401 time left   432.025006803451       s
+ Arc, ik       188801 Nk     1442401 time left   901.025001751259       s
+ Arc, ik       192001 Nk     1442401 time left   898.725001746789       s
+ Arc, ik       195201 Nk     1442401 time left   974.374996370170       s
+ Arc, ik       198401 Nk     1442401 time left   894.125001737848       s
+ Arc, ik       201601 Nk     1442401 time left   891.825001733378       s
+ Arc, ik       204801 Nk     1442401 time left   425.424997694790       s
+ Arc, ik       208001 Nk     1442401 time left   887.225001724437       s
+ Arc, ik       211201 Nk     1442401 time left   884.925001719967       s
+ Arc, ik       214401 Nk     1442401 time left   422.124997712672       s
+ Arc, ik       217601 Nk     1442401 time left   880.325001711026       s
+ Arc, ik       220801 Nk     1442401 time left   2290.49999324488       s
+ Arc, ik       224001 Nk     1442401 time left   418.824997730553       s
+ Arc, ik       227201 Nk     1442401 time left   873.425001697615       s
+ Arc, ik       230401 Nk     1442401 time left   871.125001693144       s
+ Arc, ik       233601 Nk     1442401 time left   415.524997748435       s
+ Arc, ik       236801 Nk     1442401 time left   866.525001684204       s
+ Arc, ik       240001 Nk     1442401 time left   864.225001679733       s
+ Arc, ik       243201 Nk     1442401 time left   412.225006491644       s
+ Arc, ik       246401 Nk     1442401 time left   859.625001670793       s
+ Arc, ik       249601 Nk     1442401 time left   857.324992987560       s
+ Arc, ik       252801 Nk     1442401 time left   408.925006439677       s
+ Arc, ik       256001 Nk     1442401 time left   1557.15000490309       s
+ Arc, ik       259201 Nk     1442401 time left   1996.65000013774       s
+ Arc, ik       262401 Nk     1442401 time left   1069.37499498599       s
+ Arc, ik       265601 Nk     1442401 time left   882.599999109516       s
+ Arc, ik       268801 Nk     1442401 time left   880.199999111937       s
+ Arc, ik       272001 Nk     1442401 time left   365.750000340631       s
+ Arc, ik       275201 Nk     1442401 time left   765.975006658118       s
+ Arc, ik       278401 Nk     1442401 time left   836.625001626089       s
+ Arc, ik       281601 Nk     1442401 time left   399.025006283773       s
+ Arc, ik       284801 Nk     1442401 time left   578.800002223579       s
+ Arc, ik       288001 Nk     1442401 time left   829.725001612678       s
+ Arc, ik       291201 Nk     1442401 time left   395.724997855723       s
+ Arc, ik       294401 Nk     1442401 time left   430.499995389255       s
+ Arc, ik       297601 Nk     1442401 time left   822.825001599267       s
+ Arc, ik       300801 Nk     1442401 time left   428.100003721192       s
+ Arc, ik       304001 Nk     1442401 time left   462.474992976058       s
+ Arc, ik       307201 Nk     1442401 time left   851.399999140995       s
+ Arc, ik       310401 Nk     1442401 time left   459.875001251930       s
+ Arc, ik       313601 Nk     1442401 time left   458.575001248391       s
+ Arc, ik       316801 Nk     1442401 time left   809.025001572445       s
+ Arc, ik       320001 Nk     1442401 time left   1192.54999947734       s
+ Arc, ik       323201 Nk     1442401 time left   384.724997915328       s
+ Arc, ik       326401 Nk     1442401 time left   767.249995842576       s
+ Arc, ik       329601 Nk     1442401 time left   452.075001230696       s
+ Arc, ik       332801 Nk     1442401 time left   381.424997933209       s
+ Arc, ik       336001 Nk     1442401 time left   726.075006311294       s
+ Arc, ik       339201 Nk     1442401 time left   448.175001220079       s
+ Arc, ik       342401 Nk     1442401 time left   343.750000320142       s
+ Arc, ik       345601 Nk     1442401 time left   754.050003894372       s
+ Arc, ik       348801 Nk     1442401 time left   410.100003564730       s
+ Arc, ik       352001 Nk     1442401 time left   374.824997968972       s
+ Arc, ik       355201 Nk     1442401 time left   679.500000632834       s
+ Arc, ik       358401 Nk     1442401 time left   440.375001198845       s
+ Arc, ik       361601 Nk     1442401 time left   371.524997986853       s
+ Arc, ik       364801 Nk     1442401 time left   1549.04999517021       s
+ Arc, ik       368001 Nk     1442401 time left   436.475001188228       s
+ Arc, ik       371201 Nk     1442401 time left   368.224998004735       s
+ Arc, ik       374401 Nk     1442401 time left   567.374999751337       s
+ Arc, ik       377601 Nk     1442401 time left   432.575001177611       s
+ Arc, ik       380801 Nk     1442401 time left   364.925005746773       s
+ Arc, ik       384001 Nk     1442401 time left   529.199994332157       s
+ Arc, ik       387201 Nk     1442401 time left   428.675001166994       s
+ Arc, ik       390401 Nk     1442401 time left   328.750000306172       s
+ Arc, ik       393601 Nk     1442401 time left   458.849998901132       s
+ Arc, ik       396801 Nk     1442401 time left   424.775001156377       s
+ Arc, ik       400001 Nk     1442401 time left   358.325005642837       s
+ Arc, ik       403201 Nk     1442401 time left   487.125004234258       s
+ Arc, ik       406401 Nk     1442401 time left   420.875001145760       s
+ Arc, ik       409601 Nk     1442401 time left   903.700005350402       s
+ Arc, ik       412801 Nk     1442401 time left   1287.00000119861       s
+ Arc, ik       416001 Nk     1442401 time left   866.025000059744       s
+ Arc, ik       419201 Nk     1442401 time left   351.724998094141       s
+ Arc, ik       422401 Nk     1442401 time left   478.124996734550       s
+ Arc, ik       425601 Nk     1442401 time left   476.624996744795       s
+ Arc, ik       428801 Nk     1442401 time left   791.874997050036       s
+ Arc, ik       432001 Nk     1442401 time left   1231.42500335234       s
+ Arc, ik       435201 Nk     1442401 time left   472.124996775528       s
+ Arc, ik       438401 Nk     1442401 time left   1035.37500169477       s
+ Arc, ik       441601 Nk     1442401 time left   1094.62500466034       s
+ Arc, ik       444801 Nk     1442401 time left   467.624996806262       s
+ Arc, ik       448001 Nk     1442401 time left   714.725001389161       s
+ Arc, ik       451201 Nk     1442401 time left   433.650006173411       s
+ Arc, ik       454401 Nk     1442401 time left   1018.87500166777       s
+ Arc, ik       457601 Nk     1442401 time left   338.524998165667       s
+ Arc, ik       460801 Nk     1442401 time left   429.449998971540       s
+ Arc, ik       464001 Nk     1442401 time left   458.625003986526       s
+ Arc, ik       467201 Nk     1442401 time left   335.224998183548       s
+ Arc, ik       470401 Nk     1442401 time left   455.625003960449       s
+ Arc, ik       473601 Nk     1442401 time left   423.849998984952       s
+ Arc, ik       476801 Nk     1442401 time left   331.925005227095       s
+ Arc, ik       480001 Nk     1442401 time left   421.049998991657       s
+ Arc, ik       483201 Nk     1442401 time left   419.649998995010       s
+ Arc, ik       486401 Nk     1442401 time left   328.624998219311       s
+ Arc, ik       489601 Nk     1442401 time left   416.849999001715       s
+ Arc, ik       492801 Nk     1442401 time left   356.100003095344       s
+ Arc, ik       496001 Nk     1442401 time left   325.324998237193       s
+ Arc, ik       499201 Nk     1442401 time left   412.650005874457       s
+ Arc, ik       502401 Nk     1442401 time left   381.875001039589       s
+ Arc, ik       505601 Nk     1442401 time left   322.024998255074       s
+ Arc, ik       508801 Nk     1442401 time left   408.449999021832       s
+ Arc, ik       512001 Nk     1442401 time left   377.975001028972       s
+ Arc, ik       515201 Nk     1442401 time left   318.724998272955       s
+ Arc, ik       518401 Nk     1442401 time left   1010.62499757973       s
+ Arc, ik       521601 Nk     1442401 time left   345.299996301765       s
+ Arc, ik       524801 Nk     1442401 time left   315.425004967256       s
+ Arc, ik       528001 Nk     1442401 time left   428.625003725756       s
+ Arc, ik       531201 Nk     1442401 time left   313.224998302758       s
+ Arc, ik       534401 Nk     1442401 time left   312.124998308718       s
+ Arc, ik       537601 Nk     1442401 time left   395.849999052007       s
+ Arc, ik       540801 Nk     1442401 time left   309.924998320639       s
+ Arc, ik       544001 Nk     1442401 time left   308.825004863320       s
+ Arc, ik       547201 Nk     1442401 time left   419.624997134088       s
+ Arc, ik       550401 Nk     1442401 time left   892.000003426801       s
+ Arc, ik       553601 Nk     1442401 time left   305.524998344481       s
+ Arc, ik       556801 Nk     1442401 time left   1245.37500438164       s
+ Arc, ik       560001 Nk     1442401 time left   303.324998356402       s
+ Arc, ik       563201 Nk     1442401 time left   302.224998362362       s
+ Arc, ik       566401 Nk     1442401 time left   958.124997705454       s
+ Arc, ik       569601 Nk     1442401 time left   736.425000050804       s
+ Arc, ik       572801 Nk     1442401 time left   815.250000759261       s
+ Arc, ik       576001 Nk     1442401 time left   406.125003530178       s
+ Arc, ik       579201 Nk     1442401 time left   728.325000050245       s
+ Arc, ik       582401 Nk     1442401 time left   295.624998398125       s
+ Arc, ik       585601 Nk     1442401 time left   883.574995212257       s
+ Arc, ik       588801 Nk     1442401 time left   293.424998410046       s
+ Arc, ik       592001 Nk     1442401 time left   292.325004603481       s
+ Arc, ik       595201 Nk     1442401 time left   1006.04999847128       s
+ Arc, ik       598401 Nk     1442401 time left   685.750001866836       s
+ Arc, ik       601601 Nk     1442401 time left   315.300002740696       s
+ Arc, ik       604801 Nk     1442401 time left   340.275000926340       s
+ Arc, ik       608001 Nk     1442401 time left   286.825004516868       s
+ Arc, ik       611201 Nk     1442401 time left   337.674994871486       s
+ Arc, ik       614401 Nk     1442401 time left   310.499996674480       s
+ Arc, ik       617601 Nk     1442401 time left   309.299996687332       s
+ Arc, ik       620801 Nk     1442401 time left   1078.34999741754       s
+ Arc, ik       624001 Nk     1442401 time left   741.674996522488       s
+ Arc, ik       627201 Nk     1442401 time left   280.224998481572       s
+ Arc, ik       630401 Nk     1442401 time left   1192.62500051991       s
+ Arc, ik       633601 Nk     1442401 time left   328.574995009694       s
+ Arc, ik       636801 Nk     1442401 time left   931.475000281353       s
+ Arc, ik       640001 Nk     1442401 time left   1404.20000247541       s
+ Arc, ik       643201 Nk     1442401 time left   324.675000883872       s
+ Arc, ik       646401 Nk     1442401 time left   970.124996849336       s
+ Arc, ik       649601 Nk     1442401 time left   1412.17500073835       s
+ Arc, ik       652801 Nk     1442401 time left   764.925004733959       s
+ Arc, ik       656001 Nk     1442401 time left   540.650002792245       s
+ Arc, ik       659201 Nk     1442401 time left   1321.65000009118       s
+ Arc, ik       662401 Nk     1442401 time left   755.624999001157       s
+ Arc, ik       665601 Nk     1442401 time left   534.050002758158       s
+ Arc, ik       668801 Nk     1442401 time left   1184.57500279183       s
+ Arc, ik       672001 Nk     1442401 time left   866.699996322859       s
+ Arc, ik       675201 Nk     1442401 time left   1510.42500196490       s
+ Arc, ik       678401 Nk     1442401 time left   525.250002712710       s
+ Arc, ik       681601 Nk     1442401 time left   309.075000841403       s
+ Arc, ik       684801 Nk     1442401 time left   1302.12499845657       s
+ Arc, ik       688001 Nk     1442401 time left   1249.47500171256       s
+ Arc, ik       691201 Nk     1442401 time left   633.825000043726       s
+ Arc, ik       694401 Nk     1442401 time left   560.999999433989       s
+ Arc, ik       697601 Nk     1442401 time left   488.774998829467       s
+ Arc, ik       700801 Nk     1442401 time left   254.924998618662       s
+ Arc, ik       704001 Nk     1442401 time left   530.725001031533       s
+ Arc, ik       707201 Nk     1442401 time left   1378.50000128383       s
+ Arc, ik       710401 Nk     1442401 time left   640.500003792113       s
+ Arc, ik       713601 Nk     1442401 time left   1389.27500500577       s
+ Arc, ik       716801 Nk     1442401 time left   1451.20000029565       s
+ Arc, ik       720001 Nk     1442401 time left   835.274994996144       s
+ Arc, ik       723201 Nk     1442401 time left   1393.45000339090       s
+ Arc, ik       726401 Nk     1442401 time left   1230.62499854132       s
+ Arc, ik       729601 Nk     1442401 time left   289.575000788318       s
+ Arc, ik       732801 Nk     1442401 time left   510.025000991300       s
+ Arc, ik       736001 Nk     1442401 time left   1280.35000427626       s
+ Arc, ik       739201 Nk     1442401 time left   857.024997216649       s
+ Arc, ik       742401 Nk     1442401 time left   1290.62500272994       s
+ Arc, ik       745601 Nk     1442401 time left   1284.72499764757       s
+ Arc, ik       748801 Nk     1442401 time left   693.600002664607       s
+ Arc, ik       752001 Nk     1442401 time left   496.225000964478       s
+ Arc, ik       755201 Nk     1442401 time left   450.975003920030       s
+ Arc, ik       758401 Nk     1442401 time left   277.875000756467       s
+ Arc, ik       761601 Nk     1442401 time left   489.325000951067       s
+ Arc, ik       764801 Nk     1442401 time left   1101.09999806737       s
+ Arc, ik       768001 Nk     1442401 time left   273.975000745850       s
+ Arc, ik       771201 Nk     1442401 time left   482.425000937656       s
+ Arc, ik       774401 Nk     1442401 time left   396.625001827488       s
+ Arc, ik       777601 Nk     1442401 time left   249.300002167001       s
+ Arc, ik       780801 Nk     1442401 time left   475.525000924245       s
+ Arc, ik       784001 Nk     1442401 time left   658.400002529379       s
+ Arc, ik       787201 Nk     1442401 time left   266.174995957408       s
+ Arc, ik       790401 Nk     1442401 time left   1120.62500341563       s
+ Arc, ik       793601 Nk     1442401 time left   263.575000717537       s
+ Arc, ik       796801 Nk     1442401 time left   706.125003006309       s
+ Arc, ik       800001 Nk     1442401 time left   441.649997606874       s
+ Arc, ik       803201 Nk     1442401 time left   619.224999181461       s
+ Arc, ik       806401 Nk     1442401 time left   675.749999703839       s
+ Arc, ik       809601 Nk     1442401 time left   435.049997642636       s
+ Arc, ik       812801 Nk     1442401 time left   550.899998680688       s
+ Arc, ik       816001 Nk     1442401 time left   274.049999343697       s
+ Arc, ik       819201 Nk     1442401 time left   954.275002249051       s
+ Arc, ik       822401 Nk     1442401 time left   213.125003356254       s
+ Arc, ik       825601 Nk     1442401 time left   289.124998025363       s
+ Arc, ik       828801 Nk     1442401 time left   402.674999035662       s
+ Arc, ik       832001 Nk     1442401 time left   209.824998863041       s
+ Arc, ik       835201 Nk     1442401 time left   265.649999363814       s
+ Arc, ik       838401 Nk     1442401 time left   377.500000351574       s
+ Arc, ik       841601 Nk     1442401 time left   206.524998880923       s
+ Arc, ik       844801 Nk     1442401 time left   280.124998086831       s
+ Arc, ik       848001 Nk     1442401 time left   315.774999861605       s
+ Arc, ik       851201 Nk     1442401 time left   203.224998898804       s
+ Arc, ik       854401 Nk     1442401 time left   257.250003662193       s
+ Arc, ik       857601 Nk     1442401 time left   584.800002246629       s
+ Arc, ik       860801 Nk     1442401 time left   199.925003148383       s
+ Arc, ik       864001 Nk     1442401 time left   271.125002356712       s
+ Arc, ik       867201 Nk     1442401 time left   683.049998962088       s
+ Arc, ik       870401 Nk     1442401 time left   571.999998035608       s
+ Arc, ik       873601 Nk     1442401 time left   693.225001887185       s
+ Arc, ik       876801 Nk     1442401 time left   335.825001547346       s
+ Arc, ik       880001 Nk     1442401 time left   193.325003044447       s
+ Arc, ik       883201 Nk     1442401 time left   244.649999414105       s
+ Arc, ik       886401 Nk     1442401 time left   191.125003009802       s
+ Arc, ik       889601 Nk     1442401 time left   552.800002123695       s
+ Arc, ik       892801 Nk     1442401 time left   687.000000639819       s
+ Arc, ik       896001 Nk     1442401 time left   409.799999586539       s
+ Arc, ik       899201 Nk     1442401 time left   594.124998577172       s
+ Arc, ik       902401 Nk     1442401 time left   253.124998271232       s
+ Arc, ik       905601 Nk     1442401 time left   184.525002905866       s
+ Arc, ik       908801 Nk     1442401 time left   583.624998602318       s
+ Arc, ik       912001 Nk     1442401 time left   696.150002192007       s
+ Arc, ik       915201 Nk     1442401 time left   477.774997759843       s
+ Arc, ik       918401 Nk     1442401 time left   491.250000457512       s
+ Arc, ik       921601 Nk     1442401 time left   244.125002122018       s
+ Arc, ik       924801 Nk     1442401 time left   177.925002801931       s
+ Arc, ik       928001 Nk     1442401 time left   241.125002095941       s
+ Arc, ik       931201 Nk     1442401 time left   559.125002380461       s
+ Arc, ik       934401 Nk     1442401 time left   365.125000709668       s
+ Arc, ik       937601 Nk     1442401 time left   220.849999471102       s
+ Arc, ik       940801 Nk     1442401 time left   611.324998014607       s
+ Arc, ik       944001 Nk     1442401 time left   171.324999071658       s
+ Arc, ik       947201 Nk     1442401 time left   216.650003084214       s
+ Arc, ik       950401 Nk     1442401 time left   215.249999484513       s
+ Arc, ik       953601 Nk     1442401 time left   427.699998975731       s
+ Arc, ik       956801 Nk     1442401 time left   622.174999519484       s
+ Arc, ik       960001 Nk     1442401 time left   211.049999494571       s
+ Arc, ik       963201 Nk     1442401 time left   164.724999107420       s
+ Arc, ik       966401 Nk     1442401 time left   223.125001939479       s
+ Arc, ik       969601 Nk     1442401 time left   221.624998486368       s
+ Arc, ik       972801 Nk     1442401 time left   161.425002542092       s
+ Arc, ik       976001 Nk     1442401 time left   218.624998506857       s
+ Arc, ik       979201 Nk     1442401 time left   202.649999514688       s
+ Arc, ik       982401 Nk     1442401 time left   388.125000026776       s
+ Arc, ik       985601 Nk     1442401 time left   471.075000771089       s
+ Arc, ik       988801 Nk     1442401 time left   198.449999524746       s
+ Arc, ik       992001 Nk     1442401 time left   436.324999423232       s
+ Arc, ik       995201 Nk     1442401 time left   447.199998464203       s
+ Arc, ik       998401 Nk     1442401 time left   208.124998578569       s
+ Arc, ik      1001601 Nk     1442401 time left   413.250000384869       s
+ Arc, ik      1004801 Nk     1442401 time left   437.599998497171       s
+ Arc, ik      1008001 Nk     1442401 time left   515.849999216152       s
+ Arc, ik      1011201 Nk     1442401 time left   148.224999196827       s
+ Arc, ik      1014401 Nk     1442401 time left   387.874998181360       s
+ Arc, ik      1017601 Nk     1442401 time left   438.075000717072       s
+ Arc, ik      1020801 Nk     1442401 time left   144.924999214709       s
+ Arc, ik      1024001 Nk     1442401 time left   169.975000462728       s
+ Arc, ik      1027201 Nk     1442401 time left   194.624998670770       s
+ Arc, ik      1030401 Nk     1442401 time left   141.624999232590       s
+ Arc, ik      1033601 Nk     1442401 time left   166.074997477699       s
+ Arc, ik      1036801 Nk     1442401 time left   190.125001652632       s
+ Arc, ik      1040001 Nk     1442401 time left   138.324999250472       s
+ Arc, ik      1043201 Nk     1442401 time left   162.175000441493       s
+ Arc, ik      1046401 Nk     1442401 time left   507.374999608146       s
+ Arc, ik      1049601 Nk     1442401 time left   135.024999268353       s
+ Arc, ik      1052801 Nk     1442401 time left   158.275000430876       s
+ Arc, ik      1056001 Nk     1442401 time left   217.350001889281       s
+ Arc, ik      1059201 Nk     1442401 time left   131.724999286234       s
+ Arc, ik      1062401 Nk     1442401 time left   154.375000420259       s
+ Arc, ik      1065601 Nk     1442401 time left   235.500000219326       s
+ Arc, ik      1068801 Nk     1442401 time left   128.424999304116       s
+ Arc, ik      1072001 Nk     1442401 time left   150.475000409642       s
+ Arc, ik      1075201 Nk     1442401 time left   240.974999422906       s
+ Arc, ik      1078401 Nk     1442401 time left   125.124999321997       s
+ Arc, ik      1081601 Nk     1442401 time left   349.524999537971       s
+ Arc, ik      1084801 Nk     1442401 time left   614.624999271473       s
+ Arc, ik      1088001 Nk     1442401 time left   299.025000020629       s
+ Arc, ik      1091201 Nk     1442401 time left   329.250000306638       s
+ Arc, ik      1094401 Nk     1442401 time left   619.875000324100       s
+ Arc, ik      1097601 Nk     1442401 time left   129.299998615170       s
+ Arc, ik      1100801 Nk     1442401 time left   138.775000377791       s
+ Arc, ik      1104001 Nk     1442401 time left   623.925001319731       s
+ Arc, ik      1107201 Nk     1442401 time left   387.575000117067       s
+ Arc, ik      1110401 Nk     1442401 time left   373.500000830973       s
+ Arc, ik      1113601 Nk     1442401 time left   626.774999866029       s
+ Arc, ik      1116801 Nk     1442401 time left   132.274997991044       s
+ Arc, ik      1120001 Nk     1442401 time left   342.549999849871       s
+ Arc, ik      1123201 Nk     1442401 time left   608.474999869941       s
+ Arc, ik      1126401 Nk     1442401 time left   385.124998749234       s
+ Arc, ik      1129601 Nk     1442401 time left   107.525001693284       s
+ Arc, ik      1132801 Nk     1442401 time left   570.824998954777       s
+ Arc, ik      1136001 Nk     1442401 time left   201.075001747813       s
+ Arc, ik      1139201 Nk     1442401 time left   265.299999364652       s
+ Arc, ik      1142401 Nk     1442401 time left   506.250000034925       s
+ Arc, ik      1145601 Nk     1442401 time left   593.600000120932       s
+ Arc, ik      1148801 Nk     1442401 time left   266.074998752447       s
+ Arc, ik      1152001 Nk     1442401 time left   217.800001893193       s
+ Arc, ik      1155201 Nk     1442401 time left   215.399999782676       s
+ Arc, ik      1158401 Nk     1442401 time left   248.499999404885       s
+ Arc, ik      1161601 Nk     1442401 time left   535.275001928676       s
+ Arc, ik      1164801 Nk     1442401 time left   199.525000387803       s
+ Arc, ik      1168001 Nk     1442401 time left   231.525000015972       s
+ Arc, ik      1171201 Nk     1442401 time left   500.024999084417       s
+ Arc, ik      1174401 Nk     1442401 time left   200.999999797205       s
+ Arc, ik      1177601 Nk     1442401 time left   91.0249995067716       s
+ Arc, ik      1180801 Nk     1442401 time left   457.800000807038       s
+ Arc, ik      1184001 Nk     1442401 time left   492.575001774821       s
+ Arc, ik      1187201 Nk     1442401 time left   231.275000772439       s
+ Arc, ik      1190401 Nk     1442401 time left   488.250001188135       s
+ Arc, ik      1193601 Nk     1442401 time left   178.825000347570       s
+ Arc, ik      1196801 Nk     1442401 time left   84.4249995425344       s
+ Arc, ik      1200001 Nk     1442401 time left   174.225000338629       s
+ Arc, ik      1203201 Nk     1442401 time left   171.925000334159       s
+ Arc, ik      1206401 Nk     1442401 time left   81.1249995604157       s
+ Arc, ik      1209601 Nk     1442401 time left   167.325000325218       s
+ Arc, ik      1212801 Nk     1442401 time left   165.025000320747       s
+ Arc, ik      1216001 Nk     1442401 time left   77.8249995782971       s
+ Arc, ik      1219201 Nk     1442401 time left   167.399999831105       s
+ Arc, ik      1222401 Nk     1442401 time left   158.125000307336       s
+ Arc, ik      1225601 Nk     1442401 time left   74.5249995961785       s
+ Arc, ik      1228801 Nk     1442401 time left   153.524998744251       s
+ Arc, ik      1232001 Nk     1442401 time left   151.224998763064       s
+ Arc, ik      1235201 Nk     1442401 time left   71.2250011216383       s
+ Arc, ik      1238401 Nk     1442401 time left   152.999999845633       s
+ Arc, ik      1241601 Nk     1442401 time left   131.774999684421       s
+ Arc, ik      1244801 Nk     1442401 time left   67.9249996319413       s
+ Arc, ik      1248001 Nk     1442401 time left   145.799999852898       s
+ Arc, ik      1251201 Nk     1442401 time left   274.850000534207       s
+ Arc, ik      1254401 Nk     1442401 time left   64.6249996498227       s
+ Arc, ik      1257601 Nk     1442401 time left   132.825000258163       s
+ Arc, ik      1260801 Nk     1442401 time left   85.1249994186219       s
+ Arc, ik      1264001 Nk     1442401 time left   61.3250009657349       s
+ Arc, ik      1267201 Nk     1442401 time left   328.500000305939       s
+ Arc, ik      1270401 Nk     1442401 time left   188.124999549473       s
+ Arc, ik      1273601 Nk     1442401 time left   168.799999420298       s
+ Arc, ik      1276801 Nk     1442401 time left   119.025000231341       s
+ Arc, ik      1280001 Nk     1442401 time left   152.250000141794       s
+ Arc, ik      1283201 Nk     1442401 time left   54.7250008617993       s
+ Arc, ik      1286401 Nk     1442401 time left   282.750000944361       s
+ Arc, ik      1289601 Nk     1442401 time left   57.3000004980713       s
+ Arc, ik      1292801 Nk     1442401 time left   144.924999808427       s
+ Arc, ik      1296001 Nk     1442401 time left   279.074999940349       s
+ Arc, ik      1299201 Nk     1442401 time left   147.675000241725       s
+ Arc, ik      1302401 Nk     1442401 time left   126.875000423752       s
+ Arc, ik      1305601 Nk     1442401 time left   98.3250001911074       s
+ Arc, ik      1308801 Nk     1442401 time left   50.0999994634185       s
+ Arc, ik      1312001 Nk     1442401 time left   44.8250007058959       s
+ Arc, ik      1315201 Nk     1442401 time left   91.4250001776963       s
+ Arc, ik      1318401 Nk     1442401 time left   46.4999995019753       s
+ Arc, ik      1321601 Nk     1442401 time left   41.5249997749925       s
+ Arc, ik      1324801 Nk     1442401 time left   88.1999999110121       s
+ Arc, ik      1328001 Nk     1442401 time left   39.3249997869134       s
+ Arc, ik      1331201 Nk     1442401 time left   41.7000003624707       s
+ Arc, ik      1334401 Nk     1442401 time left   77.6250001508743       s
+ Arc, ik      1337601 Nk     1442401 time left   36.0249998047948       s
+ Arc, ik      1340801 Nk     1442401 time left   34.9249998107553       s
+ Arc, ik      1344001 Nk     1442401 time left   70.7249994215090       s
+ Arc, ik      1347201 Nk     1442401 time left   32.7250005153473       s
+ Arc, ik      1350401 Nk     1442401 time left   31.6249998286366       s
+ Arc, ik      1353601 Nk     1442401 time left   185.925000108546       s
+ Arc, ik      1356801 Nk     1442401 time left   82.9249998903833       s
+ Arc, ik      1360001 Nk     1442401 time left   25.7500000239816       s
+ Arc, ik      1363201 Nk     1442401 time left   160.874999861699       s
+ Arc, ik      1366401 Nk     1442401 time left   56.9999999424908       s
+ Arc, ik      1369601 Nk     1442401 time left   25.0249998643994       s
+ Arc, ik      1372801 Nk     1442401 time left   134.850000328152       s
+ Arc, ik      1376001 Nk     1442401 time left   66.4000002550893       s
+ Arc, ik      1379201 Nk     1442401 time left   59.2500000551809       s
+ Arc, ik      1382401 Nk     1442401 time left   114.374999975553       s
+ Arc, ik      1385601 Nk     1442401 time left   47.9250000033062       s
+ Arc, ik      1388801 Nk     1442401 time left   16.7500000155997       s
+ Arc, ik      1392001 Nk     1442401 time left   89.7750000469387       s
+ Arc, ik      1395201 Nk     1442401 time left   48.6750000796746       s
+ Arc, ik      1398401 Nk     1442401 time left   15.1249999180436       s
+ Arc, ik      1401601 Nk     1442401 time left   79.0500001923647       s
+ Arc, ik      1404801 Nk     1442401 time left   31.7250000021886       s
+ Arc, ik      1408001 Nk     1442401 time left   11.8250001862179       s
+ Arc, ik      1411201 Nk     1442401 time left   54.5999998692423       s
+ Arc, ik      1414401 Nk     1442401 time left   9.62499994784594       s
+ Arc, ik      1417601 Nk     1442401 time left   8.52500013425015       s
+ Arc, ik      1420801 Nk     1442401 time left   39.8250000842381       s
+ Arc, ik      1424001 Nk     1442401 time left   15.5250000010710       s
+ Arc, ik      1427201 Nk     1442401 time left   15.6749999150634       s
+ Arc, ik      1430401 Nk     1442401 time left   20.6249999755528       s
+ Arc, ik      1433601 Nk     1442401 time left   2.75000000256114       s
+ Arc, ik      1436801 Nk     1442401 time left   4.72500000032596       s
+ Arc, ik      1440001 Nk     1442401 time left   4.12499999511056       s
+ Ndim:           84
+ Nk1,Nk2,eta:         1201        1201  5.000000000000000E-003
+ Calculated surface density of state successfully
+ calculate spintexture successfully
+ Time cost for SlabArc is about         1306.236 s
+ End of calculating the surface arc
+  
+ Time cost for whole program is about         8589.642 s
+  
+  
+  =======================================================================
+  Congratulations! you finished the calculation.
+  I hope you could find something useful from this calculation.
+  If so, I would like to ask you to cite our this paper:
+  
+  WannierTools : An open-source software package for novel topological materials
+  QuanSheng Wu and ShengNan Zhang and Hai-Feng Song and Matthias Troyer and Alexey A. Soluyanov
+  Computer Physics Communications 224, 405 (2018)
+  https://doi.org/10.1016/j.cpc.2017.09.033
+  
+  For bugs, please report to wuquansheng@gmail.com                   
+  or wanniertools@groups.google.com.                 
+  More information could find on www.wanniertools.com            
+  See you next time :)
+  =======================================================================
