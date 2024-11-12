@@ -1,0 +1,13 @@
+#!/bin/bash
+#PBS -j oe 
+#PBS -l nodes=node2:ppn=24
+#PBS -q batch
+cd $PBS_O_WORKDIR
+NPROCS=`wc -l < $PBS_NODEFILE`
+cat $PBS_NODEFILE > nodefile
+#Run the parallel MPI executable a.out
+echo This job has allocated $NPROCS $PBS_NODEFILE >> $HOME/arun.txt
+date >> $HOME/arun.txt
+pwd >> $HOME/arun.txt
+export wannier=/home/wzw/soft/wannier90-3.1.0/wannier90.x
+mpirun -np $NPROCS $wannier wannier90

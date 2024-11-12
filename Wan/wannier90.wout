@@ -1,0 +1,556 @@
+ 
+             +---------------------------------------------------+
+             |                                                   |
+             |                   WANNIER90                       |
+             |                                                   |
+             +---------------------------------------------------+
+             |                                                   |
+             |        Welcome to the Maximally-Localized         |
+             |        Generalized Wannier Functions code         |
+             |            http://www.wannier.org                 |
+             |                                                   |
+             |  Wannier90 Authors:                               |
+             |    Arash A. Mostofi   (Imperial College London)   |
+             |    Jonathan R. Yates  (University of Oxford)      |
+             |    Young-Su Lee       (KIST, S. Korea)            |
+             |                                                   |
+             |  Wannier90 Contributors:                          |
+             |    Matthew Shelley    (Imperial College London)   |
+             |    Nicolas Poilvert   (MIT)                       |
+             |                                                   |
+             |  Wannier77 Authors:                               |
+             |    Nicola Marzari     (University of Oxford)      |
+             |    Ivo Souza          (UC Berkeley)               |
+             |    David Vanderbilt   (Rutgers University)        |
+             |                                                   |
+             |  Please cite                                      |
+             |                                                   |
+             |  [ref] "Wannier90: A Tool for Obtaining Maximally |
+             |         Localised Wannier Functions"              |
+             |        A. A. Mostofi, J. R. Yates, Y.-S. Lee,     |
+             |        I. Souza, D. Vanderbilt and N. Marzari     |
+             |        Comput. Phys. Commun. 178, 685 (2008)      |
+             |                                                   |
+             |  in any publications arising from the use of      |
+             |  this code. For the method please cite            |
+             |                                                   |
+             |  [ref] "Maximally Localized Generalised Wannier   |
+             |         Functions for Composite Energy Bands"     |
+             |         N. Marzari and D. Vanderbilt              |
+             |         Phys. Rev. B 56 12847 (1997)              |
+             |                                                   |
+             |  [ref] "Maximally Localized Wannier Functions     |
+             |         for Entangled Energy Bands"               |
+             |         I. Souza, N. Marzari and D. Vanderbilt    |
+             |         Phys. Rev. B 65 035109 (2001)             |
+             |                                                   |
+             |                                                   |
+             | Copyright (c) 1996-2010                           |
+             |        A. A. Mostofi, J. R. Yates, Y.-S. Lee,     |
+             |        I. Souza, D. Vanderbilt and N. Marzari     |
+             |                                                   |
+             |        Release: 1.2        24th Jan 2010          |
+             |                                                   |
+             | This program is free software; you can            |
+             | redistribute it and/or modify it under the terms  |
+             | of the GNU General Public License as published by |
+             | the Free Software Foundation; either version 2 of |
+             | the License, or (at your option) any later version|
+             |                                                   |
+             | This program is distributed in the hope that it   |
+             | will be useful, but WITHOUT ANY WARRANTY; without |
+             | even the implied warranty of MERCHANTABILITY or   |
+             | FITNESS FOR A PARTICULAR PURPOSE. See the GNU     |
+             | General Public License for more details.          |
+             |                                                   |
+             | You should have received a copy of the GNU General|
+             | Public License along with this program; if not,   |
+             | write to the Free Software Foundation, Inc.,      |
+             | 675 Mass Ave, Cambridge, MA 02139, USA.           |
+             |                                                   |
+             +---------------------------------------------------+
+             |    Execution started on 22Jan2022 at 14:35:26     |
+             +---------------------------------------------------+
+
+ Wannier90 is running in LIBRARY MODE
+
+ Setting up k-point neighbours...
+
+
+ Ignoring <num_bands> in input file
+ The following section of file wannier90.win contained unrecognised keywords
+ 
+ use_ws_distance  =  t
+ 
+ Exiting.......
+ Unrecognised keyword(s) in input file
+ 
+             +---------------------------------------------------+
+             |                                                   |
+             |                   WANNIER90                       |
+             |                                                   |
+             +---------------------------------------------------+
+             |                                                   |
+             |        Welcome to the Maximally-Localized         |
+             |        Generalized Wannier Functions code         |
+             |            http://www.wannier.org                 |
+             |                                                   |
+             |  Wannier90 Authors:                               |
+             |    Arash A. Mostofi   (Imperial College London)   |
+             |    Jonathan R. Yates  (University of Oxford)      |
+             |    Young-Su Lee       (KIST, S. Korea)            |
+             |                                                   |
+             |  Wannier90 Contributors:                          |
+             |    Matthew Shelley    (Imperial College London)   |
+             |    Nicolas Poilvert   (MIT)                       |
+             |                                                   |
+             |  Wannier77 Authors:                               |
+             |    Nicola Marzari     (University of Oxford)      |
+             |    Ivo Souza          (UC Berkeley)               |
+             |    David Vanderbilt   (Rutgers University)        |
+             |                                                   |
+             |  Please cite                                      |
+             |                                                   |
+             |  [ref] "Wannier90: A Tool for Obtaining Maximally |
+             |         Localised Wannier Functions"              |
+             |        A. A. Mostofi, J. R. Yates, Y.-S. Lee,     |
+             |        I. Souza, D. Vanderbilt and N. Marzari     |
+             |        Comput. Phys. Commun. 178, 685 (2008)      |
+             |                                                   |
+             |  in any publications arising from the use of      |
+             |  this code. For the method please cite            |
+             |                                                   |
+             |  [ref] "Maximally Localized Generalised Wannier   |
+             |         Functions for Composite Energy Bands"     |
+             |         N. Marzari and D. Vanderbilt              |
+             |         Phys. Rev. B 56 12847 (1997)              |
+             |                                                   |
+             |  [ref] "Maximally Localized Wannier Functions     |
+             |         for Entangled Energy Bands"               |
+             |         I. Souza, N. Marzari and D. Vanderbilt    |
+             |         Phys. Rev. B 65 035109 (2001)             |
+             |                                                   |
+             |                                                   |
+             | Copyright (c) 1996-2010                           |
+             |        A. A. Mostofi, J. R. Yates, Y.-S. Lee,     |
+             |        I. Souza, D. Vanderbilt and N. Marzari     |
+             |                                                   |
+             |        Release: 1.2        24th Jan 2010          |
+             |                                                   |
+             | This program is free software; you can            |
+             | redistribute it and/or modify it under the terms  |
+             | of the GNU General Public License as published by |
+             | the Free Software Foundation; either version 2 of |
+             | the License, or (at your option) any later version|
+             |                                                   |
+             | This program is distributed in the hope that it   |
+             | will be useful, but WITHOUT ANY WARRANTY; without |
+             | even the implied warranty of MERCHANTABILITY or   |
+             | FITNESS FOR A PARTICULAR PURPOSE. See the GNU     |
+             | General Public License for more details.          |
+             |                                                   |
+             | You should have received a copy of the GNU General|
+             | Public License along with this program; if not,   |
+             | write to the Free Software Foundation, Inc.,      |
+             | 675 Mass Ave, Cambridge, MA 02139, USA.           |
+             |                                                   |
+             +---------------------------------------------------+
+             |    Execution started on 22Jan2022 at 16:22:59     |
+             +---------------------------------------------------+
+
+ Wannier90 is running in LIBRARY MODE
+
+ Setting up k-point neighbours...
+
+
+ Ignoring <num_bands> in input file
+ 
+                                    ------
+                                    SYSTEM
+                                    ------
+ 
+                              Lattice Vectors (Ang)
+                    a_1     4.300141   0.000000   0.000000
+                    a_2     0.000000   4.300141   0.000000
+                    a_3     0.000000   0.000000   6.145861
+ 
+                   Unit Cell Volume:     113.64442  (Ang^3)
+ 
+                        Reciprocal-Space Vectors (Ang^-1)
+                    b_1     1.461158   0.000000   0.000000
+                    b_2     0.000000   1.461158   0.000000
+                    b_3     0.000000   0.000000   1.022344
+  
+ *----------------------------------------------------------------------------*
+ |   Site       Fractional Coordinate          Cartesian Coordinate (Ang)     |
+ +----------------------------------------------------------------------------+
+ | Ga   1   0.50000   0.00000   0.72574   |    2.15007   0.00000   4.46027    |
+ | Ga   2   0.00000   0.50000   0.27426   |    0.00000   2.15007   1.68559    |
+ | Bi   1   0.00000   0.00000   0.00000   |    0.00000   0.00000   0.00000    |
+ | As   1   0.50000   0.50000   0.50000   |    2.15007   2.15007   3.07293    |
+ *----------------------------------------------------------------------------*
+  
+                                ------------
+                                K-POINT GRID
+                                ------------
+  
+             Grid size =  7 x  7 x  5      Total points =  245
+  
+  
+ *---------------------------------- MAIN ------------------------------------*
+ |  Number of Wannier Functions               :                24             |
+ |  Number of input Bloch states              :                48             |
+ |  Output verbosity (1=low, 5=high)          :                 1             |
+ |  Timing Level (1=low, 5=high)              :                 1             |
+ |  Optimisation (0=memory, 3=speed)          :                 3             |
+ |  Length Unit                               :               Ang             |
+ |  Post-processing setup (write *.nnkp)      :                 F             |
+ |  Using Gamma-only branch of algorithms     :                 F             |
+ *----------------------------------------------------------------------------*
+ *------------------------------- WANNIERISE ---------------------------------*
+ |  Total number of iterations                :               100             |
+ |  Number of CG steps before reset           :                 5             |
+ |  Trial step length for line search         :             2.000             |
+ |  Convergence tolerence                     :         0.100E-09             |
+ |  Convergence window                        :                -1             |
+ |  Iterations between writing output         :                 1             |
+ |  Iterations between backing up to disk     :               100             |
+ |  Write r^2_nm to file                      :                 F             |
+ |  Write xyz WF centres to file              :                 F             |
+ |  Use guiding centre to control phases      :                 T             |
+ |  Iterations before starting guiding centres:                 0             |
+ |  Iterations between using guiding centres  :                 1             |
+ *----------------------------------------------------------------------------*
+ Time to read parameters        0.001 (sec)
+
+ *---------------------------------- K-MESH ----------------------------------*
+ +----------------------------------------------------------------------------+
+ |                    Distance to Nearest-Neighbour Shells                    |
+ |                    ------------------------------------                    |
+ |          Shell             Distance (Ang^-1)          Multiplicity         |
+ |          -----             -----------------          ------------         |
+ |             1                   0.204469                      2            |
+ |             2                   0.208737                      4            |
+ |             3                   0.292196                      8            |
+ |             4                   0.295198                      4            |
+ |             5                   0.359096                      8            |
+ |             6                   0.408938                      2            |
+ |             7                   0.417474                      4            |
+ |             8                   0.459131                      8            |
+ |             9                   0.464857                      8            |
+ |            10                   0.466750                      8            |
+ |            11                   0.504353                      8            |
+ |            12                   0.509571                     16            |
+ +----------------------------------------------------------------------------+
+ | The b-vectors are chosen automatically                                     |
+ | The following shells are used:   1,  2                                     |
+ +----------------------------------------------------------------------------+
+ |                        Shell   # Nearest-Neighbours                        |
+ |                        -----   --------------------                        |
+ |                          1               2                                 |
+ |                          2               4                                 |
+ +----------------------------------------------------------------------------+
+ | Completeness relation is fully satisfied [Eq. (B1), PRB 56, 12847 (1997)]  |
+ +----------------------------------------------------------------------------+
+ |                  b_k Vectors (Ang^-1) and Weights (Ang^2)                  |
+ |                  ----------------------------------------                  |
+ |            No.         b_k(x)      b_k(y)      b_k(z)        w_b           |
+ |            ---        --------------------------------     --------        |
+ |             1         0.000000    0.000000    0.204469    11.959575        |
+ |             2         0.000000    0.000000   -0.204469    11.959575        |
+ |             3         0.208737    0.000000    0.000000    11.475502        |
+ |             4        -0.208737    0.000000    0.000000    11.475502        |
+ |             5         0.000000    0.208737    0.000000    11.475502        |
+ |             6         0.000000   -0.208737    0.000000    11.475502        |
+ +----------------------------------------------------------------------------+
+ |                           b_k Directions (Ang^-1)                          |
+ |                           -----------------------                          |
+ |            No.           x           y           z                         |
+ |            ---        --------------------------------                     |
+ |             1         0.000000    0.000000    0.204469                     |
+ |             2         0.208737    0.000000    0.000000                     |
+ |             3         0.000000    0.208737    0.000000                     |
+ +----------------------------------------------------------------------------+
+  
+ Time to write kmesh            0.050 (sec)
+
+ Finished setting up k-point neighbours.
+
+ Returning to pw2wannier90 at 16:22:59 
+ 
+             +---------------------------------------------------+
+             |                                                   |
+             |                   WANNIER90                       |
+             |                                                   |
+             +---------------------------------------------------+
+             |                                                   |
+             |        Welcome to the Maximally-Localized         |
+             |        Generalized Wannier Functions code         |
+             |            http://www.wannier.org                 |
+             |                                                   |
+             |  Wannier90 Authors:                               |
+             |    Arash A. Mostofi   (Imperial College London)   |
+             |    Jonathan R. Yates  (University of Oxford)      |
+             |    Young-Su Lee       (KIST, S. Korea)            |
+             |                                                   |
+             |  Wannier90 Contributors:                          |
+             |    Matthew Shelley    (Imperial College London)   |
+             |    Nicolas Poilvert   (MIT)                       |
+             |                                                   |
+             |  Wannier77 Authors:                               |
+             |    Nicola Marzari     (University of Oxford)      |
+             |    Ivo Souza          (UC Berkeley)               |
+             |    David Vanderbilt   (Rutgers University)        |
+             |                                                   |
+             |  Please cite                                      |
+             |                                                   |
+             |  [ref] "Wannier90: A Tool for Obtaining Maximally |
+             |         Localised Wannier Functions"              |
+             |        A. A. Mostofi, J. R. Yates, Y.-S. Lee,     |
+             |        I. Souza, D. Vanderbilt and N. Marzari     |
+             |        Comput. Phys. Commun. 178, 685 (2008)      |
+             |                                                   |
+             |  in any publications arising from the use of      |
+             |  this code. For the method please cite            |
+             |                                                   |
+             |  [ref] "Maximally Localized Generalised Wannier   |
+             |         Functions for Composite Energy Bands"     |
+             |         N. Marzari and D. Vanderbilt              |
+             |         Phys. Rev. B 56 12847 (1997)              |
+             |                                                   |
+             |  [ref] "Maximally Localized Wannier Functions     |
+             |         for Entangled Energy Bands"               |
+             |         I. Souza, N. Marzari and D. Vanderbilt    |
+             |         Phys. Rev. B 65 035109 (2001)             |
+             |                                                   |
+             |                                                   |
+             | Copyright (c) 1996-2010                           |
+             |        A. A. Mostofi, J. R. Yates, Y.-S. Lee,     |
+             |        I. Souza, D. Vanderbilt and N. Marzari     |
+             |                                                   |
+             |        Release: 1.2        24th Jan 2010          |
+             |                                                   |
+             | This program is free software; you can            |
+             | redistribute it and/or modify it under the terms  |
+             | of the GNU General Public License as published by |
+             | the Free Software Foundation; either version 2 of |
+             | the License, or (at your option) any later version|
+             |                                                   |
+             | This program is distributed in the hope that it   |
+             | will be useful, but WITHOUT ANY WARRANTY; without |
+             | even the implied warranty of MERCHANTABILITY or   |
+             | FITNESS FOR A PARTICULAR PURPOSE. See the GNU     |
+             | General Public License for more details.          |
+             |                                                   |
+             | You should have received a copy of the GNU General|
+             | Public License along with this program; if not,   |
+             | write to the Free Software Foundation, Inc.,      |
+             | 675 Mass Ave, Cambridge, MA 02139, USA.           |
+             |                                                   |
+             +---------------------------------------------------+
+             |    Execution started on 17May2019 at 21:52:50     |
+             +---------------------------------------------------+
+
+ Wannier90 is running in LIBRARY MODE
+
+ Setting up k-point neighbours...
+
+
+ Ignoring <num_bands> in input file
+ Ignoring <spinors> in input file
+ Exiting.......
+ param_get_projection: too many projections defined
+ 
+             +---------------------------------------------------+
+             |                                                   |
+             |                   WANNIER90                       |
+             |                                                   |
+             +---------------------------------------------------+
+             |                                                   |
+             |        Welcome to the Maximally-Localized         |
+             |        Generalized Wannier Functions code         |
+             |            http://www.wannier.org                 |
+             |                                                   |
+             |  Wannier90 Authors:                               |
+             |    Arash A. Mostofi   (Imperial College London)   |
+             |    Jonathan R. Yates  (University of Oxford)      |
+             |    Young-Su Lee       (KIST, S. Korea)            |
+             |                                                   |
+             |  Wannier90 Contributors:                          |
+             |    Matthew Shelley    (Imperial College London)   |
+             |    Nicolas Poilvert   (MIT)                       |
+             |                                                   |
+             |  Wannier77 Authors:                               |
+             |    Nicola Marzari     (University of Oxford)      |
+             |    Ivo Souza          (UC Berkeley)               |
+             |    David Vanderbilt   (Rutgers University)        |
+             |                                                   |
+             |  Please cite                                      |
+             |                                                   |
+             |  [ref] "Wannier90: A Tool for Obtaining Maximally |
+             |         Localised Wannier Functions"              |
+             |        A. A. Mostofi, J. R. Yates, Y.-S. Lee,     |
+             |        I. Souza, D. Vanderbilt and N. Marzari     |
+             |        Comput. Phys. Commun. 178, 685 (2008)      |
+             |                                                   |
+             |  in any publications arising from the use of      |
+             |  this code. For the method please cite            |
+             |                                                   |
+             |  [ref] "Maximally Localized Generalised Wannier   |
+             |         Functions for Composite Energy Bands"     |
+             |         N. Marzari and D. Vanderbilt              |
+             |         Phys. Rev. B 56 12847 (1997)              |
+             |                                                   |
+             |  [ref] "Maximally Localized Wannier Functions     |
+             |         for Entangled Energy Bands"               |
+             |         I. Souza, N. Marzari and D. Vanderbilt    |
+             |         Phys. Rev. B 65 035109 (2001)             |
+             |                                                   |
+             |                                                   |
+             | Copyright (c) 1996-2010                           |
+             |        A. A. Mostofi, J. R. Yates, Y.-S. Lee,     |
+             |        I. Souza, D. Vanderbilt and N. Marzari     |
+             |                                                   |
+             |        Release: 1.2        24th Jan 2010          |
+             |                                                   |
+             | This program is free software; you can            |
+             | redistribute it and/or modify it under the terms  |
+             | of the GNU General Public License as published by |
+             | the Free Software Foundation; either version 2 of |
+             | the License, or (at your option) any later version|
+             |                                                   |
+             | This program is distributed in the hope that it   |
+             | will be useful, but WITHOUT ANY WARRANTY; without |
+             | even the implied warranty of MERCHANTABILITY or   |
+             | FITNESS FOR A PARTICULAR PURPOSE. See the GNU     |
+             | General Public License for more details.          |
+             |                                                   |
+             | You should have received a copy of the GNU General|
+             | Public License along with this program; if not,   |
+             | write to the Free Software Foundation, Inc.,      |
+             | 675 Mass Ave, Cambridge, MA 02139, USA.           |
+             |                                                   |
+             +---------------------------------------------------+
+             |    Execution started on 22Jan2022 at 18:21:42     |
+             +---------------------------------------------------+
+
+ Wannier90 is running in LIBRARY MODE
+
+ Setting up k-point neighbours...
+
+
+ Ignoring <num_bands> in input file
+ Ignoring <spinors> in input file
+ 
+                                    ------
+                                    SYSTEM
+                                    ------
+ 
+                              Lattice Vectors (Ang)
+                    a_1     4.300141   0.000000   0.000000
+                    a_2     0.000000   4.300141   0.000000
+                    a_3     0.000000   0.000000   6.145861
+ 
+                   Unit Cell Volume:     113.64442  (Ang^3)
+ 
+                        Reciprocal-Space Vectors (Ang^-1)
+                    b_1     1.461158   0.000000   0.000000
+                    b_2     0.000000   1.461158   0.000000
+                    b_3     0.000000   0.000000   1.022344
+  
+ *----------------------------------------------------------------------------*
+ |   Site       Fractional Coordinate          Cartesian Coordinate (Ang)     |
+ +----------------------------------------------------------------------------+
+ | Ga   1   0.50000   0.00000   0.72574   |    2.15007   0.00000   4.46027    |
+ | Ga   2   0.00000   0.50000   0.27426   |    0.00000   2.15007   1.68559    |
+ | Bi   1   0.00000   0.00000   0.00000   |    0.00000   0.00000   0.00000    |
+ | As   1   0.50000   0.50000   0.50000   |    2.15007   2.15007   3.07293    |
+ *----------------------------------------------------------------------------*
+  
+                                ------------
+                                K-POINT GRID
+                                ------------
+  
+             Grid size =  7 x  7 x  5      Total points =  245
+  
+  
+ *---------------------------------- MAIN ------------------------------------*
+ |  Number of Wannier Functions               :                28             |
+ |  Number of input Bloch states              :                48             |
+ |  Output verbosity (1=low, 5=high)          :                 1             |
+ |  Timing Level (1=low, 5=high)              :                 1             |
+ |  Optimisation (0=memory, 3=speed)          :                 3             |
+ |  Length Unit                               :               Ang             |
+ |  Post-processing setup (write *.nnkp)      :                 F             |
+ |  Using Gamma-only branch of algorithms     :                 F             |
+ *----------------------------------------------------------------------------*
+ *------------------------------- WANNIERISE ---------------------------------*
+ |  Total number of iterations                :               100             |
+ |  Number of CG steps before reset           :                 5             |
+ |  Trial step length for line search         :             2.000             |
+ |  Convergence tolerence                     :         0.100E-09             |
+ |  Convergence window                        :                -1             |
+ |  Iterations between writing output         :                 1             |
+ |  Iterations between backing up to disk     :               100             |
+ |  Write r^2_nm to file                      :                 F             |
+ |  Write xyz WF centres to file              :                 F             |
+ |  Use guiding centre to control phases      :                 T             |
+ |  Iterations before starting guiding centres:                 0             |
+ |  Iterations between using guiding centres  :                 1             |
+ *----------------------------------------------------------------------------*
+ Time to read parameters        0.001 (sec)
+
+ *---------------------------------- K-MESH ----------------------------------*
+ +----------------------------------------------------------------------------+
+ |                    Distance to Nearest-Neighbour Shells                    |
+ |                    ------------------------------------                    |
+ |          Shell             Distance (Ang^-1)          Multiplicity         |
+ |          -----             -----------------          ------------         |
+ |             1                   0.204469                      2            |
+ |             2                   0.208737                      4            |
+ |             3                   0.292196                      8            |
+ |             4                   0.295198                      4            |
+ |             5                   0.359096                      8            |
+ |             6                   0.408938                      2            |
+ |             7                   0.417474                      4            |
+ |             8                   0.459131                      8            |
+ |             9                   0.464857                      8            |
+ |            10                   0.466750                      8            |
+ |            11                   0.504353                      8            |
+ |            12                   0.509571                     16            |
+ +----------------------------------------------------------------------------+
+ | The b-vectors are chosen automatically                                     |
+ | The following shells are used:   1,  2                                     |
+ +----------------------------------------------------------------------------+
+ |                        Shell   # Nearest-Neighbours                        |
+ |                        -----   --------------------                        |
+ |                          1               2                                 |
+ |                          2               4                                 |
+ +----------------------------------------------------------------------------+
+ | Completeness relation is fully satisfied [Eq. (B1), PRB 56, 12847 (1997)]  |
+ +----------------------------------------------------------------------------+
+ |                  b_k Vectors (Ang^-1) and Weights (Ang^2)                  |
+ |                  ----------------------------------------                  |
+ |            No.         b_k(x)      b_k(y)      b_k(z)        w_b           |
+ |            ---        --------------------------------     --------        |
+ |             1         0.000000    0.000000    0.204469    11.959575        |
+ |             2         0.000000    0.000000   -0.204469    11.959575        |
+ |             3         0.208737    0.000000    0.000000    11.475502        |
+ |             4        -0.208737    0.000000    0.000000    11.475502        |
+ |             5         0.000000    0.208737    0.000000    11.475502        |
+ |             6         0.000000   -0.208737    0.000000    11.475502        |
+ +----------------------------------------------------------------------------+
+ |                           b_k Directions (Ang^-1)                          |
+ |                           -----------------------                          |
+ |            No.           x           y           z                         |
+ |            ---        --------------------------------                     |
+ |             1         0.000000    0.000000    0.204469                     |
+ |             2         0.208737    0.000000    0.000000                     |
+ |             3         0.000000    0.208737    0.000000                     |
+ +----------------------------------------------------------------------------+
+  
+ Time to write kmesh            0.050 (sec)
+
+ Finished setting up k-point neighbours.
+
+ Returning to pw2wannier90 at 18:21:42 
