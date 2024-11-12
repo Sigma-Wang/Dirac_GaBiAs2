@@ -1,0 +1,7 @@
+K-points alon1g high symmetry lines
+25
+Line-mode
+rec
+0.0000   0.0000   0.0000   ! \Gamma
+0.0000   0.0000   0.5000   ! Z
+
