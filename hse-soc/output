@@ -1,0 +1,84 @@
+ running on   64 total cores
+ distrk:  each k-point on   64 cores,    1 groups
+ distr:  one band on   16 cores,    4 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Dec 27 2023 19:01:44) complex          
+  
+ POSCAR found type information on POSCAR  Ga Bi As
+ POSCAR found :  3 types and       4 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|  ADVICE TO THIS USER RUNNING 'VASP/VAMP'   (HEAR YOUR MASTER'S VOICE ...):  |
+|                                                                             |
+|      You have a (more or less) 'small supercell' and for smaller cells      |
+|      it is recommended  to use the reciprocal-space projection scheme!      |
+|      The real space optimization is not  efficient for small cells and it   |
+|      is also less accurate ...                                              |
+|      Therefore set LREAL=.FALSE. in the  INCAR file                         |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|      Your generating k-point grid is not commensurate to the symmetry       |
+|      of the lattice.  This can cause   slow convergence with respect        |
+|      to k-points for HF type calculations                                   |
+|      suggested SOLUTIONS:                                                   |
+|       ) if not already the case, use automatic k-point generation           |
+|       ) shift your grid to Gamma (G) (e.g. required for hex or fcc lattice) |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ found WAVECAR, reading the header
+  number of bands has changed, file:    48 present:    40
+  trying to continue reading WAVECAR, but it might fail
+  number of k-points has changed, file:    75 present:   147
+  trying to continue reading WAVECAR, but it might fail
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ reading WAVECAR
+ the WAVECAR file was read successfully
+ initial charge from wavefunction
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          ort
+ gam= 0.000 g(H,U,f)=  0.305E+00 0.350E-01 0.733E-02 ort(H,U,f) = 0.000E+00 0.000E+00 0.000E+00
+SDA:   1    -0.182170739352E+02   -0.18217E+02   -0.13901E+00  5880   0.348E+00 0.000E+00
+ gam= 0.382 g(H,U,f)=  0.108E+00 0.220E-01 0.816E-02 ort(H,U,f) = 0.919E-01 0.254E-01 0.946E-02
+DMP:   2    -0.183124010396E+02   -0.95327E-01   -0.74469E-01  5880   0.138E+00 0.127E+00
+ gam= 0.382 g(H,U,f)=  0.142E-01 0.125E-01 0.189E-02 ort(H,U,f) = 0.182E-01 0.227E-01 0.321E-02
+DMP:   3    -0.183583923652E+02   -0.45991E-01   -0.18185E-01  5880   0.286E-01 0.441E-01
+ gam= 0.382 g(H,U,f)=  0.853E-02 0.652E-02 0.107E-03 ort(H,U,f) =-0.925E-03 0.145E-01 0.231E-03
+DMP:   4    -0.183700736062E+02   -0.11681E-01   -0.81745E-02  5880   0.152E-01 0.138E-01
+ gam= 0.382 g(H,U,f)=  0.546E-02 0.324E-02 0.302E-05 ort(H,U,f) = 0.754E-03 0.812E-02 0.772E-05
+DMP:   5    -0.183759325679E+02   -0.58590E-02   -0.48402E-02  5880   0.871E-02 0.889E-02
+ gam= 0.382 g(H,U,f)=  0.198E-02 0.157E-02 0.889E-07 ort(H,U,f) = 0.260E-02 0.429E-02 0.248E-06
+DMP:   6    -0.183797230668E+02   -0.37905E-02   -0.24754E-02  5880   0.356E-02 0.689E-02
+ gam= 0.382 g(H,U,f)=  0.854E-03 0.761E-03 0.388E-08 ort(H,U,f) = 0.117E-02 0.219E-02 0.114E-07
+DMP:   7    -0.183816254725E+02   -0.19024E-02   -0.11587E-02  5880   0.161E-02 0.336E-02
+ gam= 0.382 g(H,U,f)=  0.306E-03 0.365E-03 0.956E-10 ort(H,U,f) = 0.383E-03 0.109E-02 0.304E-09
+DMP:   8    -0.183824991899E+02   -0.87372E-03   -0.49381E-03  5880   0.672E-03 0.147E-02
+ gam= 0.382 g(H,U,f)=  0.125E-03 0.174E-03 0.560E-11 ort(H,U,f) = 0.186E-03 0.534E-03 0.209E-10
+DMP:   9    -0.183828896129E+02   -0.39042E-03   -0.22946E-03  5880   0.299E-03 0.720E-03
+ gam= 0.382 g(H,U,f)=  0.544E-04 0.818E-04 0.855E-12 ort(H,U,f) = 0.737E-04 0.257E-03 0.435E-11
+DMP:  10    -0.183830710320E+02   -0.18142E-03   -0.10507E-03  5880   0.136E-03 0.331E-03
+ gam= 0.382 g(H,U,f)=  0.186E-04 0.383E-04 0.208E-12 ort(H,U,f) = 0.310E-04 0.123E-03 0.118E-11
+DMP:  11    -0.183831562532E+02   -0.85221E-04   -0.46211E-04  5880   0.569E-04 0.154E-03
+ gam= 0.382 g(H,U,f)=  0.837E-05 0.178E-04 0.309E-13 ort(H,U,f) = 0.157E-04 0.578E-04 0.249E-12
+DMP:  12    -0.183831951397E+02   -0.38887E-04   -0.21683E-04  5880   0.262E-04 0.734E-04
+ gam= 0.382 g(H,U,f)=  0.450E-05 0.819E-05 0.768E-15 ort(H,U,f) = 0.772E-05 0.270E-04 0.171E-13
+DMP:  13    -0.183832135748E+02   -0.18435E-04   -0.10376E-04  5880   0.127E-04 0.347E-04
+ gam= 0.382 g(H,U,f)=  0.196E-05 0.377E-05 0.202E-15 ort(H,U,f) = 0.403E-05 0.125E-04-0.329E-14
+DMP:  14    -0.183832227327E+02   -0.91579E-05   -0.48186E-05  5880   0.573E-05 0.165E-04
+ final diagonalization
+   1 F= -.18383223E+02 E0= -.18383223E+02  d E =-.315757E-08  mag=     0.0000     0.0000    -0.0000
